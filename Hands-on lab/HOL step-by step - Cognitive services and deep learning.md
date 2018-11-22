@@ -324,20 +324,20 @@ The tasks that follow depend on Python libraries, like nltk and gensim. The foll
 
 7.  At the last line, under azure-ml-api-sdk add another line with -gensim to the pip configuration. You should also add entries for tensorflow and tflearn, which we will need later in the lab. Your final configuration should look as follows:
 
-    ```sh
+    ```yaml
     name: project_environment
 
     dependencies:
     - python=3.5.2
     - scikit-learn
     - pip:
-    # The API for Azure Machine Learning Model Management Service.
-    # Details: https://github.com/Azure/Machine-Learning-Operationalization
-    - azure-ml-api-sdk==0.1.0a11
-    - azureml.datacollector==0.1.0a13
-    - gensim
-    - tensorflow
-    - tflearn
+      # The API for Azure Machine Learning Model Management Service.
+      # Details: https://github.com/Azure/Machine-Learning-Operationalization
+      - azure-ml-api-sdk==0.1.0a11
+      - azureml.datacollector==0.1.0a13
+      - gensim
+      - tensorflow
+      - tflearn
     ```
 
 8.  Save the file. When we go to create the image in a later step, this file will be included with command.
