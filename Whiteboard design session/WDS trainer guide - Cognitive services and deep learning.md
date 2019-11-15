@@ -170,7 +170,7 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 ## Abstract and learning objectives 
 
-In this whiteboard design session, you will work with a group to design a solution which combines both pre-built artificial intelligence (AI) in the form of various Cognitive Services, with custom AI in the form of services built and deployed with Azure Machine Learning service. You will learn to create intelligent solutions atop unstructured text data by designing and implementing a text analytics pipeline. You will discover how to build a binary classifier using a simple neural network that can be used to classify the textual data, as well as how to deploy multiple kinds of predictive services using Azure Machine Learning service and learn to integrate with the Computer Vision API and the Text Analytics API from Cognitive Services.
+In this whiteboard design session, you will work with a group to design a solution which combines both pre-built artificial intelligence (AI) in the form of various Cognitive Services, with custom AI in the form of services built and deployed with Azure Machine Learning service. You will learn to create intelligent solutions atop unstructured text data by designing and implementing a text analytics pipeline. You will discover how to build a binary classifier using a recurrent neural network that can be used to classify the textual data, as well as how to deploy multiple kinds of predictive services using Azure Machine Learning service and learn to integrate with the Computer Vision API and the Text Analytics API from Cognitive Services.
 
 At the end of this whiteboard design session, you will be better able to design solutions leveraging the Azure Machine Learning service and Cognitive Services.
 
@@ -278,7 +278,7 @@ _Classifying claim-text data_
 
 4.  For this scenario, Contoso has indicated an interest in using TensorFlow, but is concerned about the complexity of jumping right in. They are wondering if Keras would provide an easier framework they could use as a stepping stone to the full blown TensorFlow, that would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready?
 
-5.  What would a very simple DNN that performs this classification look like? Sketch the graph of input nodes, hidden layer nodes, and output nodes.
+5.  What would a recurrent neural net that performs this classification look like? Sketch the graph of input nodes, hidden layer nodes, and output nodes.
 
 6.  Assuming they will be using a fully connected DNN with a sigmoid activation function to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
 
@@ -459,7 +459,7 @@ _Classifying claim text data_
 
     TensorFlow is a robust framework for performing machine learning, including building neural networks. The Keras library builds upon Tensorflow and provides an easy-to-use and understand high-level API for implementing deep neural networks, complete with tutorials and examples. Models built with Keras are TensorFlow models, so if they choose to move fully towards the lower level TensorFlow API's, then they could do so without having to re-create the models.
 
-5.  What would a very simple DNN that performs this classification look like? Sketch the graph of input nodes, hidden layer nodes, and output nodes.
+5.  What would a very recurrent neural net that performs this classification look like? Sketch the graph of input nodes, hidden layer nodes, and output nodes.
 
     ![Input of terms (size of vocab) nodes point to hidden layers nodes, which point to output layer (binary classifier has two outputs) nodes: 1 (auto), and 0 (home).](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image7.png "Graph of input nodes, hidden layer nodes, and output nodes")
 
