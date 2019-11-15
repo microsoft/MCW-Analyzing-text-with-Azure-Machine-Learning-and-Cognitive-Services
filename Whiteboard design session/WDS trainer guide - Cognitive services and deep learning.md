@@ -457,11 +457,11 @@ _Classifying claim text data_
 
     Machine learning models requires numeric data as inputs. Thus, when you are working with text, as part of feature extraction, you convert words or sentences in text into numeric vector representation. There are several approaches to vectorize textual data, that include approaches like [Term Frequency-Inverse Document Frequency  (TF-IDF) vectorization](https://en.wikipedia.org/wiki/Tf-idf), or use of word embedding like [Word2Vec](https://arxiv.org/pdf/1310.4546.pdf) or [Global Vectors (GloVe)](https://nlp.stanford.edu/pubs/glove.pdf). 
 
-  The approach of TF-IDF is to give less important to words that are common in most documents and giver higher importance to words that appears more frequently in fewer documents. Thus TF-IDF assigns weights to words that signify their relevance in the documents. There are some disadvantages to the TF-ID approach, most notably it makes no use of semantic similarities between words.
+    The approach of TF-IDF is to give less important to words that are common in most documents and giver higher importance to words that appears more frequently in fewer documents. Thus TF-IDF assigns weights to words that signify their relevance in the documents. There are some disadvantages to the TF-ID approach, most notably it makes no use of semantic similarities between words.
 
-  The use of embedding to represent words or sentences is considered the-state-of-the art in NLP field. Most commonly used word embedding with DNN is either Word2Vec or GloVe. Both Word2Vec and GloVe are known to perform well, with GloVe claiming to outperform its peers on similarity tasks and named entity recognition. 
+    The use of embedding to represent words or sentences is considered the-state-of-the art in NLP field. Most commonly used word embedding with DNN is either Word2Vec or GloVe. Both Word2Vec and GloVe are known to perform well, with GloVe claiming to outperform its peers on similarity tasks and named entity recognition. 
 
-  In the scenario, given the descriptive nature of the claims data, it is recommended that they use pretrained GloVe word embedding from [nlp.stanford.edu](https://nlp.stanford.edu/projects/glove/) for vector representation of words.
+    In the scenario, given the descriptive nature of the claims data, it is recommended that they use pretrained GloVe word embedding from [nlp.stanford.edu](https://nlp.stanford.edu/projects/glove/) for vector representation of words.
 
 
 4.  Contoso understands they should use a classification algorithm for this problem. They have asked if a Deep Neural Network could be trained against the text to recognize home or auto classifications? Could they use a DNN for this?
