@@ -274,19 +274,21 @@ _Classifying claim-text data_
 
 2.  What data would they need to train the model?
 
-3.  Contoso understands they should use a classification algorithm for this problem. They have asked if a Deep Neural Network could be trained against the text to recognize home or auto classifications. Could they use a DNN for this?
+3.  Contoso want to understand some of the common approaches to handle texts for machine learning? Is there a recommended approach to dealing with long descriptive texts that are typically found in claims data?
 
-4.  For this scenario, Contoso has indicated an interest in using TensorFlow, but is concerned about the complexity of jumping right in. They are wondering if Keras would provide an easier framework they could use as a stepping stone to the full blown TensorFlow, that would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready?
+4.  Contoso understands they should use a classification algorithm for this problem. They have asked if a Deep Neural Network could be trained against the text to recognize home or auto classifications. Could they use a DNN for this?
 
-5.  What would a recurrent neural net that performs this classification look like? Sketch the graph of input nodes, hidden layer nodes, and output nodes.
+5.  For this scenario, Contoso has indicated an interest in using TensorFlow, but is concerned about the complexity of jumping right in. They are wondering if Keras would provide an easier framework they could use as a stepping stone to the full blown TensorFlow, that would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready?
 
-6.  Assuming they will be using Recurrent Neural Net (RNN) which is a type of DNN, along with a sigmoid activation function for binary classification to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
+6.  What would a recurrent neural net that performs this classification look like? Sketch the graph of input nodes, hidden layer nodes, and output nodes.
 
-7.  Next, pseudo code how they would construct the RNN and the binary classifier and fit the model to the data.
+7.  Assuming they will be using Recurrent Neural Net (RNN) which is a type of DNN, along with a sigmoid activation function for binary classification to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
 
-8.  With the trained model in hand, pseudo code how the model would be used to predict the class of a given claim text. What would the output of the prediction be? How would you interpret the value?
+8.  Next, pseudo code how they would construct the RNN and the binary classifier and fit the model to the data.
 
-9.  Describe at a high level, how you would deploy this trained model, so it is available as a web service that can be integrated with the rest of the solution.
+9.  With the trained model in hand, pseudo code how the model would be used to predict the class of a given claim text. What would the output of the prediction be? How would you interpret the value?
+
+10.  Describe at a high level, how you would deploy this trained model, so it is available as a web service that can be integrated with the rest of the solution.
 
 _Identifying free-text sentiment_
 
@@ -451,19 +453,30 @@ _Classifying claim text data_
 
     Contoso would need to have a certain amount of historical claim text and have it labeled as home or auto to train a model.
 
-3.  Contoso understands they should use a classification algorithm for this problem. They have asked if a Deep Neural Network could be trained against the text to recognize home or auto classifications? Could they use a DNN for this?
+3.  Contoso want to understand some of the common approaches to handle texts for machine learning? Is there a recommended approach to dealing with long descriptive texts that are typically found in claims data?
+
+    Machine learning models requires numeric data as inputs. Thus, when you are working with text, as part of feature extraction, you convert words or sentences in text into numeric vector representation. There are several approaches to vectorize textual data, that include approaches like [Term Frequency-Inverse Document Frequency  (TF-IDF) vectorization](https://en.wikipedia.org/wiki/Tf-idf), or use of word embedding like [Word2Vec](https://arxiv.org/pdf/1310.4546.pdf) or [Global Vectors (GloVe)](https://nlp.stanford.edu/pubs/glove.pdf). 
+
+  The approach of TF-IDF is to give less important to words that are common in most documents and giver higher importance to words that appears more frequently in fewer documents. Thus TF-IDF assigns weights to words that signify their relevance in the documents. There are some disadvantages to the TF-ID approach, most notably it makes no use of semantic similarities between words.
+
+  The use of embedding to represent words or sentences is considered the-state-of-the art in NLP field. Most commonly used word embedding with DNN is either Word2Vec or GloVe. Both Word2Vec and GloVe are known to perform well, with GloVe claiming to outperform its peers on similarity tasks and named entity recognition. 
+
+  In the scenario, given the descriptive nature of the claims data, it is recommended that they use pretrained GloVe word embedding from [nlp.stanford.edu](https://nlp.stanford.edu/projects/glove/) for vector representation of words.
+
+
+4.  Contoso understands they should use a classification algorithm for this problem. They have asked if a Deep Neural Network could be trained against the text to recognize home or auto classifications? Could they use a DNN for this?
 
     Yes, they could build a DNN that performs classification against the document tensors (or vectors of word frequencies).
 
-4.  For this scenario, Contoso has indicated an interest in using TensorFlow, but is concerned about the complexity of jumping right in. They are wondering if Keras would provide an easier framework they could use as a stepping stone to the full-blown TensorFlow, which would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready.
+5.  For this scenario, Contoso has indicated an interest in using TensorFlow, but is concerned about the complexity of jumping right in. They are wondering if Keras would provide an easier framework they could use as a stepping stone to the full-blown TensorFlow, which would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready.
 
     TensorFlow is a robust framework for performing machine learning, including building neural networks. The Keras library builds upon Tensorflow and provides an easy-to-use and understand high-level API for implementing deep neural networks, complete with tutorials and examples. Models built with Keras are TensorFlow models, so if they choose to move fully towards the lower level TensorFlow API's, then they could do so without having to re-create the models.
 
-5.  What would a very recurrent neural net that performs this classification look like? Sketch the graph of input nodes, hidden layer nodes, and output nodes.
+6.  What would a very recurrent neural net that performs this classification look like? Sketch the graph of input nodes, hidden layer nodes, and output nodes.
 
     ![Input of terms (size of vocab) nodes point to hidden layers nodes, which point to output layer (binary classifier has two outputs) nodes: 1 (auto), and 0 (home).](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image7.png "Graph of input nodes, hidden layer nodes, and output nodes")
 
-6.  Assuming they will be using a fully connected DNN with a sigmoid activation function to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
+7.  Assuming they will be using a fully connected DNN with a sigmoid activation function to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
 
     ```python
     model = Sequential()
@@ -477,7 +490,7 @@ _Classifying claim text data_
     model.add(Activation('sigmoid'))
     ```
 
-7.  Next, pseudo code how they would define the optimizer, loss function and fit the model to the vectorized data and the labels.
+8.  Next, pseudo code how they would define the optimizer, loss function and fit the model to the vectorized data and the labels.
 
     ```python
     opt = keras.optimizers.Adam(lr = ...)
@@ -487,7 +500,7 @@ _Classifying claim text data_
     model.fit(X_train, y_train, epochs = ..., batch_size = ..., validation_data = ...)
     ```
 
-8.  With the trained model in hand, pseudo code how the model would be used to predict the class of a given claim text. What would the output of the prediction be? How would you interpret the value?
+9.  With the trained model in hand, pseudo code how the model would be used to predict the class of a given claim text. What would the output of the prediction be? How would you interpret the value?
 
     ```python
     test_claim = ['I crashed my car into a pole.']
@@ -505,7 +518,7 @@ _Classifying claim text data_
 
     Could be interpreted to indicate that a prediction of 1 ("auto insurance claim") with a confidence of 78%.
 
-9.  Describe at a high level, how you would deploy this trained model so it is available as a web service that can be integrated with the rest of the solution? What Azure Service(s) would be involved?
+10.  Describe at a high level, how you would deploy this trained model so it is available as a web service that can be integrated with the rest of the solution? What Azure Service(s) would be involved?
 
     The trained model is saved to a file. Then this file is loaded by web service code that re-creates the DNN and loads the model weights. The web service code can then run classifications using the model. It is important to note that any text provided to the model for classification must still be processed by the normalize and extract features routines, as was done when training the model. You could deploy this service using Azure Machine Learning service, which would capture the web service in a container, and then deploy the container to Azure Container Service where it can be invoked by any REST client.
 
