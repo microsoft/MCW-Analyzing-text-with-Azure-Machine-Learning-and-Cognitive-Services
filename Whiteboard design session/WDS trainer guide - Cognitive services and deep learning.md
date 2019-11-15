@@ -280,9 +280,9 @@ _Classifying claim-text data_
 
 5.  What would a recurrent neural net that performs this classification look like? Sketch the graph of input nodes, hidden layer nodes, and output nodes.
 
-6.  Assuming they will be using a fully connected DNN with a sigmoid activation function to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
+6.  Assuming they will be using Recurrent Neural Net (RNN) which is a type of DNN, along with a sigmoid activation function for binary classification to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
 
-7.  Next, pseudo code how they would construct the DNN from the network and fit the model to the data
+7.  Next, pseudo code how they would construct the RNN and the binary classifier and fit the model to the data.
 
 8.  With the trained model in hand, pseudo code how the model would be used to predict the class of a given claim text. What would the output of the prediction be? How would you interpret the value?
 
