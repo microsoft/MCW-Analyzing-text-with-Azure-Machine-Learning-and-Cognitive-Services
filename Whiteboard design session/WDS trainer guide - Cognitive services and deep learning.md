@@ -280,11 +280,11 @@ _Classifying claim-text data_
 
 5.  For this scenario, Contoso has indicated an interest in using TensorFlow, but is concerned about the complexity of jumping right in. They are wondering if Keras would provide an easier framework they could use as a stepping stone to the full blown TensorFlow, that would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready?
 
-6.  What would a recurrent neural net that performs this classification look like? Sketch the graph of input nodes, hidden layer nodes, and output nodes.
+6.  What would a LSTM recurrent neural network that performs this classification look like? Show a snippet of a single layer of an unrolled LSTM network, and the binary classification output at the last step of the network.
 
-7.  Assuming they will be using Recurrent Neural Net (RNN) which is a type of DNN, along with a sigmoid activation function for binary classification to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
+7.  Assuming they will be using a LSTM recurrent neural network to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
 
-8.  Next, pseudo code how they would construct the RNN and the binary classifier and fit the model to the data.
+8.  Next, pseudo code how they would define the optimizer, loss function and fit the model to the vectorized data and the labels.
 
 9.  With the trained model in hand, pseudo code how the model would be used to predict the class of a given claim text. What would the output of the prediction be? How would you interpret the value?
 
@@ -507,10 +507,6 @@ _Classifying claim text data_
 
     ```python
     test_claim = ['I crashed my car into a pole.']
-
-    test_claim = normalize_text(test_claim)
-
-    test_claim = extract_features(test_claim)
     
     pred = model.predict(test_claim)
     ```
