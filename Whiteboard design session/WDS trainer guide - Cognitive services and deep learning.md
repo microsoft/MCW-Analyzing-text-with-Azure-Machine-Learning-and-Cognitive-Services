@@ -370,9 +370,11 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | **Description**                                       | **Links**                                                                                         |
 | Azure Machine Learning service                        | <https://docs.microsoft.com/en-us/azure/machine-learning/service/overview-what-is-azure-ml>       |  |
 | Deploying Web Services                                | <https://docs.microsoft.com/en-us/azure/machine-learning/preview/model-management-service-deploy> |
-| Overview of Keras                                   | <https://keras.io/>                                                                             |
-| Overview of TensorFlow                                | <https://www.tensorflow.org/>                                                                     |
-| Overview of gensim library                            | <https://radimrehurek.com/gensim/>                                                                |
+| Overview of Keras                                   | <https://keras.io/> |
+| Overview of TensorFlow                                | <https://www.tensorflow.org/> |
+| GloVe: Global Vectors for Word Representation | <https://nlp.stanford.edu/projects/glove/>  |
+| Research Paper: "GloVe: Global Vectors for Word Representation" | <https://nlp.stanford.edu/pubs/glove.pdf>  |
+| Word2vec | <https://en.wikipedia.org/wiki/Word2vec>  |
 | Overview of the Computer Vision API Cognitive Service | <https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/home>                  |
 | Overview of the Text Analytics API Cognitive Service  | <https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview>               |
 
