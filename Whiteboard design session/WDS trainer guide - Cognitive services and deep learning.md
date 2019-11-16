@@ -520,7 +520,7 @@ _Classifying claim text data_
 
 10.  Describe at a high level, how you would deploy this trained model so it is available as a web service that can be integrated with the rest of the solution? What Azure Service(s) would be involved?
 
-    The trained model is saved to a file. Then this file is loaded by web service code that re-creates the model architecture and loads the model weights. The web service code can then run classifications using the model. You could deploy this service using Azure Machine Learning service, which would capture the web service in a container, and then deploy the container to Azure Container Service where it can be invoked by any REST client.
+     The trained model is saved to a file. Then this file is loaded by web service code that re-creates the model architecture and loads the model weights. The web service code can then run classifications using the model. You could deploy this service using Azure Machine Learning service, which would capture the web service in a container, and then deploy the container to Azure Container Service where it can be invoked by any REST client.
 
 _Identifying free-text sentiment_
 
