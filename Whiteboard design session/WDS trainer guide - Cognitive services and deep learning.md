@@ -469,24 +469,24 @@ _Classifying claim text data_
 
 4.  Contoso understands they should use a classification algorithm for this problem. They have asked if a Deep Neural Network could be trained against the text to recognize home or auto classifications? Could they use a DNN for this?
 
-    Yes, they could build a DNN that performs classification against the document tensors (or vectors of word frequencies).
+    Yes, they could use a type of DNN called the Long Short-Term Memory (LSTM) recurrent neural network that is shown to work well for text classification problems, especially when used in conjunction with word embedding such as GloVe for word vectorization.
 
 5.  For this scenario, Contoso has indicated an interest in using TensorFlow, but is concerned about the complexity of jumping right in. They are wondering if Keras would provide an easier framework they could use as a stepping stone to the full-blown TensorFlow, which would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready.
 
     TensorFlow is a robust framework for performing machine learning, including building neural networks. The Keras library builds upon Tensorflow and provides an easy-to-use and understand high-level API for implementing deep neural networks, complete with tutorials and examples. Models built with Keras are TensorFlow models, so if they choose to move fully towards the lower level TensorFlow API's, then they could do so without having to re-create the models.
 
-6.  What would a very recurrent neural net that performs this classification look like? Sketch the graph of input nodes, hidden layer nodes, and output nodes.
+6.  What would a LSTM recurrent neural network that performs this classification look like? Show a snippet of a single layer of an unrolled LSTM network, and the binary classification output at the last step of the network.
 
-    ![Input of terms (size of vocab) nodes point to hidden layers nodes, which point to output layer (binary classifier has two outputs) nodes: 1 (auto), and 0 (home).](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image7.png "Graph of input nodes, hidden layer nodes, and output nodes")
+    ![The figure shows a snippet of a single layer of an unrolled LSTM network, and the binary classification output layer at the last step of the network](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/lstm.png "Unrolled LSTM network")
 
-7.  Assuming they will be using a fully connected DNN with a sigmoid activation function to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
+7.  Assuming they will be using a LSTM recurrent neural network to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
 
     ```python
     model = Sequential()
     
-    model.add(Dense(..., input_dim = ..., kernel_regularizer = ...))
+    model.add(embedding_layer)
     
-    model.add(Activation('relu'))
+    model.add(LSTM(100, ..., ...))
     
     model.add(Dense(2))
     
@@ -511,6 +511,7 @@ _Classifying claim text data_
     test_claim = normalize_text(test_claim)
 
     test_claim = extract_features(test_claim)
+    
     pred = model.predict(test_claim)
     ```
     The output of pred is an array of the confidence that label is a 0 or a 1. For example:
@@ -523,7 +524,7 @@ _Classifying claim text data_
 
 10.  Describe at a high level, how you would deploy this trained model so it is available as a web service that can be integrated with the rest of the solution? What Azure Service(s) would be involved?
 
-    The trained model is saved to a file. Then this file is loaded by web service code that re-creates the DNN and loads the model weights. The web service code can then run classifications using the model. It is important to note that any text provided to the model for classification must still be processed by the normalize and extract features routines, as was done when training the model. You could deploy this service using Azure Machine Learning service, which would capture the web service in a container, and then deploy the container to Azure Container Service where it can be invoked by any REST client.
+    The trained model is saved to a file. Then this file is loaded by web service code that re-creates the model architecture and loads the model weights. The web service code can then run classifications using the model. You could deploy this service using Azure Machine Learning service, which would capture the web service in a container, and then deploy the container to Azure Container Service where it can be invoked by any REST client.
 
 _Identifying free-text sentiment_
 
