@@ -238,8 +238,9 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Deploying Web Services                                | <https://docs.microsoft.com/en-us/azure/machine-learning/preview/model-management-service-deploy> |
 | Overview of Keras                                   | <https://keras.io/> |
 | Overview of TensorFlow                                | <https://www.tensorflow.org/> |
+| Term Frequency-Inverse Document Frequency (TF-IDF) vectorization | <https://en.wikipedia.org/wiki/Tf-idf> |
 | GloVe: Global Vectors for Word Representation | <https://nlp.stanford.edu/projects/glove/>  |
 | Research Paper: "GloVe: Global Vectors for Word Representation" | <https://nlp.stanford.edu/pubs/glove.pdf>  |
-| Word2vec | <https://en.wikipedia.org/wiki/Word2vec>  |
+| Word2vec word embeddings | <https://en.wikipedia.org/wiki/Word2vec>  |
 | Overview of the Computer Vision API Cognitive Service | <https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/home>                  |
 | Overview of the Text Analytics API Cognitive Service  | <https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview>               |
