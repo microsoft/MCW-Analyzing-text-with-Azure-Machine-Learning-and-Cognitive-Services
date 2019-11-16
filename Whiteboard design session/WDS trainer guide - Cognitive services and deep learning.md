@@ -372,9 +372,10 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Deploying Web Services                                | <https://docs.microsoft.com/en-us/azure/machine-learning/preview/model-management-service-deploy> |
 | Overview of Keras                                   | <https://keras.io/> |
 | Overview of TensorFlow                                | <https://www.tensorflow.org/> |
+| Term Frequency-Inverse Document Frequency (TF-IDF) vectorization | <https://en.wikipedia.org/wiki/Tf-idf> |
 | GloVe: Global Vectors for Word Representation | <https://nlp.stanford.edu/projects/glove/>  |
 | Research Paper: "GloVe: Global Vectors for Word Representation" | <https://nlp.stanford.edu/pubs/glove.pdf>  |
-| Word2vec | <https://en.wikipedia.org/wiki/Word2vec>  |
+| Word2vec word embeddings | <https://en.wikipedia.org/wiki/Word2vec>  |
 | Overview of the Computer Vision API Cognitive Service | <https://docs.microsoft.com/en-us/azure/cognitive-services/computer-vision/home>                  |
 | Overview of the Text Analytics API Cognitive Service  | <https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview>               |
 
@@ -457,11 +458,11 @@ _Classifying claim text data_
 
 3.  Contoso want to understand some of the common approaches to handle texts for machine learning? Is there a recommended approach to dealing with long descriptive texts that are typically found in claims data?
 
-    Machine learning models requires numeric data as inputs. Thus, when you are working with text, as part of feature extraction, you convert words or sentences in text into numeric vector representation. There are several approaches to vectorize textual data, that include approaches like [Term Frequency-Inverse Document Frequency  (TF-IDF) vectorization](https://en.wikipedia.org/wiki/Tf-idf), or use of word embedding like [Word2Vec](https://arxiv.org/pdf/1310.4546.pdf) or [Global Vectors (GloVe)](https://nlp.stanford.edu/pubs/glove.pdf). 
+    Machine learning models requires numeric data as inputs. Thus, when you are working with text, as part of feature extraction, you convert words or sentences in text into numeric vector representation. There are several approaches to vectorize textual data, that include approaches like [Term Frequency-Inverse Document Frequency  (TF-IDF) vectorization](https://en.wikipedia.org/wiki/Tf-idf), or use of word embedding like [Word2vec](https://en.wikipedia.org/wiki/Word2vec) or [Global Vectors (GloVe)](https://nlp.stanford.edu/pubs/glove.pdf). 
 
     The approach of TF-IDF is to give less important to words that are common in most documents and giver higher importance to words that appears more frequently in fewer documents. Thus TF-IDF assigns weights to words that signify their relevance in the documents. There are some disadvantages to the TF-ID approach, most notably it makes no use of semantic similarities between words.
 
-    The use of embedding to represent words or sentences is considered the-state-of-the art in NLP field. Most commonly used word embedding with DNN is either Word2Vec or GloVe. Both Word2Vec and GloVe are known to perform well, with GloVe claiming to outperform its peers on similarity tasks and named entity recognition. 
+    The use of embedding to represent words or sentences is considered the-state-of-the art in NLP field. Most commonly used word embedding with DNN is either Word2vec or GloVe. Both Word2vec and GloVe are known to perform similarly, with GloVe claiming to outperform its peers on similarity tasks and named entity recognition.
 
     In the scenario, given the descriptive nature of the claims data, it is recommended that they use pretrained GloVe word embedding from [nlp.stanford.edu](https://nlp.stanford.edu/projects/glove/) for vector representation of words.
 
