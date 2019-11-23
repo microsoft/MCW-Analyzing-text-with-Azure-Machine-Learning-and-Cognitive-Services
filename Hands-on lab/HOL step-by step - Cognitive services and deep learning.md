@@ -110,7 +110,7 @@ In this exercise, you will create and deploy a web service that uses a pre-train
 
 ### Task 1: Install libraries
 
-The notebooks you will run depends on certain Python libraries like `NLTK.` The `NLTK` library has built-in support for dozens of corpora and trained models that need to be installed using the corpus downloader. The following steps walk you through adding these dependencies.
+The notebooks you will run depends on certain Python libraries like keras, and tensorflow. The following steps walk you through adding these dependencies.
 
 1.  Within the `notebooks` folder, select the notebook called `00 init`. This will open the notebook so you can read and execute the code it contains.
 
@@ -133,7 +133,7 @@ The notebooks you will run depends on certain Python libraries like `NLTK.` The 
 
 Duration: 60 minutes
 
-In this exercise, you will use Keras to construct and train a simple deep neural network classification model that will classify claim text as belonging to a home insurance claim or an automobile claim. You will then deploy this trained model as a web service.
+In this exercise, you will use Keras to construct and train a DNN called the Long Short-Term Memory (LSTM) recurrent neural network. LSTM is shown to work well for text classification problems, especially when used in conjunction with word embedding such as GloVe for word vectorization. In this notebook you will also learn how GloVe word embeddings perform on word analogy tasks.
 
 ### Task 1: Create a simple Keras based model
 
@@ -141,7 +141,7 @@ In this exercise, you will use Keras to construct and train a simple deep neural
 
 2. Read the instructions at the top of the notebook, and execute the cells as instructed.
 
-   >**Note**: Pay attention to the top of the notebook and check the version of  `tensorflow` and `keras` libraries. Tensorflow version should be >= 1.12.2 and Keras version should be >= 2.2.4.
+   >**Note**: Pay attention to the top of the notebook and check the version of tensorflow and keras libraries. Tensorflow version should be == 1.13.1 and Keras version should be == 2.3.1.
 
 ### Task 2: Deploy the Keras model
 
