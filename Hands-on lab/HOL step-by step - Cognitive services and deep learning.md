@@ -62,7 +62,7 @@ In this workshop, you will help Contoso Ltd. build a proof of concept that shows
 
 The high-level architecture of the solution is illustrated in the diagram. The lab is performed within the context of a notebook running within Azure Notebooks. Various notebooks are built to test the integration with the Cognitive Services listed, to train custom ML services, and to integrate the results in a simple user interface that shows the result of processing the claim with all of the AI services involved.
 
-![The High-level architectural solution begins with a Claim, which us submitted for processing using a notebook in Azure Databricks. This notebook coordinates the calls to Computer Vision, Text Analytics, and Containerized Services, which includes a Classification Service and a Summary Service that both process claim text.](media/image2.jpg 'High-level architectural solution')
+![The High-level architectural solution begins with a Claim, which us submitted for processing using a notebook in Azure Databricks. This notebook coordinates the calls to Computer Vision, Text Analytics, and Containerized Services, which includes a Classification Service and a Summary Service that both processes claim text.](media/image2.jpg 'High-level architectural solution')
 
 ## Requirements
 
@@ -124,7 +124,7 @@ The notebooks you will run depends on certain Python libraries like keras, and t
 
 ### Task 3: Provision the Azure Machine Learning Workspace and Create the Summarization service
 
-1. Within the `notebooks` folder, sekect the notebook called `02 Deploy Summarizer Web Service`. This will open the notebook so you can read and execute the code it contains.
+1. Within the `notebooks` folder, select the notebook called `02 Deploy Summarizer Web Service`. This will open the notebook so you can read and execute the code it contains.
 
 2. Read the instructions at the top of the notebook, and execute the cells as instructed.
 
