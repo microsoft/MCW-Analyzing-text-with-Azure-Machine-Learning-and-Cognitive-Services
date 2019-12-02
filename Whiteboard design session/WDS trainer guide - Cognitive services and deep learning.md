@@ -42,7 +42,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Step 3: Present the solution](#step-3-present-the-solution)
   - [Wrap-up](#wrap-up)
   - [Additional references](#additional-references)
-- [Cognitive services and deep learning whiteboard design session trainer guide](#cognitive-services-and-deep-learning-whiteboard-design-session-trainer-guide-1)
+- [Cognitive services and deep learning whiteboard design session trainer guide](#cognitive-services-and-deep-learning-whiteboard-design-session-trainer-guide)
   - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
   - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
   - [Step 3: Present the solution](#step-3-present-the-solution-1)
@@ -369,7 +369,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | **Description**                                       | **Links**                                                                                         |
 | Azure Machine Learning service                        | <https://docs.microsoft.com/en-us/azure/machine-learning/service/overview-what-is-azure-ml>       |  |
-| Deploying Web Services                                | <https://docs.microsoft.com/en-us/azure/machine-learning/preview/model-management-service-deploy> |
+| Deploying Web Services                                | <https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where> |
 | Overview of Keras                                   | <https://keras.io/> |
 | Overview of TensorFlow                                | <https://www.tensorflow.org/> |
 | Term Frequency-Inverse Document Frequency (TF-IDF) vectorization | <https://en.wikipedia.org/wiki/Tf-idf> |
