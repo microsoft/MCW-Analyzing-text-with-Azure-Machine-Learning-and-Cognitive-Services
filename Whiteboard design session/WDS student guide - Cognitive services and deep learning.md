@@ -204,6 +204,14 @@ Directions: With all participants at your table:
 
 Prepare a 15-minute chalk-talk style presentation to the customer.
 
+## Step 3: Present the solution
+
+**Outcome**
+
+Present a solution to the target customer audience in a 15-minute chalk-talk format.
+
+Timeframe: 30 minutes
+
 **Presentation**
 
 Directions:
@@ -235,7 +243,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | ----------------------------------------------------- | ------------------------------------------------------------------------------------------------- |
 | **Description**                                       | **Links**                                                                                         |
 | Azure Machine Learning service                        | <https://docs.microsoft.com/en-us/azure/machine-learning/service/overview-what-is-azure-ml>       |  |
-| Deploying Web Services                                | <https://docs.microsoft.com/en-us/azure/machine-learning/preview/model-management-service-deploy> |
+| Deploying Web Services                                | <https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-deploy-and-where> |
 | Overview of Keras                                   | <https://keras.io/> |
 | Overview of TensorFlow                                | <https://www.tensorflow.org/> |
 | Term Frequency-Inverse Document Frequency (TF-IDF) vectorization | <https://en.wikipedia.org/wiki/Tf-idf> |
