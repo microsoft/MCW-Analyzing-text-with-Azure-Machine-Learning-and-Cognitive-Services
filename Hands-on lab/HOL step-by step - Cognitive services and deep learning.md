@@ -94,7 +94,7 @@ In this exercise, you will setup your Azure Notebooks Project.
 
 1. Navigate to your project: `MCW-Cognitive-services-and-deep-learning`.
 
-2. Start your Notebook server on `Free Compute` by clicking on the **Play** icon in the toolbar as shown:
+2. Start your Notebook server on `Free Compute` by selecting on the **Play** icon in the toolbar as shown:
 
 	![The image shows the Start Notebook Server Icon and highlights the area to select.](images/az_nb_setup/02.png 'Start Notebook Server Icon')
 
