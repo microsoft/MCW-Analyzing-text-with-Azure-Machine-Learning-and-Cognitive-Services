@@ -66,7 +66,7 @@ The high-level architecture of the solution is illustrated in the diagram. The l
 
 ## Requirements
 
-1.  Microsoft Azure subscription must be pay-as-you-go or MSDN
+1. Microsoft Azure subscription must be pay-as-you-go or MSDN
 
     a. Trial subscriptions will not work. You will run into issues with Azure resource quota limits.
 
@@ -76,32 +76,32 @@ The high-level architecture of the solution is illustrated in the diagram. The l
 
 Duration: 20 minutes
 
-In this exercise, you will setup your Azure Notebooks Project.
+In this exercise, you will set up your Azure Notebooks Project.
 
 ### Task 1: Upload project files
 
-1.  Log in to [Azure Notebooks](https://notebooks.azure.com/).
+1. Log in to [Azure Notebooks](https://notebooks.azure.com/).
 
-2.  Navigate to **My Projects** page.
+2. Navigate to **My Projects** page.
 
-3.  Select **Upload GitHub Repo**.
+3. Select **Upload GitHub Repo**.
 
-4. In the Upload GitHub Repository dialog, for the GitHub repository provide **`https://github.com/microsoft/MCW-Cognitive-services-and-deep-learning.git`** and select **Import**. Allow the import a few moments to complete, the dialog will dismiss once the import has completed.
-	
-	![In the dialog the GitHub URL to upload the project repository is shown.](images/az_nb_setup/01.png 'Upload GitHub Repository dialog box')
+4. In the Upload GitHub Repository dialog, for the GitHub repository provide **`https://github.com/microsoft/MCW-Cognitive-services-and-deep-learning.git`** and select **Import**. Allow the import a few moments to complete. The dialog will dismiss once the import has completed.
+
+    ![In the dialog the GitHub URL to upload the project repository is shown.](images/az_nb_setup/01.png 'Upload GitHub Repository dialog box')
 
 ### Task 2: Start the Notebook Server
 
 1. Navigate to your project: `MCW-Cognitive-services-and-deep-learning`.
 
-2. Start your Notebook server on `Free Compute` by clicking on the **Play** icon in the toolbar as shown:
+2. Start your Notebook server on `Free Compute` by selecting the **Play** icon in the toolbar as shown:
 
-	![The image shows the Start Notebook Server Icon and highlights the area to select.](images/az_nb_setup/02.png 'Start Notebook Server Icon')
+    ![The image shows the Start Notebook Server Icon and highlights the area to select.](images/az_nb_setup/02.png 'Start Notebook Server Icon')
 
-3.  Navigate to the `> MCW-Cognitive-services-and-deep-learning > Hands-on lab > notebooks` folder where you will find all your lab files.
+3. Navigate to the `> MCW-Cognitive-services-and-deep-learning > Hands-on lab > notebooks` folder where you will find all your lab files.
 
-	![Jupyter notebook interface showing the folder where the lab files are present.](images/az_nb_setup/03.png 'Jupyter Notebooks Folder')
-	
+    ![Jupyter notebook interface showing the folder where the lab files are present.](images/az_nb_setup/03.png 'Jupyter Notebooks Folder')
+
 ## Exercise 2: Create and Deploy an Unsupervised Model
 
 Duration: 60 minutes
@@ -112,9 +112,9 @@ In this exercise, you will create and deploy a web service that uses a pre-train
 
 The notebooks you will run depends on certain Python libraries like keras, and tensorflow. The following steps walk you through adding these dependencies.
 
-1.  Within the `notebooks` folder, select the notebook called `00 init`. This will open the notebook so you can read and execute the code it contains.
+1. Within the `notebooks` folder, select the notebook called `00 init`. This will open the notebook so you can read and execute the code it contains.
 
-2.  Run each cell in the notebook to install the required libraries.
+2. Run each cell in the notebook to install the required libraries.
 
 ### Task 2: Read through and execute the Summarization notebook
 
@@ -127,7 +127,6 @@ The notebooks you will run depends on certain Python libraries like keras, and t
 1. Within the `notebooks` folder, select the notebook called `02 Deploy Summarizer Web Service`. This will open the notebook so you can read and execute the code it contains.
 
 2. Read the instructions at the top of the notebook, and execute the cells as instructed.
-
 
 ## Exercise 3: Create and Deploy a Keras Model
 
@@ -149,23 +148,22 @@ In this exercise, you will use Keras to construct and train a DNN called the Lon
 
 2. Read the instructions at the top of the notebook, and execute the cells as instructed.
 
-
 ## Exercise 4: Completing the solution
 
 Duration: 45 minutes
 
-In this exercise, you will perform the final integration with the Computer Vision API and the Text Analytics API along with the Azure Machine Learning service you previously deployed, to deliver the completed proof of concept solution.
+In this exercise, you will perform the final integration with the Computer Vision API and the Text Analytics API along with the Azure Machine Learning service you previously deployed to deliver the completed proof of concept solution.
 
 ### Task 1: Deploy the Computer Vision API
 
-1.  Navigate to the Azure Portal in your browser.
+1. Navigate to the Azure Portal in your browser.
 
-2.  Select **Create a resource**.
+2. Select **Create a resource**.
 
-3.  Select **AI + Machine Learning** and then **Computer Vision**.\
+3. Select **AI + Machine Learning** and then **Computer Vision**.\
     ![In the New blade, the AI + Machine Learning option is selected.](media/image19.png 'New blade')
 
-4.  On the **Create** blade, provide the following:
+4. On the **Create** blade, provide the following:
 
     a. **Name:** Provide a unique name for this instance.
 
@@ -179,28 +177,27 @@ In this exercise, you will perform the final integration with the Computer Visio
 
     ![The Create blade fields display the previously defined settings.](media/image60.png 'Create blade')
 
-5.  Select **Create**.
+5. Select **Create**.
 
-6.  When the notification appears that the deployment succeeded, select **Go to resource**.
+6. When the notification appears that the deployment succeeded, select **Go to resource**.
 
     ![A Deployment succeeded notification displays.](media/image61.png 'Notification')
 
-7.  Select **Quick start** and then copy the value of **Key 1** and **Endpoint** into notepad or something similar as you will need this value later in the lab.
+7. Select **Quick start** and then copy the value of **Key 1** and **Endpoint** into notepad or something similar as you will need this value later in the lab.
 
     ![In the Cognitive Services blade, under Resource Management, Quick start is selected. ](media/image62.png 'Cognitive Services blade')
-    
 
 ### Task 2: Deploy the Text Analytics API
 
-1.  Navigate to the Azure Portal in your browser.
+1. Navigate to the Azure Portal in your browser.
 
-2.  Select **Create a resource**.
+2. Select **Create a resource**.
 
-3.  Select **AI + Machine Learning** and then **Text Analytics**.
+3. Select **AI + Machine Learning** and then **Text Analytics**.
 
     ![In the New blade, both AI + Cognitive Services and Text Analytics API are selected.](media/image64.png 'New blade')
 
-4.  On the **Create** blade, provide the following:
+4. On the **Create** blade, provide the following:
 
     a. **Name**: Provide a unique name for this instance.
 
@@ -214,13 +211,13 @@ In this exercise, you will perform the final integration with the Computer Visio
 
     ![The Create blade fields are set to the previously defined settings.](media/image65.png 'Create blade')
 
-5.  Select **Create**.
+5. Select **Create**.
 
-6.  When the notification appears that the deployment succeeded, select **Go to resource**.
+6. When the notification appears that the deployment succeeded, select **Go to resource**.
 
     ![A Deployment succeeded notification displays.](media/image66.png 'Notification')
 
-7.  Select **Quick start** and then copy the value of **Key 1** and **Endpoint** into notepad or something similar as you will need this value later in the lab.
+7. Select **Quick start** and then copy the value of **Key 1** and **Endpoint** into notepad or something similar as you will need this value later in the lab.
 
     ![In the Cognitive Services blade, under Resource Management, Quick start is selected. ](media/image67.png 'Cognitive Services blade')
 
@@ -230,7 +227,6 @@ In this exercise, you will perform the final integration with the Computer Visio
 
 2. Follow the steps within the notebook to complete the lab and view the result of combining Cognitive Services with your Azure Machine Learning Services.
 
-
 ## After the hands-on lab
 
 Duration: 5 minutes
@@ -239,19 +235,19 @@ To avoid unexpected charges, it is recommended that you clean up all of your lab
 
 ### Task 1: Clean up lab resources
 
-1.  Navigate to the Azure Portal and locate the `mcwailab` Resource Group you created for this lab.
+1. Navigate to the Azure Portal and locate the `mcwailab` Resource Group you created for this lab.
 
-2.  Select **Delete resource group** from the command bar.
+2. Select **Delete resource group** from the command bar.
 
     ![Screenshot of the Delete resource group button.](media/image71.png 'Delete resource group button')
 
-3.  In the confirmation dialog that appears, enter the name of the resource group and select **Delete**.
+3. In the confirmation dialog that appears, enter the name of the resource group and select **Delete**.
 
-4.  Wait for the confirmation that the Resource Group has been successfully deleted. If you don't wait, and the delete fails for some reason, you may be left with resources running that were not expected. You can monitor using the Notifications dialog, which is accessible from the Alarm icon.
+4. Wait for the confirmation that the Resource Group has been successfully deleted. If you don't wait, and the delete fails for some reason, you may be left with resources running that were not expected. You can monitor using the Notifications dialog, which is accessible from the Alarm icon.
 
     ![The Notifications dialog box has a message stating that the resource group is being deleted.](media/image72.png 'Notifications dialog box')
 
-5.  When the Notification indicates success, the cleanup is complete.
+5. When the Notification indicates success, the cleanup is complete.
 
     ![The Notifications dialog box has a message stating that the resource group has been deleted.](media/image73.png 'Notifications dialog box')
 

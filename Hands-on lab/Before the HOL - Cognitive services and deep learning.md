@@ -27,25 +27,25 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 <!-- TOC -->
 
 - [Cognitive services and deep learning before the hands-on lab setup guide](#cognitive-services-and-deep-learning-before-the-hands-on-lab-setup-guide)
-    - [Requirements](#requirements)
-    - [Before the hands-on lab](#before-the-hands-on-lab)
+  - [Requirements](#requirements)
+  - [Before the hands-on lab](#before-the-hands-on-lab)
 
 <!-- /TOC -->
 
-# Cognitive services and deep learning before the hands-on lab setup guide 
+# Cognitive services and deep learning before the hands-on lab setup guide
 
 ## Requirements
 
-1.  Microsoft Azure subscription must be pay-as-you-go or MSDN
+1. Microsoft Azure subscription must be pay-as-you-go or MSDN
 
     a. Trial subscriptions will not work. You will run into issues with Azure resource quota limits.
 
     b. Subscriptions with access limited to a single resource group will not work. You will need the ability to deploy multiple resource groups.
-    
+
 2. Azure Notebooks account
 
-    a. In your browser, navigate to https://notebooks.azure.com/.
-    
+    a. In your browser, navigate to <https://notebooks.azure.com/.>
+
     b. Select Sign In from the top, right corner and sign in using your Microsoft Account credentials. After a successful login, you will have implicitly created the account and are ready to continue.
 
 ## Before the hands-on lab
