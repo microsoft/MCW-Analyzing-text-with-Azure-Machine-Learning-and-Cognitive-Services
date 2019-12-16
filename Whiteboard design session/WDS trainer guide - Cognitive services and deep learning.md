@@ -222,7 +222,7 @@ As a first step towards their bigger goals, Contoso would like to build a proof 
 
 ### Customer needs 
 
-1.  We receive a lot of useful information in the free text responses, but because they can be long, agents sometimes skip over them and miss vital details or spend too much time looking for a particular detail when returning to a claim. We aren't certain this can be automated, but we would like to have a standardized process that identifies the key entities in a claim and pulls them out into a separate list that agents can more easily review, and then click to view the entity in the context of the claim.
+1.  We receive a lot of useful information in the free text responses, but because they can be long, agents sometimes skip over them and miss vital details or spend too much time looking for a particular detail when returning to a claim. We aren't certain this can be automated, but we would like to have a standardized process that identifies the key entities in a claim and pulls them out into a separate list that agents can more easily review, and then select to view the entity in the context of the claim.
 
 2.  We need a solution that can "look" at a photo and give us a description of the photos contents and tag the photos with keywords, so agents can more easily find and refer to the photo later.
 
