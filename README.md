@@ -68,4 +68,4 @@ We welcome feedback and comments from Microsoft SMEs & learning partners who del
 
 If you are planning to present a workshop, *review and test the materials early*! We recommend at least two weeks prior.
 
-### Please allow 5 - 10 business days for review and resolution of issues.
+### Please allow 5 - 10 business days for review and resolution of issues
