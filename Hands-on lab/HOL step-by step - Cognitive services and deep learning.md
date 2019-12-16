@@ -97,7 +97,6 @@ In this exercise, you will set up your Azure Notebooks Project.
 2. Start your Notebook server on `Free Compute` by selecting the **Play** icon in the toolbar as shown:
 
     ![The image shows the Start Notebook Server Icon and highlights the area to select.](images/az_nb_setup/02.png 'Start Notebook Server Icon')
-
 3. Navigate to the `> MCW-Cognitive-services-and-deep-learning > Hands-on lab > notebooks` folder where you will find all your lab files.
 
     ![Jupyter notebook interface showing the folder where the lab files are present.](images/az_nb_setup/03.png 'Jupyter Notebooks Folder')
