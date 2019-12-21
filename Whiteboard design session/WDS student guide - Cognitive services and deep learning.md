@@ -170,9 +170,9 @@ _Identifying free-text sentiment_
 
 _Summarizing claim text_
 
-1. The team at Contoso has heard about a Python library called gensim that has a summarize function. Given an input of text, it can extract a summary of the desired length. Contoso would like their PoC to implement its summarization functionality initially using gensim. However, the process they follow to deploy the summarization capability should also enable them to replace the use of gensim with another library or with the use of their own custom trained models if desired down the road. Describe how Contoso should deploy the summarization service to meet these requirements?
+1. The team at Contoso has heard about a Python library called Gensim that has a summarize function. Given an input of text, it can extract a summary of the desired length. Contoso would like their PoC to implement its summarization functionality initially using Gensim. However, the process they follow to deploy the summarization capability should also enable them to replace the use of Gensim with another library or with the use of their own custom trained models if desired down the road. Describe how Contoso should deploy the summarization service to meet these requirements?
 
-2. Can they deploy a predictive web service to Azure Machine Learning service that does not utilize an external model (as in the case with gensim) or would support an unsupervised approach?
+2. Can they deploy a predictive web service to Azure Machine Learning service that does not utilize an external model (as in the case with Gensim) or would support an unsupervised approach?
 
 _Captions, tags and "reading" images_
 
