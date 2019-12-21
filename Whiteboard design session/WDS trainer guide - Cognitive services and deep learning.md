@@ -296,9 +296,9 @@ _Identifying free-text sentiment_
 
 _Summarizing claim text_
 
-1. The team at Contoso has heard about a Python library called gensim that has a summarize function. Given an input of text, it can extract a summary of the desired length. Contoso would like their PoC to implement its summarization functionality initially using gensim. However, the process they follow to deploy the summarization capability should also enable them to replace the use of gensim with another library or with the use of their own custom trained models if desired down the road. Describe how Contoso should deploy the summarization service to meet these requirements?
+1. The team at Contoso has heard about a Python library called Gensim that has a summarize function. Given an input of text, it can extract a summary of the desired length. Contoso would like their PoC to implement its summarization functionality initially using Gensim. However, the process they follow to deploy the summarization capability should also enable them to replace the use of Gensim with another library or with the use of their own custom trained models if desired down the road. Describe how Contoso should deploy the summarization service to meet these requirements?
 
-2. Can they deploy a predictive web service to Azure Machine Learning service that does not utilize an external model (as in the case with gensim) or would support an unsupervised approach?
+2. Can they deploy a predictive web service to Azure Machine Learning service that does not utilize an external model (as in the case with Gensim) or would support an unsupervised approach?
 
 _Captions, tags and "reading" images_
 
@@ -530,9 +530,9 @@ _Identifying free-text sentiment_
 
 _Summarizing claim text_
 
-1. The team at Contoso has heard about a Python library called gensim that has a summarize function. Given an input of text, it is capable of extracting a summary of the desired length. Contoso would like their PoC to implement its summarization functionality initially using gensim. However, the process they follow to deploy the summarization capability should also enable them to replace the use of gensim with another library or with the use of their own custom trained models if desired down the road. Describe how Contoso should deploy the summarization service so that these requirements are met? Can they deploy a predictive web service to Azure Machine Learning service that does not utilize an external model (as in the case with gensim) or would support an unsupervised approach (such as clustering)?
+1. The team at Contoso has heard about a Python library called Gensim that has a summarize function. Given an input of text, it is capable of extracting a summary of the desired length. Contoso would like their PoC to implement its summarization functionality initially using Gensim. However, the process they follow to deploy the summarization capability should also enable them to replace the use of Gensim with another library or with the use of their own custom trained models if desired down the road. Describe how Contoso should deploy the summarization service so that these requirements are met? Can they deploy a predictive web service to Azure Machine Learning service that does not utilize an external model (as in the case with Gensim) or would support an unsupervised approach (such as clustering)?
 
-    Azure Machine Learning service can be used to deploy web services that do not have a model. While the API used to perform the deployment requires a model argument, the argument can refer to any file, and it does not require the use of the file during the web service runtime. Therefore, Contoso could deploy a web service that uses gensim to perform summarization.
+    Azure Machine Learning service can be used to deploy web services that do not have a model. While the API used to perform the deployment requires a model argument, the argument can refer to any file, and it does not require the use of the file during the web service runtime. Therefore, Contoso could deploy a web service that uses Gensim to perform summarization.
 
 _Captions, tags and "reading" images_
 
