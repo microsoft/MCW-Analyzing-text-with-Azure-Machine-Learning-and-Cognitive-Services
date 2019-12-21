@@ -29,13 +29,11 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 - [Cognitive services and deep learning whiteboard design session student guide](#cognitive-services-and-deep-learning-whiteboard-design-session-student-guide)
   - [Abstract and learning objectives](#abstract-and-learning-objectives)
   - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
-    - [Outcome](#outcome)
     - [Customer situation](#customer-situation)
     - [Customer needs](#customer-needs)
     - [Customer objections](#customer-objections)
     - [Infographic for common scenarios](#infographic-for-common-scenarios)
   - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution)
-    - [Outcome](#outcome-1)
   - [Step 3: Present the solution](#step-3-present-the-solution)
   - [Wrap-up](#wrap-up)
   - [Additional references](#additional-references)
@@ -52,7 +50,7 @@ At the end of this whiteboard design session, you will be better able to design 
 
 ## Step 1: Review the customer case study
 
-### Outcome
+**Outcome**
 
 Analyze your customer's needs.
 
@@ -120,7 +118,7 @@ As a first step towards their bigger goals, Contoso would like to build a proof 
 
 ## Step 2: Design a proof of concept solution
 
-### Outcome
+**Outcome**
 
 Design a solution and prepare to present the solution to the target customer audience in a 15-minute chalk-talk format.
 
