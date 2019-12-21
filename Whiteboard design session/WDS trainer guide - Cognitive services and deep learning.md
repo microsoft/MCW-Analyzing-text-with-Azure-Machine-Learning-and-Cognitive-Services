@@ -468,7 +468,7 @@ _Classifying claim text data_
 
 5. For this scenario, Contoso has indicated an interest in using TensorFlow, but is concerned about the complexity of jumping right in. They are wondering if Keras would provide an easier framework they could use as a stepping stone to the full-blown TensorFlow, which would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready.
 
-    TensorFlow is a robust framework for performing machine learning, including building neural networks. The Keras library builds upon Tensorflow and provides an easy-to-use and understand high-level API for implementing deep neural networks, complete with tutorials and examples. Models built with Keras are TensorFlow models, so if they choose to move fully towards the lower level TensorFlow API's, then they could do so without having to re-create the models.
+    TensorFlow is a robust framework for performing machine learning, including building neural networks. The Keras library builds upon TensorFlow and provides an easy-to-use and understand high-level API for implementing deep neural networks, complete with tutorials and examples. Models built with Keras are TensorFlow models, so if they choose to move fully towards the lower level TensorFlow API's, then they could do so without having to re-create the models.
 
 6. What would a LSTM recurrent neural network that performs this classification look like? Show a snippet of a single layer of an unrolled LSTM network, and the binary classification output at the last step of the network.
 
@@ -636,7 +636,7 @@ _Enabling search_
 
 3. We expect some part of our solution would require deep learning; do you have any prescriptive guidance on how we might choose between investing to learn and use TensorFlow or the Microsoft Cognitive Toolkit (CNTK)?
 
-    Both TensorFlow and the Microsoft Cognitive Toolkit solve similar problems and have been used successfully by many companies for deep learning. At present, it appears that TensorFlow has a much larger community base and interest level, which can be measured simply by the number of stars it has in its GitHub project (which is an order of magnitude larger than that of the Microsoft Cognitive Toolkit). The size of the community means that is likely you will more easily find help online for issues with TensforFlow versus the Microsoft Cognitive Toolkit, which is why it may be a good reason to start with TensorFlow.
+    Both TensorFlow and the Microsoft Cognitive Toolkit solve similar problems and have been used successfully by many companies for deep learning. At present, it appears that TensorFlow has a much larger community base and interest level, which can be measured simply by the number of stars it has in its GitHub project (which is an order of magnitude larger than that of the Microsoft Cognitive Toolkit). The size of the community means that is likely you will more easily find help online for issues with TensorFlow versus the Microsoft Cognitive Toolkit, which is why it may be a good reason to start with TensorFlow.
 
 ## Customer quote (to be read back to the attendees at the end)
 
