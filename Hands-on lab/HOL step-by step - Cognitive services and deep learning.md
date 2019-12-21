@@ -68,9 +68,9 @@ The high-level architecture of the solution is illustrated in the diagram. The l
 
 1. Microsoft Azure subscription must be pay-as-you-go or MSDN
 
-    a. Trial subscriptions will not work. You will run into issues with Azure resource quota limits.
+    - Trial subscriptions will not work. You will run into issues with Azure resource quota limits.
 
-    b. Subscriptions with access limited to a single resource group will not work. You will need the ability to deploy multiple resource groups.
+    - Subscriptions with access limited to a single resource group will not work. You will need the ability to deploy multiple resource groups.
 
 ## Exercise 1: Setup Azure Notebooks Project
 
@@ -109,7 +109,7 @@ In this exercise, you will create and deploy a web service that uses a pre-train
 
 ### Task 1: Install libraries
 
-The notebooks you will run depends on certain Python libraries like keras, and tensorflow. The following steps walk you through adding these dependencies.
+The notebooks you will run depends on certain Python libraries like Keras, and TensorFlow. The following steps walk you through adding these dependencies.
 
 1. Within the `notebooks` folder, select the notebook called `00 init`. This will open the notebook so you can read and execute the code it contains.
 
@@ -139,7 +139,7 @@ In this exercise, you will use Keras to construct and train a DNN called the Lon
 
 2. Read the instructions at the top of the notebook, and execute the cells as instructed.
 
-   >**Note**: Pay attention to the top of the notebook and check the version of tensorflow and keras libraries. Tensorflow version should be == 1.13.1 and Keras version should be == 2.3.1.
+   >**Note**: Pay attention to the top of the notebook and check the version of TensorFlow and Keras libraries. TensorFlow version should be == 1.13.1 and Keras version should be == 2.3.1.
 
 ### Task 2: Deploy the Keras model
 
@@ -164,15 +164,15 @@ In this exercise, you will perform the final integration with the Computer Visio
 
 4. On the **Create** blade, provide the following:
 
-    a. **Name:** Provide a unique name for this instance.
+    - **Name:** Provide a unique name for this instance.
 
-    b. **Subscription:** Select your Azure subscription.
+    - **Subscription:** Select your Azure subscription.
 
-    c. **Location**: Select a location nearest your other deployed services.
+    - **Location**: Select a location nearest your other deployed services.
 
-    d. **Pricing tier**: Select S1.
+    - **Pricing tier**: Select S1.
 
-    e. **Resource group**: Select the existing mcwailab resource group.
+    - **Resource group**: Select the existing mcwailab resource group.
 
     ![The Create blade fields display the previously defined settings.](media/image60.png 'Create blade')
 
