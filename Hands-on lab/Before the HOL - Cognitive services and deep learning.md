@@ -44,7 +44,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 2. Azure Notebooks account
 
- - In your browser, navigate to <https://notebooks.azure.com/.>.
+ - In your browser, navigate to <https://notebooks.azure.com>.
 
  - Select Sign In from the top, right corner and sign in using your Microsoft Account credentials. After a successful login, you will have implicitly created the account and are ready to continue.
 
