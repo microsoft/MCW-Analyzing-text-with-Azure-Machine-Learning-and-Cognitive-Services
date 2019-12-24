@@ -66,7 +66,7 @@ In this workshop, you will help Contoso Ltd. build a proof of concept that shows
 
 The high-level architecture of the solution is illustrated in the diagram. The lab is performed within the context of a notebook running within Azure Notebooks. Various notebooks are built to test the integration with the Cognitive Services listed, to train custom ML services, and to integrate the results in a simple user interface that shows the result of processing the claim with all of the AI services involved.
 
-![The High-level architectural solution begins with a Claim, which us submitted for processing using a notebook in Azure Databricks. This notebook coordinates the calls to Computer Vision, Text Analytics, and Containerized Services, which includes a Classification Service and a Summary Service that both processes claim text.](media/image2.jpg 'High-level architectural solution')
+![The High-level architectural solution begins with a Claim, which us submitted for processing using a notebook in Azure Databricks. This notebook coordinates the calls to Computer Vision, Text Analytics, and Containerized Services, which includes a Classification Service and a Summary Service that both processes claim text.](Hands-on%20lab/media/image2.jpg 'High-level architectural solution')
 
 ## Requirements
 
@@ -92,7 +92,7 @@ In this exercise, you will set up your Azure Notebooks Project.
 
 4. In the Upload GitHub Repository dialog, for the GitHub repository provide **`https://github.com/microsoft/MCW-Cognitive-services-and-deep-learning.git`** and select **Import**. Allow the import a few moments to complete. The dialog will dismiss once the import has completed.
 
-    ![In the dialog the GitHub URL to upload the project repository is shown.](/Hands-on%20lab/images/az_nb_setup/01.png 'Upload GitHub Repository dialog box')
+    ![In the dialog the GitHub URL to upload the project repository is shown.](Hands-on%20lab/images/az_nb_setup/01.png 'Upload GitHub Repository dialog box')
 
 ### Task 2: Start the Notebook Server
 
@@ -100,10 +100,10 @@ In this exercise, you will set up your Azure Notebooks Project.
 
 2. Start your Notebook server on `Free Compute` by selecting the **Play** icon in the toolbar as shown:
 
-    ![The image shows the Start Notebook Server Icon and highlights the area to select.](/Hands-on%20lab/images/az_nb_setup/02.png 'Start Notebook Server Icon')
+    ![The image shows the Start Notebook Server Icon and highlights the area to select.](Hands-on%20lab/images/az_nb_setup/02.png 'Start Notebook Server Icon')
 3. Navigate to the `> MCW-Cognitive-services-and-deep-learning > Hands-on lab > notebooks` folder where you will find all your lab files.
 
-    ![Jupyter notebook interface showing the folder where the lab files are present.](/Hands-on%20lab/images/az_nb_setup/03.png 'Jupyter Notebooks Folder')
+    ![Jupyter notebook interface showing the folder where the lab files are present.](Hands-on%20lab/images/az_nb_setup/03.png 'Jupyter Notebooks Folder')
 
 ## Exercise 2: Create and Deploy an Unsupervised Model
 
@@ -164,7 +164,7 @@ In this exercise, you will perform the final integration with the Computer Visio
 2. Select **Create a resource**.
 
 3. Select **AI + Machine Learning** and then **Computer Vision**.\
-    ![In the New blade, the AI + Machine Learning option is selected.](/Hands-on%20lab/media/image19.png 'New blade')
+    ![In the New blade, the AI + Machine Learning option is selected.](Hands-on%20lab/media/image19.png 'New blade')
 
 4. On the **Create** blade, provide the following:
 
@@ -178,17 +178,17 @@ In this exercise, you will perform the final integration with the Computer Visio
 
     - **Resource group**: Select the existing mcwailab resource group.
 
-    ![The Create blade fields display the previously defined settings.](/Hands-on%20lab/media/image60.png 'Create blade')
+    ![The Create blade fields display the previously defined settings.](Hands-on%20lab/media/image60.png 'Create blade')
 
 5. Select **Create**.
 
 6. When the notification appears that the deployment succeeded, select **Go to resource**.
 
-    ![A Deployment succeeded notification displays.](/Hands-on%20lab/media/image61.png 'Notification')
+    ![A Deployment succeeded notification displays.](Hands-on%20lab/media/image61.png 'Notification')
 
 7. Select **Quick start** and then copy the value of **Key 1** and **Endpoint** into notepad or something similar as you will need this value later in the lab.
 
-    ![In the Cognitive Services blade, under Resource Management, Quick start is selected. ](/Hands-on%20lab/media/image62.png 'Cognitive Services blade')
+    ![In the Cognitive Services blade, under Resource Management, Quick start is selected. ](Hands-on%20lab/media/image62.png 'Cognitive Services blade')
 
 ### Task 2: Deploy the Text Analytics API
 
@@ -198,7 +198,7 @@ In this exercise, you will perform the final integration with the Computer Visio
 
 3. Select **AI + Machine Learning** and then **Text Analytics**.
 
-    ![In the New blade, both AI + Cognitive Services and Text Analytics API are selected.](/Hands-on%20lab/media/image64.png 'New blade')
+    ![In the New blade, both AI + Cognitive Services and Text Analytics API are selected.](Hands-on%20lab/media/image64.png 'New blade')
 
 4. On the **Create** blade, provide the following:
 
@@ -212,17 +212,17 @@ In this exercise, you will perform the final integration with the Computer Visio
 
     e. **Resource group**: Select the existing mcw-ai-lab resource group.
 
-    ![The Create blade fields are set to the previously defined settings.](/Hands-on%20lab/media/image65.png 'Create blade')
+    ![The Create blade fields are set to the previously defined settings.](Hands-on%20lab/media/image65.png 'Create blade')
 
 5. Select **Create**.
 
 6. When the notification appears that the deployment succeeded, select **Go to resource**.
 
-    ![A Deployment succeeded notification displays.](/Hands-on%20lab/media/image66.png 'Notification')
+    ![A Deployment succeeded notification displays.](Hands-on%20lab/media/image66.png 'Notification')
 
 7. Select **Quick start** and then copy the value of **Key 1** and **Endpoint** into notepad or something similar as you will need this value later in the lab.
 
-    ![In the Cognitive Services blade, under Resource Management, Quick start is selected. ](/Hands-on%20lab/media/image67.png 'Cognitive Services blade')
+    ![In the Cognitive Services blade, under Resource Management, Quick start is selected. ](Hands-on%20lab/media/image67.png 'Cognitive Services blade')
 
 ### Task 3: Completing the solution
 
@@ -242,16 +242,16 @@ To avoid unexpected charges, it is recommended that you clean up all of your lab
 
 2. Select **Delete resource group** from the command bar.
 
-    ![Screenshot of the Delete resource group button.](/Hands-on%20lab/media/image71.png 'Delete resource group button')
+    ![Screenshot of the Delete resource group button.](Hands-on%20lab/media/image71.png 'Delete resource group button')
 
 3. In the confirmation dialog that appears, enter the name of the resource group and select **Delete**.
 
 4. Wait for the confirmation that the Resource Group has been successfully deleted. If you don't wait, and the delete fails for some reason, you may be left with resources running that were not expected. You can monitor using the Notifications dialog, which is accessible from the Alarm icon.
 
-    ![The Notifications dialog box has a message stating that the resource group is being deleted.](/Hands-on%20lab/media/image72.png 'Notifications dialog box')
+    ![The Notifications dialog box has a message stating that the resource group is being deleted.](Hands-on%20lab/media/image72.png 'Notifications dialog box')
 
 5. When the Notification indicates success, the cleanup is complete.
 
-    ![The Notifications dialog box has a message stating that the resource group has been deleted.](/Hands-on%20lab/media/image73.png 'Notifications dialog box')
+    ![The Notifications dialog box has a message stating that the resource group has been deleted.](Hands-on%20lab/media/image73.png 'Notifications dialog box')
 
 You should follow all steps provided _after_ attending the Hands-on lab.
