@@ -24,6 +24,8 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 **Contents**
 
+<!-- TOC -->
+
 - [Cognitive services and deep learning hands-on lab step-by-step](#cognitive-services-and-deep-learning-hands-on-lab-step-by-step)
   - [Abstract and learning objectives](#abstract-and-learning-objectives)
   - [Overview](#overview)
@@ -45,6 +47,8 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 3: Completing the solution](#task-3-completing-the-solution)
   - [After the hands-on lab](#after-the-hands-on-lab)
     - [Task 1: Clean up lab resources](#task-1-clean-up-lab-resources)
+
+<!-- /TOC -->
 
 # Cognitive services and deep learning hands-on lab step-by-step
 
