@@ -472,7 +472,7 @@ _Classifying claim text data_
 
 6. What would a LSTM recurrent neural network that performs this classification look like? Show a snippet of a single layer of an unrolled LSTM network, and the binary classification output at the last step of the network.
 
-    ![The figure shows a snippet of a single layer of an unrolled LSTM network, and the binary classification output layer at the last step of the network.](/Whiteboard%20design%20session/images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/lstm.png "Unrolled LSTM network")
+    ![The figure shows a snippet of a single layer of an unrolled LSTM network, and the binary classification output layer at the last step of the network.](./images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/lstm.png "Unrolled LSTM network")
 
 7. Assuming they will be using a LSTM recurrent neural network to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
 
