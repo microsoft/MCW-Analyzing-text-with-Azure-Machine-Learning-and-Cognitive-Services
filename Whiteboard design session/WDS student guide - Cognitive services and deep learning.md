@@ -112,9 +112,9 @@ As a first step towards their bigger goals, Contoso would like to build a proof 
 
 ### Infographic for common scenarios
 
-![In the Training a classification model with text diagram, Document labels points to Supervised ML or DL Algorithm, which points to Classification Model. Documents points to Text Normalization, which points to Feature Extraction, which points to Supervised ML or DL Algorithm. Vectors points to a table of words and percentages.](/Whiteboard%20design%20session/images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image2.png "Training a classification model with text diagram")
+![In the Training a classification model with text diagram, Document labels points to Supervised ML or DL Algorithm, which points to Classification Model. Documents points to Text Normalization, which points to Feature Extraction, which points to Supervised ML or DL Algorithm. Vectors points to a table of words and percentages.](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image2.png "Training a classification model with text diagram")
 
-![The Predicting a classification from text diagram has Documents, which points to Text Normalization, which points to Feature Extraction, which points to Classification Model, which points to Document Labels. Vectors points to a table of words and percentages.](/Whiteboard%20design%20session/images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image3.png "Predicting a classification from text diagram")
+![The Predicting a classification from text diagram has Documents, which points to Text Normalization, which points to Feature Extraction, which points to Classification Model, which points to Document Labels. Vectors points to a table of words and percentages.](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image3.png "Predicting a classification from text diagram")
 
 ## Step 2: Design a proof of concept solution
 

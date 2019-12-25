@@ -238,9 +238,9 @@ As a first step towards their bigger goals, Contoso would like to build a proof 
 
 ### Infographic for common scenarios
 
-![In the Training a classification model with text diagram, Document labels points to Supervised ML or DL Algorithm, which points to Classification Model. Documents points to Text Normalization, which points to Feature Extraction, which points to Supervised ML or DL Algorithm. Vectors points to a table of words and percentages.](/Whiteboard%20design%20session/images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image2.png "Training a classification model with text diagram")
+![In the Training a classification model with text diagram, Document labels points to Supervised ML or DL Algorithm, which points to Classification Model. Documents points to Text Normalization, which points to Feature Extraction, which points to Supervised ML or DL Algorithm. Vectors points to a table of words and percentages.](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image2.png "Training a classification model with text diagram")
 
-![The Predicting a classification from text diagram has Documents, which points to Text Normalization, which points to Feature Extraction, which points to Classification Model, which points to Document Labels. Vectors points to a table of words and percentages.](/Whiteboard%20design%20session/images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image3.png "Predicting a classification from text diagram")
+![The Predicting a classification from text diagram has Documents, which points to Text Normalization, which points to Feature Extraction, which points to Classification Model, which points to Document Labels. Vectors points to a table of words and percentages.](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image3.png "Predicting a classification from text diagram")
 
 ## Step 2: Design a proof of concept solution
 
@@ -432,11 +432,11 @@ _High-level architecture_
 
 After speaking with its team at Microsoft, Contoso decided to design their PoC solution in Azure. They would continue to use the web app and SQL database that they already have running in Azure to handle claim submissions. They could build a claim enrichment pipeline by invoking a sequence of Azure Functions, where each of the coordinates calls to various AI-powered services.
 
- ![The High-level architectural solution begins with a Claim, which points to Jupyter notebook. Jupyter then points to Computer Vision, Text Analytics, and Containerized Services, which includes a Classification Service and a Summary Service that both processes claim text.](/Whiteboard%20design%20session/images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image4.jpg "High-level architectural solution")
+ ![The High-level architectural solution begins with a Claim, which points to Jupyter notebook. Jupyter then points to Computer Vision, Text Analytics, and Containerized Services, which includes a Classification Service and a Summary Service that both processes claim text.](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image4.jpg "High-level architectural solution")
 
 The claim image processing functions would invoke the Computer Vision Cognitive Service for automatically creating the caption and the tags from any supplied claim images. A mixture of pre-built AI, in the form of Cognitive Services and custom AI in the form of Azure ML services, would be used to process the claim text. The models used for processing the claims text would be trained in Azure Databricks notebooks. These models could also then be directly deployed from Azure Databricks using the Azure Machine Learning Service Python SDK. Azure Functions would be used to coordinate the calls to the classifications and summary AI services, which would run as containerized web services in Azure Container Service, while the Text Analytics API could be invoked directly to provide a sentiment score for each claim text.
 
- ![In the Claim image processing diagram, Function (claim text processing) points to Sentiment, classification and summary, Text Analytics, and Containerized services comprised of Classification Service and Summary Service.](/Whiteboard%20design%20session/images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image5.png "Claim image processing diagram")
+ ![In the Claim image processing diagram, Function (claim text processing) points to Sentiment, classification and summary, Text Analytics, and Containerized services comprised of Classification Service and Summary Service.](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image5.png "Claim image processing diagram")
 
 Once all claim processing has completed, one final Azure Function could be used to insert the complete claim document into Azure Search. The inserted document would contain the claim number as a field so that it could always be tied back to the record store in Azure SQL Database.
 
@@ -444,7 +444,7 @@ _Classifying claim text data_
 
 1. What is the general pipeline for approaching the training of text analytic models such as this? What are the general steps you need to take to prepare the text data for performing tasks like classification?
 
-    ![In the high-level steps for training a classification model with text diagram, Document labels points to Supervised ML or DL Algorithm, which points to Classification Model. Documents points to Text Normalization, which points to Feature Extraction, which points to Supervised ML or DL Algorithm.](/Whiteboard%20design%20session/images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image6.png "High-level steps for training a classification model with text")
+    ![In the high-level steps for training a classification model with text diagram, Document labels points to Supervised ML or DL Algorithm, which points to Classification Model. Documents points to Text Normalization, which points to Feature Extraction, which points to Supervised ML or DL Algorithm.](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image6.png "High-level steps for training a classification model with text")
 
     As the above diagram illustrates, the general pipeline begins by pre-processing or normalizing the text. This step typically includes tasks such as breaking the text into sentence and word tokens, standardizing the spelling of words, and removing overly common words (called stop words). The output of this phase is typically a multi-dimensional array consisting of an array of documents, each having an array of sentences, with each sentence having its own array of words. The next step is feature extraction, which creates a numeric representation of the textual documents. During feature extraction, a "vocabulary" of unique words is identified, and each word becomes a column in the output. Each row represents a document. The value in each cell is typically a measure of the relative importance of that word in the document, where if a word from the vocabulary does not appear, then that cell has a zero value in that column. This approach enables machine learning algorithms, which operate against arrays of numbers, to also operate against text. Deep learning algorithms operate on tensors, which are also vectors (or arrays of numbers), so this approach is also valid for preparing text for use with a deep learning algorithm.
 
@@ -472,7 +472,7 @@ _Classifying claim text data_
 
 6. What would a LSTM recurrent neural network that performs this classification look like? Show a snippet of a single layer of an unrolled LSTM network, and the binary classification output at the last step of the network.
 
-    ![The figure shows a snippet of a single layer of an unrolled LSTM network, and the binary classification output layer at the last step of the network.](/Whiteboard%20design%20session/images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/lstm.png "Unrolled LSTM network")
+    ![The figure shows a snippet of a single layer of an unrolled LSTM network, and the binary classification output layer at the last step of the network.](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/lstm.png "Unrolled LSTM network")
 
 7. Assuming they will be using a LSTM recurrent neural network to train the classifier using Keras, pseudo code the code you would write to construct the network you just illustrated.
 
