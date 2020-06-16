@@ -9,7 +9,7 @@ Hands-on lab step-by-step
 </div>
 
 <div class="MCWHeader3">
-December 2019
+June 2020
 </div>
 
 Information in this document, including URL and other Internet Web site references, is subject to change without notice. Unless otherwise noted, the example companies, organizations, products, domain names, e-mail addresses, logos, people, places, and events depicted herein are fictitious, and no association with any real company, organization, product, domain name, e-mail address, logo, person, place or event is intended or should be inferred. Complying with all applicable copyright laws is the responsibility of the user. Without limiting the rights under copyright, no part of this document may be reproduced, stored in or introduced into a retrieval system, or transmitted in any form or by any means (electronic, mechanical, photocopying, recording, or otherwise), or for any purpose, without the express written permission of Microsoft Corporation.
@@ -72,35 +72,23 @@ The high-level architecture of the solution is illustrated in the diagram. The l
 
     - Subscriptions with access limited to a single resource group will not work. You will need the ability to deploy multiple resource groups.
 
-## Exercise 1: Setup Azure Notebooks Project
+## Exercise 1: Locate the Lab Notebooks
 
-Duration: 20 minutes
+Duration: 5 minutes
 
-In this exercise, you will set up your Azure Notebooks Project.
+In this exercise, you will navigate to the folder where all the notebooks for this lab are available.
 
-### Task 1: Upload project files
+### Task 1: Open the notebooks folder
 
-1. Log in to [Azure Notebooks](https://notebooks.azure.com/).
+1. From within your Azure Machine Learning workspace navigate to the `Compute` section.
 
-2. Navigate to **My Projects** page.
+2. Select the Compute Instance: **csdl-compute** and then select **Jupyter** open icon, to open Jupyter Notebooks interface.
 
-3. Select **Upload GitHub Repo**.
+   ![The Compute section of the Azure Machine Learning workspace showing the Jupyter link selected for the compute instance csdl-compute.](images/06.png 'Open Jupyter Notebooks')
 
-4. In the Upload GitHub Repository dialog, for the GitHub repository provide **`https://github.com/microsoft/MCW-Cognitive-services-and-deep-learning.git`** and select **Import**. Allow the import a few moments to complete. The dialog will dismiss once the import has completed.
+3. Navigate to the `> mcw-csdl > MCW-Cognitive-services-and-deep-learning > Hands-on lab > notebooks` folder where you will find all your lab files.
 
-    ![In the dialog the GitHub URL to upload the project repository is shown.](images/az_nb_setup/01.png 'Upload GitHub Repository dialog box')
-
-### Task 2: Start the Notebook Server
-
-1. Navigate to your project: `MCW-Cognitive-services-and-deep-learning`.
-
-2. Start your Notebook server on `Free Compute` by selecting the **Play** icon in the toolbar as shown:
-
-    ![The image shows the Start Notebook Server Icon and highlights the area to select.](images/az_nb_setup/02.png 'Start Notebook Server Icon')
-
-3. Navigate to the `> MCW-Cognitive-services-and-deep-learning > Hands-on lab > notebooks` folder where you will find all your lab files.
-
-    ![Jupyter notebook interface showing the folder where the lab files are present.](images/az_nb_setup/03.png 'Jupyter Notebooks Folder')
+    ![Jupyter notebook interface showing the folder where the lab files are present.](images/09.png 'Jupyter Notebooks Folder')
 
 ## Exercise 2: Create and Deploy an Unsupervised Model
 
