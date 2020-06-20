@@ -128,7 +128,7 @@ In this exercise, you will use Keras to construct and train a DNN called the Lon
 
 2. Read the instructions at the top of the notebook, and execute the cells as instructed.
 
-   >**Note**: Pay attention to the top of the notebook and check the version of TensorFlow and Keras libraries. TensorFlow version should be == 1.13.1 and Keras version should be == 2.3.1.
+   >**Note**: Pay attention to the top of the notebook and check the version of TensorFlow and Keras libraries. TensorFlow version should be == 2.0.0 and Keras version should be == 2.3.1.
 
 ### Task 2: Deploy the Keras model
 
@@ -171,7 +171,7 @@ In this exercise, you will perform the final integration with the Computer Visio
 
     ![A Deployment succeeded notification displays.](media/image61.png 'Notification')
 
-7. Select **Quick start** and then copy the value of **Key 1** and **Endpoint** into notepad or something similar as you will need this value later in the lab.
+7. Select **Keys and Endpoint** and then copy the value of **Key 1** and **ENDPOINT** into notepad or something similar as you will need this value later in the lab.
 
     ![In the Cognitive Services blade, under Resource Management, Quick start is selected. ](media/image62.png 'Cognitive Services blade')
 
@@ -205,7 +205,7 @@ In this exercise, you will perform the final integration with the Computer Visio
 
     ![A Deployment succeeded notification displays.](media/image66.png 'Notification')
 
-7. Select **Quick start** and then copy the value of **Key 1** and **Endpoint** into notepad or something similar as you will need this value later in the lab.
+7. Select **Keys and Endpoint** and then copy the value of **Key 1** and **ENDPOINT** into notepad or something similar as you will need this value later in the lab.
 
     ![In the Cognitive Services blade, under Resource Management, Quick start is selected. ](media/image67.png 'Cognitive Services blade')
 
