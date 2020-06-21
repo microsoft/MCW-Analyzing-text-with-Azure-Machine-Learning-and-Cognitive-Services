@@ -49,9 +49,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Abstract and learning objectives
 
-In this hands-on lab, you will implement a solution which combines both pre-built artificial intelligence (AI) in the form of various Cognitive Services, with custom AI in the form of services built and deployed with Azure Machine Learning service. You will learn to create intelligent solutions atop unstructured text data by designing and implementing a text analytics pipeline. You will discover how to build a binary classifier using a simple neural network that can be used to classify the textual data, as well as how to deploy multiple kinds of predictive services using Azure Machine Learning and learn to integrate with the Computer Vision API and the Text Analytics API from Cognitive Services.
+In this hands-on lab, you will implement a solution which combines both pre-built artificial intelligence (AI) in the form of various Cognitive Services, with custom AI in the form of services built and deployed with Azure Machine Learning service. In the lab you will be working with unstructured text and image data and learning how to build analytics pipelines for various problems such as text summarization, text classification, image detection, OCR, and sentiment analysis. You will learn how to build and train a deep neural net for text classification.  You will also learn how to deploy multiple kinds of predictive services using Azure Machine Learning and learn to integrate with the Computer Vision API and the Text Analytics API from Cognitive Services.
 
-At the end of this hands-on lab, you will be better able to implement solutions leveraging Azure Machine Learning service and Cognitive Services.
+At the end of this hands-on lab, you will be better able to present solutions leveraging Azure Machine Learning service, Azure Machine Learning compute instance and Cognitive Services.
 
 ## Overview
 
@@ -59,7 +59,7 @@ In this workshop, you will help Contoso Ltd. build a proof of concept that shows
 
 ## Solution architecture
 
-The high-level architecture of the solution is illustrated in the diagram. The lab is performed within the context of a notebook running within Azure Notebooks. Various notebooks are built to test the integration with the Cognitive Services listed, to train custom ML services, and to integrate the results in a simple user interface that shows the result of processing the claim with all of the AI services involved.
+The high-level architecture of the solution is illustrated in the diagram. The lab is performed within the context of a notebook running within Azure Machine Learning compute instance. Various notebooks are built to test the integration with the Cognitive Services listed, to train custom ML services, and to integrate the results in a simple user interface that shows the result of processing the claim with all of the AI services involved.
 
 ![The High-level architectural solution begins with a Claim, which us submitted for processing using a notebook in Azure Databricks. This notebook coordinates the calls to Computer Vision, Text Analytics, and Containerized Services, which includes a Classification Service and a Summary Service that both processes claim text.](media/image2.jpg 'High-level architectural solution')
 
@@ -210,7 +210,7 @@ In this exercise, you will perform the final integration with the Computer Visio
 
 ### Task 3: Completing the solution
 
-1. Return to your Azure Notebooks Project. Within the `notebooks` folder, select the notebook called `05 Cognitive Services`. This will open the notebook so you can read and execute the code it contains.
+1. Return to your Azure Machine Learning compute instance. Within the `notebooks` folder, select the notebook called `05 Cognitive Services`. This will open the notebook so you can read and execute the code it contains.
 
 2. Follow the steps within the notebook to complete the lab and view the result of combining Cognitive Services with your Azure Machine Learning Services.
 
