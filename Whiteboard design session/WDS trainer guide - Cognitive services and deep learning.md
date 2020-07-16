@@ -18,7 +18,7 @@ Microsoft may have patents, patent applications, trademarks, copyrights, or othe
 
 The names of manufacturers, products, or URLs are provided for informational purposes only, and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third-party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
 
-© 2019 Microsoft Corporation. All rights reserved.
+© 2020 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are the property of their respective owners.
 
@@ -430,15 +430,15 @@ _High-level architecture_
 
 1. Without getting into the details (the following sections will address the details), diagram your initial vision for handling the top-level requirements for processing the claims textual data, photos, and enabling search. You will refine this diagram as you proceed.
 
-After speaking with its team at Microsoft, Contoso decided to design their PoC solution in Azure. They would continue to use the web app and SQL database that they already have running in Azure to handle claim submissions. They could build a claim enrichment pipeline by invoking a sequence of Azure Functions, where each of the coordinates calls to various AI-powered services.
+    After speaking with its team at Microsoft, Contoso decided to design their PoC solution in Azure. They would continue to use the web app and SQL database that they already have running in Azure to handle claim submissions. They could build a claim enrichment pipeline by invoking a sequence of Azure Functions, where each of the coordinates calls to various AI-powered services.
 
  ![The High-level architectural solution begins with a Claim, which points to Jupyter notebook. Jupyter then points to Computer Vision, Text Analytics, and Containerized Services, which includes a Classification Service and a Summary Service that both processes claim text.](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image4.jpg "High-level architectural solution")
 
-The claim image processing functions would invoke the Computer Vision Cognitive Service for automatically creating the caption and the tags from any supplied claim images. A mixture of pre-built AI, in the form of Cognitive Services and custom AI in the form of Azure ML services, would be used to process the claim text. The models used for processing the claims text would be trained in Azure Machine Learning compute instance. These models could also then be directly deployed from Azure Machine Learning compute instance using the Azure Machine Learning Service Python SDK. Azure Functions would be used to coordinate the calls to the classifications and summary AI services, which would run as containerized web services in Azure Container Service, while the Text Analytics API could be invoked directly to provide a sentiment score for each claim text.
+   The claim image processing functions would invoke the Computer Vision Cognitive Service for automatically creating the caption and the tags from any supplied claim images. A mixture of pre-built AI, in the form of Cognitive Services and custom AI in the form of Azure ML services, would be used to process the claim text. The models used for processing the claims text would be trained in Azure Machine Learning compute instance. These models could also then be directly deployed from Azure Machine Learning compute instance using the Azure Machine Learning Service Python SDK. Azure Functions would be used to coordinate the calls to the classifications and summary AI services, which would run as containerized web services in Azure Container Service, while the Text Analytics API could be invoked directly to provide a sentiment score for each claim text.
 
  ![In the Claim image processing diagram, Function (claim text processing) points to Sentiment, classification and summary, Text Analytics, and Containerized services comprised of Classification Service and Summary Service.](images/Whiteboarddesignsessiontrainerguide-CognitiveServicesanddeeplearningimages/media/image5.png "Claim image processing diagram")
 
-Once all claim processing has completed, one final Azure Function could be used to insert the complete claim document into Azure Search. The inserted document would contain the claim number as a field so that it could always be tied back to the record store in Azure SQL Database.
+   Once all claim processing has completed, one final Azure Function could be used to insert the complete claim document into Azure Search. The inserted document would contain the claim number as a field so that it could always be tied back to the record store in Azure SQL Database.
 
 _Classifying claim text data_
 
