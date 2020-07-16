@@ -18,7 +18,7 @@ Microsoft may have patents, patent applications, trademarks, copyrights, or othe
 
 The names of manufacturers, products, or URLs are provided for informational purposes only and Microsoft makes no representations and warranties, either expressed, implied, or statutory, regarding these manufacturers or the use of the products with any Microsoft technologies. The inclusion of a manufacturer or product does not imply endorsement of Microsoft of the manufacturer or product. Links may be provided to third party sites. Such sites are not under the control of Microsoft and Microsoft is not responsible for the contents of any linked site or any link contained in a linked site, or any changes or updates to such sites. Microsoft is not responsible for webcasting or any other form of transmission received from any linked site. Microsoft is providing these links to you only as a convenience, and the inclusion of any link does not imply endorsement of Microsoft of the site or the products contained therein.
 
-© 2019 Microsoft Corporation. All rights reserved.
+© 2020 Microsoft Corporation. All rights reserved.
 
 Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/intellectualproperty/Trademarks/Usage/General.aspx> are trademarks of the Microsoft group of companies. All other trademarks are property of their respective owners.
 
@@ -58,7 +58,7 @@ Duration: 25 minutes
 
 4. Provide the following information to configure your new workspace:
 
-   - **Subscription**: Select the Azure subscription that you want to use
+   - **Subscription**: Select the Azure subscription that you want to use.
 
    - **Resource group**: Use an existing resource group in your subscription or enter a name to create a new resource group. A resource group holds related resources for an Azure solution. In this example, we use **mcwailab**.
   
@@ -94,7 +94,7 @@ Duration: 25 minutes
 
    ![The new compute instance form is displayed populated with the aforementioned values. The Create button is highlighted.](images/05.png 'Create New Compute Instance')
 
-   > Note: If the Compute Instance names should be unique within an Azure Region notification appears, choose a different name that is unique to your environment.
+   >**Note**: If the Compute Instance names should be unique within an Azure Region notification appears, choose a different name that is unique to your environment.
   
 3. Wait for the Compute Instance to be ready, it will take around 3-5 minutes.
 
@@ -120,4 +120,4 @@ Duration: 25 minutes
 
    d. Wait for the import to complete.
 
-You should follow all these steps provided before attending the Hands-on lab.
+You should follow all these steps provided *before* attending the Hands-on lab.
