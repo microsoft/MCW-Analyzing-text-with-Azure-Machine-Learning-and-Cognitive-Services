@@ -152,7 +152,7 @@ In this task, you add a compute resource to your Azure Machine Learning workspac
 
 In this task, you import Jupyter notebooks from GitHub that you will use to complete the exercises in this hands-on lab.
 
-1. Select the Compute Instance: **csdl-compute** and then select **Jupyter** open icon, to open Jupyter Notebooks interface.
+1. Select the Compute Instance, **csdl-compute-SUFFIX**, and then select **Jupyter** link to open Jupyter Notebooks interface.
 
    ![The Jupyter link is highlighted next to the csdl-compute-SUFFIX compute instance.](media/ml-workspace-compute-instances.png "Compute instances")
 
