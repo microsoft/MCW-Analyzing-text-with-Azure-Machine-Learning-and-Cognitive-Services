@@ -30,9 +30,11 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Requirements](#requirements)
   - [Before the hands-on lab](#before-the-hands-on-lab)
     - [Task 1: Create a resource group](#task-1-create-a-resource-group)
-    - [Task 2: Create an Azure Machine Learning workspace](#task-2-create-an-azure-machine-learning-workspace)
-    - [Task 3: Create a Compute Instance](#task-3-create-a-compute-instance)
-    - [Task 4: Import the Lab Notebooks](#task-4-import-the-lab-notebooks)
+    - [Task 2: Create a Computer Vision API](#task-2-create-a-computer-vision-api)
+    - [Task 3: Provision a Text Analytics API](#task-3-provision-a-text-analytics-api)
+    - [Task 4: Create an Azure Machine Learning workspace](#task-4-create-an-azure-machine-learning-workspace)
+    - [Task 5: Create a Compute Instance](#task-5-create-a-compute-instance)
+    - [Task 6: Import the Lab Notebooks](#task-6-import-the-lab-notebooks)
 
 <!-- /TOC -->
 
@@ -75,7 +77,69 @@ In this exercise, you set up your environment for use in the rest of the hands-o
 
 5. On the **Review + create** tab, ensure the Validation passed message is displayed and then select **Create**.
 
-### Task 2: Create an Azure Machine Learning workspace
+### Task 2: Create a Computer Vision API
+
+In this task, you provision a Computer Vision API, which will be integrated into your final POC.
+
+1. In the [Azure portal](https://portal.azure.com/), select the **Show portal menu** icon and then choose **+Create a resource** from the menu.
+
+   ![The Show portal menu icon is highlighted, and the portal menu is displayed. Create a resource is highlighted in the portal menu.](media/create-a-resource.png "Create a resource")
+
+2. Select **AI + Machine Learning** in the Azure Marketplace list and then select **Computer Vision** from the featured services list.
+
+    ![In the New resource blade, AI + Machine Learning is selected under the Azure Marketplace and Computer Vision is highlighted under the featured services.](media/create-resource-computer-vision.png "Computer Vision")
+
+3. On the **Create** blade, provide the following:
+
+    Project details:
+
+    - **Subscription**: Select the subscription you are using for this hands-on lab.
+    - **Resource group**: Select the hands-on-lab-SUFFIX resource group from the dropdown list.
+
+    Instance Details:
+
+    - **Region**: Select the region you used for the hands-on-lab-SUFFIX resource group.
+    - **Name:** Provide a unique name for this instance, such as cv-SUFFIX.
+    - **Pricing tier**: Select Standard S1.
+
+    ![The Create Computer Vision Basics tab is populated with the values specified above.](media/create-computer-vision.png "Create Computer Vision")
+
+4. Select **Review + create**.
+
+5. Ensure validation passes and then select **Create** on the Review + create tab.
+
+### Task 3: Provision a Text Analytics API
+
+In this task, you create a Text Analytics API, which will be integrated into your final POC.
+
+1. In the [Azure portal](https://portal.azure.com/), select the **Show portal menu** icon and then choose **+Create a resource** from the menu.
+
+   ![The Show portal menu icon is highlighted, and the portal menu is displayed. Create a resource is highlighted in the portal menu.](media/create-a-resource.png "Create a resource")
+
+2. Select **AI + Machine Learning** in the Azure Marketplace list and then select **Text Analytics** from the featured services list.
+
+    ![In the New resource blade, AI + Machine Learning is selected under the Azure Marketplace and Text Analytics is highlighted under the featured services.](media/create-resource-text-analytics.png "Text Analytics")
+
+3. On the **Basics** tab, provide the following:
+
+    Project details:
+
+    - **Subscription**: Select the subscription you are using for this hands-on lab.
+    - **Resource group**: Select the hands-on-lab-SUFFIX resource group from the dropdown list.
+
+    Instance Details:
+
+    - **Region**: Select the region you used for the hands-on-lab-SUFFIX resource group.
+    - **Name:** Provide a unique name for this instance, such as ta-SUFFIX.
+    - **Pricing tier**: Select Standard S0.
+
+    ![The Create Text Analytics Basics tab is populated with the values specified above.](media/create-text-analytics.png "Create Text Analytics")
+
+4. Select **Review + create**.
+
+5. Ensure validation passes and then select **Create** on the Review + create tab.
+
+### Task 4: Create an Azure Machine Learning workspace
 
 In this task, you provision the Azure Machine Learning workspace you will use throughout this hands-on lab.
 
@@ -119,7 +183,7 @@ In this task, you provision the Azure Machine Learning workspace you will use th
 
    ![The Go to resource button is highlighted on the Machine Learning workspace deployment screen.](media/machine-learning-deployment.png "Machine Learning workspace deployment")
 
-### Task 3: Create a Compute Instance
+### Task 5: Create a Compute Instance
 
 In this task, you add a compute resource to your Azure Machine Learning workspace.
 
@@ -148,7 +212,7 @@ In this task, you add a compute resource to your Azure Machine Learning workspac
 
 6. Select **Create** and wait for the Compute Instance to be ready. It takes approximately 3-5 minutes for the compute provisioning to complete.
 
-### Task 4: Import the Lab Notebooks
+### Task 6: Import the Lab Notebooks
 
 In this task, you import Jupyter notebooks from GitHub that you will use to complete the exercises in this hands-on lab.
 
