@@ -79,13 +79,13 @@ In this exercise, you set up your environment for use in the rest of the hands-o
 
 In this task, you provision the Azure Machine Learning workspace you will use throughout this hands-on lab.
 
-1. In the [Azure portal](https://portal.azure.com/), select the **Show portal menu** icon and then select **+Create a resource** from the menu.
+1. In the [Azure portal](https://portal.azure.com/), select the **Show portal menu** icon and then choose **+Create a resource** from the menu.
 
    ![The Show portal menu icon is highlighted, and the portal menu is displayed. Create a resource is highlighted in the portal menu.](media/create-a-resource.png "Create a resource")
 
 2. Enter "machine learning" into the Search the Marketplace box, and then select **Machine Learning** from the results.
 
-   ![Machine learning is entered into the Search the Marketplace box and Machine Learning is highlighted in the results.](media/marketplace-results-machine-learning.png "Create Machine Learning service")
+   ![Machine learning is entered into the Search the Marketplace box, and Machine Learning is highlighted in the results.](media/marketplace-results-machine-learning.png "Create Machine Learning service")
 
 3. On the Machine Learning blade, select **Create**.
 
@@ -100,7 +100,7 @@ In this task, you provision the Azure Machine Learning workspace you will use th
 
    Workspace details:
 
-   - **Workspace name**: Enter **ml-wksp-SUFFIX**, where SUFFIX is your Microsoft alias, initials, or other value to ensure uniquely named resources. Names must be unique across the resource group. Use a name that's easy to recall and to differentiate from workspaces created by others.
+   - **Workspace name**: Enter **ml-wksp-SUFFIX**, where SUFFIX is your Microsoft alias, initials, or other value to ensure uniquely named resources. Names must be unique across the resource group. Use one that is easy to recall and differentiate from workspaces created by others.
    - **Region**: Select the region you used for the hands-on-lab-SUFFIX resource group.
    - **Storage account**: Accept the generated storage account name.
    - **Key vault**: Accept the generated key vault name.
@@ -113,7 +113,7 @@ In this task, you provision the Azure Machine Learning workspace you will use th
 
 6. Ensure the **Validation passed** message is displayed at the top of the Review + create tab and then select **Create**.
 
-   ![A validation passed message is displayed on the Review + create tab and the Create button is highlighted.](media/machine-learning-review-create.png)
+   ![A validation passed message is displayed on the Review + create tab, and the Create button is highlighted.](media/machine-learning-review-create.png)
 
 7. It may take several minutes to provision a new Machine Learning workspace. When the deployment completes, select **Go to resource** on the deployment screen.
 
@@ -129,14 +129,14 @@ In this task, you add a compute resource to your Azure Machine Learning workspac
 
 2. In the new Azure Machine Learning studio window, select **Create new** and then select **Compute instance** from the context menu.
 
-   ![Within Azure Machine Learning studio, Create new is selected and highlighted and Compute instance is highlighted in the context menu.](media/machine-learning-studio-create-new-compute-instance.png "Create new compute instance")
+   ![Within Azure Machine Learning studio, Create new is selected and highlighted, and Compute instance is highlighted in the context menu.](media/machine-learning-studio-create-new-compute-instance.png "Create new compute instance")
 
 3. On the create compute instance screen, enter the following information:
 
    - **Virtual machine type**: Select `CPU`.
    - **Virtual machine size**: Select `Select from recommended options` and then select `Standard_DS3_v2`.
 
-   ![On the create compute instance dialog, CPU is selected for the virtual machine type, select from recommended options is selected under virtual machine size, and Standard_DS3_v2 is selected and highlighted in the list of recommended virtual machine sizes.](media/machine-learning-studio-create-compute-instance-select-virtual-machine.png "Select virtual machine")
+   ![On the create compute instance dialog, CPU is selected for the virtual machine type. Select from recommended options is selected under virtual machine size, and Standard_DS3_v2 is selected and highlighted in the recommended virtual machine sizes.](media/machine-learning-studio-create-compute-instance-select-virtual-machine.png "Select virtual machine")
 
 4. Select **Next** to move to the virtual machine settings tab.
 
@@ -158,11 +158,11 @@ In this task, you import Jupyter notebooks from GitHub that you will use to comp
 
 2. Check **Yes, I understand** and select **Continue** in the trusted code dialog.
 
-   ![In the Always use trusted code dialog, Yes, I understand is checked and the continue button is highlighted.](media/trusted-code-dialog.png "Always use trusted code")
+   ![In the Always use trusted code dialog, Yes, I understand is checked, and the continue button is highlighted.](media/trusted-code-dialog.png "Always use trusted code")
 
 3. In the new Jupyter window, select **New** and then select **Terminal** from the context menu.
 
-   ![In the Jupyter notebooks interface, the New dropdown is selected and Terminal is highlighted in the context menu.](media/jupyter-new-terminal.png "Open new terminal window")
+   ![In the Jupyter notebooks interface, the New dropdown is selected, and Terminal is highlighted in the context menu.](media/jupyter-new-terminal.png "Open new terminal window")
   
 4. Run the following commands in order in the terminal window:
 
