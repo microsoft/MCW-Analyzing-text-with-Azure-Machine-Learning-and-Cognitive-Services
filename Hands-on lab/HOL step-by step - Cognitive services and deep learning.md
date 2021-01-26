@@ -78,11 +78,11 @@ In this exercise, you will navigate to the folder where all the notebooks for th
 
 ### Task 1: Open the notebooks folder
 
-1. From within Azure Machine Learning studio navigate to the `Compute` section by selecting it from the left-hand navigation menu.
+1. From within Azure Machine Learning studio, navigate to the `Compute` section by selecting it from the left-hand navigation menu.
 
     ![The Compute tab is highlighted in the left-hand menu within Azure Machine Learning studio.](media/ml-workspace-compute.png "Machine Learning studio Compute tab")
 
-2. Select the **Jupyter** link associated with your compute instance, **csdl-compute-SUFFIX** to open Jupyter Notebooks interface.
+2. Select the **Jupyter** link associated with your compute instance, **csdl-compute-SUFFIX** to open the Jupyter Notebooks interface.
 
    ![The Jupyter link is highlighted next to the csdl-compute-SUFFIX compute instance.](media/ml-workspace-compute-instances.png "Compute instances")
 
