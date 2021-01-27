@@ -232,7 +232,7 @@ As a first step towards their bigger goals, Contoso would like to build a proof 
 
 1. We are skeptical about all the hype surrounding these "AI" solutions. It's hard to know what is feasible versus what is not possible with today's technology and Azure.
 
-2. We know that are both pre-built AI and custom AI options available. We are confused as to when to choose one over the other.
+2. We know that there are both pre-built AI and custom AI options available. We are confused as to when to choose one over the other.
 
 3. We expect some part of our solution would require deep learning. Do you have any prescriptive guidance on how we might choose between investing in understanding and using TensorFlow or the Microsoft Cognitive Toolkit (CNTK)?
 
@@ -628,13 +628,13 @@ _Enabling search_
 
     While it is true that there is a lot of hype around AI, the ability to deploy solutions that use data, machine learning, and deep learning to create an application with "AI" capabilities is real and is possible in Azure. Azure provides a wide range of services to address the needs of AI, from pre-built AI capabilities in Cognitive Services to services that help you to build, train, and deploy your custom AI capabilities using the Azure Machine Learning service and other services from the Microsoft AI stack.
 
-2. We know that are both pre-built AI and custom AI options available. We are confused as to when to choose one over the other.
+2. We know that there are both pre-built AI and custom AI options available. We are confused as to when to choose one over the other.
 
     It would be best if you considered the pre-built AI options first. However, if you rule them out because they do not fit your requirements, you should explore the custom AI options. The advantage of pre-built AI options like Cognitive Services is that the models they use under the covers do not need to be trained by you, and you do not need to have the data to train them as a pre-requisite.
 
 3. We expect some part of our solution would require deep learning. Do you have any prescriptive guidance on how we might choose between investing in understanding and using TensorFlow or the Microsoft Cognitive Toolkit (CNTK)?
 
-    Both TensorFlow and the Microsoft Cognitive Toolkit solve similar problems and have been used successfully by many deep learning companies. At present, it appears that TensorFlow has a much larger community base and interest level, which can be measured simply by the number of stars it has in its GitHub project (which is an order of magnitude larger than that of the Microsoft Cognitive Toolkit). The community's size means that it is likely you will more easily find help online for issues with TensorFlow versus the Microsoft Cognitive Toolkit, which is why it may be a good reason to start with TensorFlow.
+    Both TensorFlow and the Microsoft Cognitive Toolkit solve similar problems and have been used successfully by many companies for deep learning solutions. At present, it appears that TensorFlow has a much larger community base and interest level, which can be measured simply by the number of stars it has in its GitHub project (which is an order of magnitude larger than that of the Microsoft Cognitive Toolkit). The community's size means that it is likely you will more easily find help online for issues with TensorFlow versus the Microsoft Cognitive Toolkit, which is why it may be a good reason to start with TensorFlow.
 
 ## Customer quote (to be read back to the attendees at the end)
 

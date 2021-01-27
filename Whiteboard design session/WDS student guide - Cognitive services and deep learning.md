@@ -106,7 +106,7 @@ As a first step towards their bigger goals, Contoso would like to build a proof 
 
 1. We are skeptical about all the hype surrounding these "AI" solutions. It's hard to know what is feasible versus what is not possible with today's technology and Azure.
 
-2. We know that are both pre-built AI and custom AI options available. We are confused as to when to choose one over the other.
+2. We know that there are both pre-built AI and custom AI options available. We are confused as to when to choose one over the other.
 
 3. We expect some part of our solution would require deep learning. Do you have any prescriptive guidance on how we might choose between investing in understanding and using TensorFlow or the Microsoft Cognitive Toolkit (CNTK)?
 
