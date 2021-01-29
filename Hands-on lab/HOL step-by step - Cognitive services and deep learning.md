@@ -61,7 +61,7 @@ In this workshop, you help Contoso Ltd. build a proof of concept that shows how 
 
 The high-level architecture of the solution is illustrated in the diagram. The lab is performed within the context of a notebook running within Azure Machine Learning compute instance. Various notebooks are built to test the integration with the Cognitive Services listed, train custom ML services, and integrate the results in a simple user interface that shows the effect of processing the claim with all of the AI services involved.
 
-![The High-level architectural solution begins with submitting a Claim for processing using a notebook in Azure Databricks. This notebook coordinates the calls to Computer Vision, Text Analytics, and Containerized Services, including a Classification Service and a Summary Service that both processes claim text.](media/high-level-architecture.png 'High-level architectural solution')
+![The High-level architectural solution begins with submitting a Claim for processing using a notebook in Azure Databricks. This notebook coordinates the calls to Computer Vision, Text Analytics, and Containerized Services, including a Classification Service and a Summary Service that both processes claim text.](media/high-level-architecture.png "High-level architectural solution")
 
 ## Requirements
 
