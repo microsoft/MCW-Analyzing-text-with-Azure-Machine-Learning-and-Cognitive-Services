@@ -146,11 +146,11 @@ _Classifying claim-text data_
 
 2. What data would they need to train the model?
 
-3. Contoso wants to understand some of the common approaches to handle texts for machine learning? Is there a recommended approach to dealing with long descriptive texts that are typically found in claims data?
+3. Contoso wants to understand some of the common approaches to handle texts for machine learning. Is there a recommended approach to dealing with long descriptive texts that are typically found in claims data?
 
 4. Contoso understands they should use a classification algorithm for this problem. They have asked if a Deep Neural Network could be trained against the text to recognize home or auto classifications. Could they use a DNN for this?
 
-5. For this scenario, Contoso has indicated an interest in using TensorFlow but is concerned about the complexity of jumping right in. They wonder if Keras would provide an easier framework they could use as a stepping stone to the full-blown TensorFlow, which would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready?
+5. For this scenario, Contoso has indicated an interest in using TensorFlow but is concerned about the complexity of jumping right in. They wonder if Keras would provide an easier framework they could use as a steppingstone to the full-blown TensorFlow, which would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready?
 
 6. What would a Long Short-Term Memory (LSTM) recurrent neural network that performs this classification look like? Show a snippet of a single layer of an unrolled LSTM network and the binary classification output at the network's last step.
 
