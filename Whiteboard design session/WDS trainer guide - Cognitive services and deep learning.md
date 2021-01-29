@@ -272,11 +272,11 @@ _Classifying claim-text data_
 
 2. What data would they need to train the model?
 
-3. Contoso wants to understand some of the common approaches to handle texts for machine learning? Is there a recommended approach to dealing with long descriptive texts that are typically found in claims data?
+3. Contoso wants to understand some of the common approaches to handle texts for machine learning. Is there a recommended approach to dealing with long descriptive texts that are typically found in claims data?
 
 4. Contoso understands they should use a classification algorithm for this problem. They have asked if a Deep Neural Network could be trained against the text to recognize home or auto classifications. Could they use a DNN for this?
 
-5. For this scenario, Contoso has indicated an interest in using TensorFlow but is concerned about the complexity of jumping right in. They wonder if Keras would provide an easier framework they could use as a stepping stone to the full-blown TensorFlow, which would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready?
+5. For this scenario, Contoso has indicated an interest in using TensorFlow but is concerned about the complexity of jumping right in. They wonder if Keras would provide an easier framework they could use as a steppingstone to the full-blown TensorFlow, which would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready?
 
 6. What would a Long Short-Term Memory (LSTM) recurrent neural network that performs this classification look like? Show a snippet of a single layer of an unrolled LSTM network and the binary classification output at the network's last step.
 
@@ -450,7 +450,7 @@ _Classifying claim text data_
 
     Contoso would need to have a certain amount of historical claim text and have it labeled as home or auto to train a model.
 
-3. Contoso wants to understand some of the common approaches to handle texts for machine learning? Is there a recommended approach to dealing with long descriptive texts that are typically found in claims data?
+3. Contoso wants to understand some of the common approaches to handle texts for machine learning. Is there a recommended approach to dealing with long descriptive texts that are typically found in claims data?
 
     Machine learning models require numeric data as inputs. Thus, when you are working with text, you convert words or sentences into numeric vector representation as part of feature extraction. There are several approaches to vectorize textual data, that include strategies like [Term Frequency-Inverse Document Frequency (TF-IDF) vectorization](https://en.wikipedia.org/wiki/Tf-idf), or use of word embedding like [Word2vec](https://en.wikipedia.org/wiki/Word2vec) or [Global Vectors (GloVe)](https://nlp.stanford.edu/pubs/glove.pdf).
 
@@ -464,7 +464,7 @@ _Classifying claim text data_
 
     Yes, they could use a type of DNN called the Long Short-Term Memory (LSTM) recurrent neural network that is shown to work well for text classification problems, especially when used in conjunction with word embedding such as GloVe for word vectorization.
 
-5. For this scenario, Contoso has indicated an interest in using TensorFlow but is concerned about the complexity of jumping right in. They wonder if Keras would provide an easier framework they could use as a stepping stone to the full-blown TensorFlow, which would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready?
+5. For this scenario, Contoso has indicated an interest in using TensorFlow but is concerned about the complexity of jumping right in. They wonder if Keras would provide an easier framework they could use as a steppingstone to the full-blown TensorFlow, which would enable them to build TensorFlow compatible models so that they can "graduate" to using TensorFlow when the team is ready?
 
     TensorFlow is a robust framework for performing machine learning, including building neural networks. The Keras library builds upon TensorFlow and provides an easy-to-use and understand high-level API for implementing deep neural networks, complete with tutorials and examples. Models constructed with Keras are TensorFlow models, so if they choose to move fully towards the lower-level TensorFlow API's, they could do so without re-creating the models.
 
