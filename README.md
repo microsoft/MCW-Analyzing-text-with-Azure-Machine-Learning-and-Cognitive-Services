@@ -14,7 +14,7 @@ Next, they would like to summarize long claim text automatically. This summariza
 
 Finally, they would like to automatically extract information from the photos submitted with the claims to increase their searchability.
 
-January 2021
+November 2021
 
 ## Target audience
 
