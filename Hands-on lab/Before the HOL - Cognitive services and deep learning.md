@@ -30,11 +30,10 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Requirements](#requirements)
   - [Before the hands-on lab](#before-the-hands-on-lab)
     - [Task 1: Create a resource group](#task-1-create-a-resource-group)
-    - [Task 2: Create a Computer Vision API](#task-2-create-a-computer-vision-api)
-    - [Task 3: Provision a Text Analytics API](#task-3-provision-a-text-analytics-api)
-    - [Task 4: Create an Azure Machine Learning workspace](#task-4-create-an-azure-machine-learning-workspace)
-    - [Task 5: Create a Compute Instance](#task-5-create-a-compute-instance)
-    - [Task 6: Import the Lab Notebooks](#task-6-import-the-lab-notebooks)
+    - [Task 2: Provision a Text Analytics API](#task-2-provision-a-text-analytics-api)
+    - [Task 3: Create an Azure Machine Learning workspace](#task-3-create-an-azure-machine-learning-workspace)
+    - [Task 4: Create a Compute Instance](#task-4-create-a-compute-instance)
+    - [Task 5: Import the Lab Notebooks](#task-5-import-the-lab-notebooks)
 
 <!-- /TOC -->
 
@@ -77,38 +76,7 @@ In this exercise, you set up your environment for use in the rest of the hands-o
 
 5. On the **Review + create** tab, ensure the Validation passed message is displayed and then select **Create**.
 
-### Task 2: Create a Computer Vision API
-
-In this task, you provision a Computer Vision API, which will be integrated into your final POC.
-
-1. In the [Azure portal](https://portal.azure.com/), select the **Show portal menu** icon and then choose **+Create a resource** from the menu.
-
-   ![The Show portal menu icon is highlighted, and the portal menu is displayed. Create a resource is highlighted in the portal menu.](media/create-a-resource.png "Create a resource")
-
-2. Select **AI + Machine Learning** in the Azure Marketplace list and then select **Computer Vision** from the featured services list.
-
-    ![In the New resource blade, AI + Machine Learning is selected under the Azure Marketplace and Computer Vision is highlighted under the featured services.](media/create-resource-computer-vision.png "Computer Vision")
-
-3. On the **Create** blade, provide the following:
-
-    Project details:
-
-    - **Subscription**: Select the subscription you are using for this hands-on lab.
-    - **Resource group**: Select the hands-on-lab-SUFFIX resource group from the dropdown list.
-
-    Instance Details:
-
-    - **Region**: Select the region you used for the hands-on-lab-SUFFIX resource group.
-    - **Name:** Provide a unique name for this instance, such as cv-SUFFIX.
-    - **Pricing tier**: Select Standard S1.
-
-    ![The Create Computer Vision Basics tab is populated with the values specified above.](media/create-computer-vision.png "Create Computer Vision")
-
-4. Select **Review + create**.
-
-5. Ensure validation passes and then select **Create** on the Review + create tab.
-
-### Task 3: Provision a Text Analytics API
+### Task 2: Provision a Text Analytics API
 
 In this task, you create a Text Analytics API, which will be integrated into your final POC.
 
@@ -120,7 +88,9 @@ In this task, you create a Text Analytics API, which will be integrated into you
 
     ![In the New resource blade, AI + Machine Learning is selected under the Azure Marketplace and Text Analytics is highlighted under the featured services.](media/create-resource-text-analytics.png "Text Analytics")
 
-3. On the **Basics** tab, provide the following:
+   > Note: If you shown `Select additional features` page, select **Skip this step**.
+
+3. On the **Create** tab, provide the following:
 
     Project details:
 
@@ -131,7 +101,8 @@ In this task, you create a Text Analytics API, which will be integrated into you
 
     - **Region**: Select the region you used for the hands-on-lab-SUFFIX resource group.
     - **Name:** Provide a unique name for this instance, such as ta-SUFFIX.
-    - **Pricing tier**: Select Standard S0.
+    - **Pricing tier**: Free F0 (5K Transactions per 30 days).
+    - **Responsible AI Notice**: Checked
 
     ![The Create Text Analytics Basics tab is populated with the values specified above.](media/create-text-analytics.png "Create Text Analytics")
 
@@ -139,80 +110,68 @@ In this task, you create a Text Analytics API, which will be integrated into you
 
 5. Ensure validation passes and then select **Create** on the Review + create tab.
 
-### Task 4: Create an Azure Machine Learning workspace
+### Task 3: Create an Azure Machine Learning workspace
 
 In this task, you provision the Azure Machine Learning workspace you will use throughout this hands-on lab.
 
-1. In the [Azure portal](https://portal.azure.com/), select the **Show portal menu** icon and then choose **+Create a resource** from the menu.
+1. Sign in to [Azure portal](https://portal.azure.com) by using the credentials for your Azure subscription.
 
-   ![The Show portal menu icon is highlighted, and the portal menu is displayed. Create a resource is highlighted in the portal menu.](media/create-a-resource.png "Create a resource")
+2. In the upper-left corner of Azure portal, select **+ Create a resource**.
 
-2. Enter "machine learning" into the Search the Marketplace box, and then select **Machine Learning** from the results.
+3. Use the search bar to find the **Machine Learning**.
 
-   ![Machine learning is entered into the Search the Marketplace box, and Machine Learning is highlighted in the results.](media/marketplace-results-machine-learning.png "Create Machine Learning service")
+4. Select **Machine Learning**.
 
-3. On the Machine Learning blade, select **Create**.
+5. In the **Machine Learning** pane, select **Create** to begin.
 
-   ![The Create button is highlighted on the Machine Learning blade.](media/machine-learning-create.png "Create Machine Learning resource")
+   ![The Machine Learning page displays with the Create button selected.](media/bhol-01.png 'Open Create Azure Machine Learning Workspace')
 
-4. On the Create a machine learning workspace blade, provide the following information to configure the new workspace:
+6. Provide the following information to configure your new workspace:
 
-   Project details:
+   - **Subscription**: Select the Azure subscription that you want to use.
 
-   - **Subscription**: Select the subscription you are using for this hands-on lab.
-   - **Resource group**: Select the hands-on-lab-SUFFIX resource group from the dropdown list.
+   - **Resource group**: Use an existing resource group in your subscription or enter a name to create a new resource group. A resource group holds related resources for an Azure solution. In this example, we use **hands-on-lab**.
 
-   Workspace details:
+   - **Workspace name**: Enter a unique name that identifies your workspace. In this example, we use **ml-wksp**. Names must be unique across the resource group. Use a name that's easy to recall and to differentiate from workspaces created by others.
 
-   - **Workspace name**: Enter **ml-wksp-SUFFIX**, where SUFFIX is your Microsoft alias, initials, or other value to ensure uniquely named resources. Names must be unique across the resource group. Use one that is easy to recall and differentiate from workspaces created by others.
-   - **Region**: Select the region you used for the hands-on-lab-SUFFIX resource group.
-   - **Storage account**: Accept the generated storage account name.
-   - **Key vault**: Accept the generated key vault name.
-   - **Application insights**: Accepted the generated application insights name.
-   - **Container registry**: Leave set to None.
+   - **Location**: Select the location closest to your users and the data resources to create your workspace.
 
-   ![The Create Machine Learning workspace Basics tab is displayed populated with the values specified above entered into the form.](media/machine-learning-basics-tab.png 'Create Azure Machine Learning Workspace page')
+   - **Container registry**: Use an existing container registry in your subscription or create a new container registry with `Standard SKU`.
 
-5. Select **Review + create**. The default values will be used for the remaining screens.
+   ![The Machine Learning Create form is displayed populated with the aforementioned values. The Review + Create button is highlighted.](media/bhol-02.png 'Create Azure Machine Learning Workspace page')
 
-6. Ensure the **Validation passed** message is displayed at the top of the Review + create tab and then select **Create**.
+7. After you are finished configuring the workspace, select **Review + Create**. Select **Create** after you review the fields you just entered.
 
-   ![A validation passed message is displayed on the Review + create tab, and the Create button is highlighted.](media/machine-learning-review-create.png)
+    > **Note**: It can take several minutes to create your workspace in the cloud.
 
-7. It may take several minutes to provision a new Machine Learning workspace. When the deployment completes, select **Go to resource** on the deployment screen.
+    When the process is finished, a deployment success message appears.
 
-   ![The Go to resource button is highlighted on the Machine Learning workspace deployment screen.](media/machine-learning-deployment.png "Machine Learning workspace deployment")
+8. To view the new workspace, select **Go to resource**.
 
-### Task 5: Create a Compute Instance
+9. Navigate to the [Azure Machine Learning Studio](https://ml.azure.com) and select the workspace that you created or select **Launch now** under **Try the new Azure Machine Learning studio** in the **Overview** section of your Azure Machine Learning workspace.
+
+   ![The Machine Learning resource page is shown with Overview selected from the left menu, and the Launch now button highlighted in the Overview screen.](media/bhol-03.png 'Launch the Azure Machine Learning studio')
+
+   > **Note**: If you use an existing workspace, please ensure that the default datastore for the workspace is the workspace blob store and not the file store. If you create a new workspace, as instructed above, the default datastore is already set to the workspace blob store.
+
+### Task 4: Create a Compute Instance
 
 In this task, you add a compute resource to your Azure Machine Learning workspace.
 
-1. On the Machine Learning blade in the [Azure portal](https://portal.azure.com/), open Azure Machine Learning studio by selecting **Launch studio** from the center section of the screen.
-
-   ![The Launch studio button is highlighted on the Machine Learning blade.](media/machine-learning-launch-studio.png "Launch Azure Machine Learning studio")
-
-2. In the new Azure Machine Learning studio window, select **Create new** and then select **Compute instance** from the context menu.
+1. In the new Azure Machine Learning studio window, select **Create new** and then select **Compute instance** from the context menu.
 
    ![Within Azure Machine Learning studio, Create new is selected and highlighted, and Compute instance is highlighted in the context menu.](media/machine-learning-studio-create-new-compute-instance.png "Create new compute instance")
 
-3. On the create compute instance screen, enter the following information:
+2. On the create compute instance screen, enter the following information:
 
-   - **Virtual machine type**: Select `CPU`.
-   - **Virtual machine size**: Select `Select from recommended options` and then select `Standard_DS3_v2`.
+   - **Compute name**: Enter csdl-compute-SUFFIX, where SUFFIX is your Microsoft alias, initials, or other value to ensure uniquely named resources.
+   - **Virtual machine size**: Standard_DS3_v2
 
-   ![On the create compute instance dialog, CPU is selected for the virtual machine type. Select from recommended options is selected under virtual machine size, and Standard_DS3_v2 is selected and highlighted in the recommended virtual machine sizes.](media/machine-learning-studio-create-compute-instance-select-virtual-machine.png "Select virtual machine")
+   ![On the create compute instance dialog, CPU is selected for the virtual machine type. Select from recommended options is selected under virtual machine size, and Standard_DS3_v2 is selected and highlighted in the recommended virtual machine sizes.](media/compute-instance-01.png "Create compute instance")
 
-4. Select **Next** to move to the virtual machine settings tab.
+3. Select **Create** and wait for the Compute Instance to be ready. It takes approximately 3-5 minutes for the compute provisioning to complete.
 
-5. On the **Configure Settings** tab, configure the following:
-
-   - **Compute name**: Enter `csdl-compute-SUFFIX`, where SUFFIX is your Microsoft alias, initials, or other value to ensure uniquely named resources.
-
-   ![On the configure settings dialog, csdl-compute-SUFFIX is entered into the compute name box.](media/machine-learning-studio-create-compute-instance-configure-settings.png "Configure compute instance settings")
-
-6. Select **Create** and wait for the Compute Instance to be ready. It takes approximately 3-5 minutes for the compute provisioning to complete.
-
-### Task 6: Import the Lab Notebooks
+### Task 5: Import the Lab Notebooks
 
 In this task, you import Jupyter notebooks from GitHub that you will use to complete the exercises in this hands-on lab.
 
