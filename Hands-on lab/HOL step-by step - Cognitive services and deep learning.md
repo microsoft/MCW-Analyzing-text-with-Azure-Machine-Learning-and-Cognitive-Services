@@ -42,8 +42,8 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 3: Monitor Automated ML run](#task-3-monitor-automated-ml-run)
     - [Task 4: Review Best Model Performance](#task-4-review-best-model-performance)
   - [Exercise 4: Completing the solution](#exercise-4-completing-the-solution)
-    - [Task 1: Retrieve the Text Analytics API endpoint and key](#task-2-retrieve-the-text-analytics-api-endpoint-and-key)
-    - [Task 2: Completing the solution](#task-3-completing-the-solution)
+    - [Task 1: Retrieve the Text Analytics API endpoint and key](#task-1-retrieve-the-text-analytics-api-endpoint-and-key)
+    - [Task 2: Completing the solution](#task-2-completing-the-solution)
   - [After the hands-on lab](#after-the-hands-on-lab)
     - [Task 1: Clean up lab resources](#task-1-clean-up-lab-resources)
 
