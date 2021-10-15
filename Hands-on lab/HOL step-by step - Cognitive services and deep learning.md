@@ -29,19 +29,21 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Overview](#overview)
   - [Solution architecture](#solution-architecture)
   - [Requirements](#requirements)
-  - [Exercise 1: Locate the Lab Notebooks](#exercise-1-locate-the-lab-notebooks)
-    - [Task 1: Open the notebooks folder](#task-1-open-the-notebooks-folder)
-  - [Exercise 2: Create and Deploy an Unsupervised Model](#exercise-2-create-and-deploy-an-unsupervised-model)
-    - [Task 1: Install libraries](#task-1-install-libraries)
+  - [Exercise 1: Create and Deploy an Unsupervised Model](#exercise-1-create-and-deploy-an-unsupervised-model)
+    - [Task 1: Locate and open the Summarization notebook](#task-1-locate-and-open-the-summarization-notebook)
     - [Task 2: Read through and execute the Summarization notebook](#task-2-read-through-and-execute-the-summarization-notebook)
     - [Task 3: Provision the Azure Machine Learning Workspace and Create the Summarization service](#task-3-provision-the-azure-machine-learning-workspace-and-create-the-summarization-service)
-  - [Exercise 3: Create and Deploy a Keras Model](#exercise-3-create-and-deploy-a-keras-model)
+  - [Exercise 2: Create and Deploy a Keras Model](#exercise-2-create-and-deploy-a-keras-model)
     - [Task 1: Create a simple Keras based model](#task-1-create-a-simple-keras-based-model)
     - [Task 2: Deploy the Keras model](#task-2-deploy-the-keras-model)
+  - [Exercise 3: Text Classification with Azure Automated Machine Learning](#exercise-3-text-classification-with-azure-automated-machine-learning)
+    - [Task 1: Create New Automated Machine Learning Experiment](#task-1-create-new-automated-machine-learning-experiment)
+    - [Task 2: Create a new Automated ML run](#task-2-create-a-new-automated-ml-run)
+    - [Task 3: Monitor Automated ML run](#task-3-monitor-automated-ml-run)
+    - [Task 4: Review Best Model Performance](#task-4-review-best-model-performance)
   - [Exercise 4: Completing the solution](#exercise-4-completing-the-solution)
-    - [Task 1: Retrieve the Computer Vision API endpoint and key](#task-1-retrieve-the-computer-vision-api-endpoint-and-key)
-    - [Task 2: Retrieve the Text Analytics API endpoint and key](#task-2-retrieve-the-text-analytics-api-endpoint-and-key)
-    - [Task 3: Completing the solution](#task-3-completing-the-solution)
+    - [Task 1: Retrieve the Text Analytics API endpoint and key](#task-2-retrieve-the-text-analytics-api-endpoint-and-key)
+    - [Task 2: Completing the solution](#task-3-completing-the-solution)
   - [After the hands-on lab](#after-the-hands-on-lab)
     - [Task 1: Clean up lab resources](#task-1-clean-up-lab-resources)
 
@@ -70,61 +72,35 @@ The high-level architecture of the solution is illustrated in the diagram. The l
     - Trial subscriptions will not work. You will run into issues with Azure resource quota limits.
     - Subscriptions with access limited to a single resource group will not work. You will need the ability to deploy multiple resource groups.
 
-## Exercise 1: Locate the Lab Notebooks
-
-Duration: 5 minutes
-
-In this exercise, you will navigate to the folder where all the notebooks for this lab are available.
-
-### Task 1: Open the notebooks folder
-
-1. From within Azure Machine Learning studio, navigate to the `Compute` section by selecting it from the left-hand navigation menu.
-
-    ![The Compute tab is highlighted in the left-hand menu within Azure Machine Learning studio.](media/ml-workspace-compute.png "Machine Learning studio Compute tab")
-
-2. Select the **Jupyter** link associated with your compute instance, **csdl-compute-SUFFIX** to open the Jupyter Notebooks interface.
-
-   ![The Jupyter link is highlighted next to the csdl-compute-SUFFIX compute instance.](media/ml-workspace-compute-instances.png "Compute instances")
-
-3. Navigate to the `> mcw-csdl > MCW-Cognitive-services-and-deep-learning > Hands-on lab > notebooks` folder where you will find all your lab notebooks.
-
-    ![Jupyter notebook interface showing the folder where the lab files are present.](media/jupyter-hands-on-lab-notebooks.png "Jupyter Notebooks Folder")
-
-## Exercise 2: Create and Deploy an Unsupervised Model
+## Exercise 1: Create and Deploy an Unsupervised Model
 
 Duration: 60 minutes
 
 In this exercise, you create and deploy a web service that uses a pre-trained model to summarize long text paragraphs.
 
-### Task 1: Install libraries
+### Task 1: Locate and open the Summarization notebook
 
-The notebooks you use throughout this hands-on lab depend on specific Python libraries like Keras and TensorFlow. The following steps walk you through adding these dependencies.
+In this task, you will navigate to the folder where all the notebooks for this lab are available. Then you will open the `Summarization` notebook and confirm that the compute instance is attached to the notebook.
 
-1. Within the `notebooks` folder on the Jupyter interface, select the notebook named `00 init.ipynb`. This link opens the notebook so you can read and execute the code it contains.
+1. From within Azure Machine Learning studio, navigate to the `Notebooks` section by selecting it from the left-hand navigation menu. Then select the notebook: **mcw-csdl/MCW-Cognitive-services-and-deep-learning/Hands-on lab/notebooks/01 Summarize.ipynb**. From the toolbar select **Compute** and confirm that the compute instance created in `Before the HOL - Cognitive services and deep learning` is selected and is in running state.
 
-    ![The 00 init.ipynb notebook is highlighted within the notebooks folder on the Jupyter page.](media/jupyter-notebooks-00-init.png "00 init.ipynb")
-
-2. Run each cell in the notebook to install the required libraries.
+    ![The 01 Summarize.ipynb notebook is opened from within the notebooks section of the Azure Machine Learning Studio.](media/notebook-01.png "01 Summarize.ipynb")
 
 ### Task 2: Read through and execute the Summarization notebook
 
-1. Within the `notebooks` folder on the Jupyter interface, select the notebook named `01 Summarize.ipynb`. This link opens the notebook so you can read and execute the code it contains.
+1. Read the instructions at the top of the notebook, and execute the notebook cells one by one by selecting the **Run cell** arrow.
 
-    ![The 01 Summarize.ipynb notebook is highlighted within the notebooks folder on the Jupyter page.](media/jupyter-notebooks-01-summarize.png "01 Summarize.ipynb")
-
-2. Read the instructions at the top of the notebook, and execute the cells as instructed.
-
-    > **Note**: Make sure you copy the scoring URI from the output of the last cell of this notebook. The scoring URI value is needed in the final notebook of this hands-on lab.
+    ![The 01 Summarize.ipynb notebook is opened from within the notebooks section of the Azure Machine Learning Studio and the Run cell arrow is highlighted.](media/notebook-02.png "01 Summarize.ipynb")
 
 ### Task 3: Provision the Azure Machine Learning Workspace and Create the Summarization service
 
-1. Within the `notebooks` folder on the Jupyter interface, select the notebook called `02 Deploy Summarizer Web Service.ipynb`. This link opens the notebook so you can read and execute the code it contains.
+1. Within the `notebooks` folder, select the notebook called **02 Deploy Summarizer Web Service.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
-    ![The 02 Deploy Summarizer Web Service.ipynb notebook is highlighted within the notebooks folder on the Jupyter page.](media/jupyter-notebooks-02-deploy-summarize-web-service.png "02 Deploy Summarizer Web Service.ipynb")
+2. Read the instructions at the top of the notebook, and execute the cells as instructed.
 
-2. Read the instructions at the top of the notebook, provide the necessary values indicated in the instructions, and execute the cells as instructed.
+3. Make sure you copy the scoring URI from the output of the last cell of this notebook. The scoring URI value is needed in the final notebook of this hands-on lab.
 
-## Exercise 3: Create and Deploy a Keras Model
+## Exercise 2: Create and Deploy a Keras Model
 
 Duration: 60 minutes
 
@@ -132,51 +108,98 @@ In this exercise, you use Keras to construct and train a Deep Neural Network (DN
 
 ### Task 1: Create a simple Keras based model
 
-1. Within the `notebooks` folder on the Jupyter interface, select the notebook named `03 Claim Classification.ipynb`. This link opens the notebook so you can read and execute the code it contains.
-
-    ![The 03 Claim Classification.ipynb notebook is highlighted within the notebooks folder on the Jupyter page.](media/jupyter-notebooks-03-claim-classification.png "03 Claim Classification.ipynb")
+1. Within the `notebooks` folder, select the notebook named **03 Claim Classification.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
 2. Read the instructions at the top of the notebook, and execute the cells as instructed.
 
-   > **Note**: Pay attention to the top of the notebook and check the TensorFlow and Keras library versions. The TensorFlow version should be 2.0.0, and the Keras version should be 2.3.1.
+   > **Note**: Pay attention to the top of the notebook and check the TensorFlow library version. The TensorFlow version should be 2.2.0.
 
 ### Task 2: Deploy the Keras model
 
-1. Within the `notebooks` folder on the Jupyter interface, select the notebook named `04 Deploy Classifier Web Service.ipynb`. This link opens the notebook so you can read and execute the code it contains.
-
-    ![The 04 Deploy Classifier Web Service.ipynb notebook is highlighted within the notebooks folder on the Jupyter page.](media/jupyter-notebooks-04-deploy-classifier-web-service.png "04 Deploy Classifier Web Service.ipynb")
+1. Within the `notebooks` folder, select the notebook named **04 Deploy Classifier Web Service.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
 2. Read the instructions at the top of the notebook, and execute the cells as instructed.
 
-    > **Note**: Make sure you copy the scoring URI from the output of the last cell of this notebook. The scoring URI value is needed in the final notebook of this hands-on lab.
+3. Make sure you copy the scoring URI from the output of the last cell of this notebook. The scoring URI value is needed in the final notebook of this hands-on lab.
+
+## Exercise 3: Text Classification with Azure Automated Machine Learning
+
+Duration: 75 minutes
+
+Automated machine learning picks an algorithm and hyperparameters for you and generates a model ready for deployment. You can create and run automated machine learning experiments in code using the [Azure ML Python SDK](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-auto-train) or if you prefer a no code experience, you can also Create your automated machine learning experiments in the [Azure portal](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-portal-experiments).
+
+In this exercise, you learn how to create, run, and explore automated machine learning experiments in the Azure portal without a single line of code. We will train a classification model for claim text that will predict `1` if the claim is an auto insurance claim or `0` if it is a home insurance claim.
+
+> Note: You need to complete running the notebook **03 Claim Classification.ipynb** from `Exercise 2 Task 1` before starting this exercise.
+
+### Task 1: Create New Automated Machine Learning Experiment
+
+1. From within Azure Machine Learning studio, select **Home, Create new, Automated ML run**.
+
+   ![From Azure Machine Learning studio home page, the create new automated ml run menu option is highlighted.](media/automl-01.png "Create a new Automated ML run")
+
+1. This will open a `Create a new Automated ML run` page.
+
+### Task 2: Create a new Automated ML run
+
+1. Select the dataset **claims-dataset** created during `Exercise 2` and then select **Next**.
+
+  ![In the create new automated ml run page the dataset named claims-dataset is highlighted and the button named next is also highlighted.](media/automl-02.png "Select dataset")
+
+2. In the `Configure run` page, make the following selections and then select **Next**:
+
+   - Existing experiment: **claims-classification-exp**
+   - Target column: **labels (Integer)**
+   - Select Azure ML compute cluster: **amlcompute-ad**
+
+  ![In the configure run page the above listed values are filled in and the button named next is highlighted.](media/automl-03.png "Configure run")
+
+3. In the `Select task type` page make the following selections, and then open the `Additional configurations` dialog by selecting **View additional configuration settings**:
+
+   - Task type: **Classification**
+   - Enable deep learning: **Checked**
+
+4. In the `Additional configurations` dialog make the following selections and then select **Save**:
+
+   - Training job timeout (hours): **1**
+   - Validation type: **Train-validation split**
+   - Percentage validation of data: **10**
+
+5. In the `Select task type` page select **Finish** to start the AutoML experiment run.
+
+  ![In the select task type page the above listed values are filled in and the button named finish is highlighted.](media/automl-04.png "Select task type")
+
+### Task 3: Monitor Automated ML run
+
+1. You can monitor the experiment from the run details page. Initially run status is `Not started`. Wait till the run status is `Completed`.
+
+  ![The AutoML run details page is shown, with the run status highlighted.](media/automl-05.png "Monitor AutoML run")
+
+> Note: The Automated ML run will for around 40-60 minutes. It is recommended you complete Exercise 4 and then return to complete Exercise 3.
+
+### Task 4: Review Best Model Performance
+
+1. Select the **Models** tab to review the model pipelines that were trained during the experiment run.
+
+  ![The AutoML run details page is shown, with the run status and the models tab highlighted.](media/automl-06.png "AutoML run details")
+
+1. Select the **algorithm** with the best score on the primary metric `AUC weighted`.
+
+  ![Models page that shows all the model pipelines that were trained during the AutoML run, with the best performing algorithm pipeline highlighted.](media/automl-07.png "Trained Models")
+
+1. Select the **Metrics** tab to review the various performance metrics and charts.
+
+  ![Model metrics tab showing various model performance metrics and charts.](media/automl-08.png "Model Metrics")
+
+  > Note: You have the option to deploy the trained model pipeline to either Azure Container Instance or Azure Kubernetes Service directly from the Azure ML Studio.
 
 ## Exercise 4: Completing the solution
 
 Duration: 45 minutes
 
-In this exercise, you perform the final integration with the Computer Vision and Text Analytics APIs and the Azure Machine Learning service you previously deployed to deliver the completed proof of concept solution.
+In this exercise, you perform the final integration with the Text Analytics APIs and the Azure Machine Learning service you previously deployed to deliver the completed proof of concept solution.
 
-### Task 1: Retrieve the Computer Vision API endpoint and key
-
-In this task, you retrieve the API key and endpoint URI associated with your Computer Vision API.
-
-1. In the [Azure portal](https://portal.azure.com), select **Resource groups** from the Azure services list.
-
-   ![Resource groups is highlighted in the Azure services list.](media/azure-services-resource-groups.png "Azure services")
-
-2. Select the `hands-on-lab-SUFFIX` resource group you created for this hands-on lab from the list of resource groups.
-
-    ![The hands-on-lab-SUFFIX resource group is highlighted in the list of resource groups.](media/resource-groups.png "Resource groups")
-
-3. Select your Computer Vision Cognitive Services resource from the list.
-
-    ![The computer vision resource is highlighted in the list of resources in the hands-on-lab-SUFFIX resource group.](media/resources-computer-vision.png "Computer Vision resource")
-
-4. Select **Keys and Endpoint** from the left-hand navigation menu and then copy the **Key 1** and **Endpoint** values into a text editor, such as Notepad.exe, or something similar as you will need this value later in this exercise.
-
-    ![Keys and Endpoint in highlighted and selected in the left-hand navigation menu. The copy buttons for Key 1 and Endpoint are highlighted.](media/computer-vision-keys-and-endpoint.png "Computer Vision Keys and Endpoint")
-
-### Task 2: Retrieve the Text Analytics API endpoint and key
+### Task 1: Retrieve the Text Analytics API endpoint and key
 
 In this task, you will retrieve the API key and endpoint URI associated with your Text Analytics API.
 
@@ -196,11 +219,9 @@ In this task, you will retrieve the API key and endpoint URI associated with you
 
     ![Keys and Endpoint in highlighted and selected in the left-hand navigation menu. The copy buttons for Key 1 and Endpoint are highlighted.](media/text-analytics-keys-and-endpoint.png "Text Analytics Keys and Endpoint")
 
-### Task 3: Completing the solution
+### Task 2: Completing the solution
 
-1. Return to the Azure Machine Learning Studio window. Within the `notebooks` folder on the Jupyter interface, select the notebook named `05 Cognitive Services.ipynb`. This link opens the notebook so you can read and execute the code it contains.
-
-    ![The 05 Cognitive Services.ipynb notebook is highlighted within the notebooks folder on the Jupyter page.](media/jupyter-notebooks-05-cognitive-services.png "05 Cognitive Services.ipynb")
+1. From within Azure Machine Learning studio, navigate to the `Notebooks` section by selecting it from the left-hand navigation menu. Then select the notebook: **mcw-csdl/MCW-Cognitive-services-and-deep-learning/Hands-on lab/notebooks/05 Cognitive Services.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
 2. Follow the steps within the notebook to complete the lab and view the result of combining Cognitive Services with your Azure Machine Learning Services.
 
