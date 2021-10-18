@@ -34,6 +34,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 3: Create an Azure Machine Learning workspace](#task-3-create-an-azure-machine-learning-workspace)
     - [Task 4: Create a Compute Instance](#task-4-create-a-compute-instance)
     - [Task 5: Import the Lab Notebooks](#task-5-import-the-lab-notebooks)
+    - [Task 6: Setup Lab Environment](#task-6-setup-lab-environment)
 
 <!-- /TOC -->
 
@@ -196,5 +197,16 @@ In this task, you import Jupyter notebooks from GitHub that you will use to comp
    ![In the Jupyter terminal window, the commands listed above are displayed.](media/jupyter-terminal.png "Import repository")
 
 5. Wait for the `clone` command to finish importing the repo.
+
+### Task 6: Setup Lab Environment
+
+1. From the terminal window run the following commands (assuming you are in the `mcw-csdl` folder):
+
+   - `cd "MCW-Cognitive-services-and-deep-learning/Hands-on lab/notebooks"`
+   - `conda activate azureml_py38`
+   - `pip install --upgrade pip`
+   - `pip install -r requirements.txt`
+
+   ![In the Jupyter terminal window, the commands listed above are displayed.](media/jupyter-terminal-02.png "Setup Lab environment")
 
 You should follow all these steps provided *before* attending the Hands-on lab.
