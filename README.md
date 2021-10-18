@@ -8,11 +8,11 @@ In this workshop, you help Contoso Ltd. build a proof of concept that shows how 
 
 They would like to automatically classify each claim detail a customer types in as either home or auto, based on the text. This classification should be displayed in the claim summary, so an agent can quickly assess whether they are dealing with purely a home claim, an auto claim, or a claim with a mixture of the two.
 
-They would also like to experiment with applying sentiment analysis to the claim text. Contoso Ltd. knows most customers are either factual in their description (a neutral sentiment) or slightly unhappy (a more negative sentiment). They believe that negative sentiment can indicate that the claim text involves a more severe situation, which might warrant an agent's expedited review.
+They would also like to experiment with applying text analysis to the claim text. Contoso Ltd. knows most customers are either factual in their description (a neutral sentiment) or slightly unhappy (a more negative sentiment). They believe that negative sentiment can indicate that the claim text involves a more severe situation, which might warrant an agent's expedited review. Furthermore, they would like to understand any positive or negative opinions the customers have expressed in their responses, and quickly identify key concepts in the claims text. They would also like to detect the language of the claims and identify any personal information included by customers in their responses.
 
 Next, they would like to summarize long claim text automatically. This summarization would enable the agent to get the gist before reading the full claim and quickly remind themselves of the context when revisiting it.
 
-Finally, they would like to automatically extract information from the photos submitted with the claims to increase their searchability.
+As a final step, they would like to organize the information generated from text classification, text analysis, and text summarization that can be then fed into their Agent portal.
 
 November 2021
 
@@ -25,27 +25,27 @@ November 2021
 
 ### Workshop
 
-In this workshop, you learn to combine both pre-built artificial intelligence (AI) in the form of various Cognitive Services with custom AI in the form of services built and deployed with Azure Machine Learning service. You will learn to create intelligent solutions atop unstructured text data by designing and implementing a text analytics pipeline. You will also learn how to build a binary classifier using a recurrent neural network that can be used to classify the textual data. You will also learn how to deploy multiple kinds of predictive services using Azure Machine Learning and learn to integrate with the Computer Vision API and the Text Analytics API from Cognitive Services.
+In this workshop, you learn to combine both pre-built artificial intelligence (AI) in the form of various Cognitive Services with custom AI in the form of services built and deployed with Azure Machine Learning service. You will learn to create intelligent solutions atop unstructured text data by designing and implementing a text analytics pipeline. You will also learn how to build a binary classifier using a recurrent neural network that can be used to classify the textual data. You will also learn to build Automated Machine Learning models in Azure Machine Learning studio for the purposes of text classification. Finally, you learn how to deploy multiple kinds of predictive services using Azure Machine Learning and learn to integrate with the Text Analytics API from Cognitive Services.
 
-At the end of this workshop, you will be better able to present solutions leveraging Azure Machine Learning service, Azure Machine Learning compute instance, and Cognitive Services.
+At the end of this workshop, you will be better able to present solutions leveraging Azure Machine Learning service, and Cognitive Services.
 
 ### Whiteboard design session
 
-In this whiteboard design session, you work with a group to design a solution that combines both pre-built artificial intelligence (AI) in the form of various Cognitive Services with custom AI in the form of services built and deployed with Azure Machine Learning services. You will learn to create intelligent solutions atop unstructured text data by designing and implementing a text analytics pipeline. You will discover how to build a binary classifier using a recurrent neural network that can be used to classify the textual data. You will also learn how to deploy multiple kinds of predictive services using Azure Machine Learning and learn to integrate with the Computer Vision API and the Text Analytics API from Cognitive Services.
+In this whiteboard design session, you work with a group to design a solution that combines both pre-built artificial intelligence (AI) in the form of Text Analytics API from Cognitive Services with custom AI in the form of services built and deployed with Azure Machine Learning services. You will learn to create intelligent solutions atop unstructured text data by designing and implementing a text analytics pipeline. You will discover how to build a binary classifier that can be used to classify the textual data. You will also learn how to deploy multiple kinds of predictive services using Azure Machine Learning and learn to integrate with the Text Analytics.
 
 At the end of this whiteboard design session, you will be better able to design solutions leveraging Azure Machine Learning services and Cognitive Services.
 
 ### Hands-on lab
 
-In this hands-on lab, you implement a solution that combines both pre-built artificial intelligence (AI) in the form of various Cognitive Services with custom AI in the form of services built and deployed with Azure Machine Learning service. In the lab, you work with unstructured text and image data and learning how to develop analytics pipelines for various problems such as text summarization, text classification, image detection, optical character recognition (OCR), and sentiment analysis. You learn how to build and train a deep neural net for text classification. You also learn how to deploy multiple kinds of predictive services using Azure Machine Learning and learn to integrate with the Computer Vision API and the Text Analytics API from Cognitive Services.
+In this hands-on lab, you implement a solution that combines both pre-built artificial intelligence (AI) in the form of various Cognitive Services with custom AI in the form of services built and deployed with Azure Machine Learning service. In the lab, you work with unstructured text and learning how to develop analytics pipelines for various problems such as text summarization, text classification, sentiment analysis, opinion mining, key phrase extraction, and language and PII detection. You learn how to build and train a deep neural net for text classification. You will also learn to build Automated Machine Learning models in Azure Machine Learning studio for the purposes of text classification. Finally, you learn how to deploy multiple kinds of predictive services using Azure Machine Learning and learn to integrate with the Text Analytics API from Cognitive Services.
 
-At the end of this hands-on lab, you will be better able to present solutions leveraging Azure Machine Learning service, Azure Machine Learning compute instance, and Cognitive Services.
+At the end of this hands-on lab, you will be better able to present solutions leveraging Azure Machine Learning services and Cognitive Services.
 
 ## Azure services and related products
 
 - Azure Machine Learning service
+- Automated Machine Learning
 - Cognitive Services
-- Computer Vision API
 - Text Analytics API
 - TensorFlow
 - Keras
