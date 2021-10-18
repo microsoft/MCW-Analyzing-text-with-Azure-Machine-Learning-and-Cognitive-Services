@@ -160,7 +160,7 @@ _Classifying claim-text data_
 
 _Automated machine learning_
 
-1. Can Contoso apply automated machine learning for text classification? How?
+1. Can Contoso apply automated machine learning for text classification?
 
 2. Can they really expect a non-data scientist to create performant models using automated machine learning?
 
@@ -168,7 +168,9 @@ _Free-text Analytics_
 
 1. How would you recommend Contoso identify the sentiment, opinions, and key phrases in the free-response text provided associated with a claim? Would this require you to build a custom AI model? Is there a pre-built AI service you could use?
 
-2. Next, pseudo code on how to use the Text Analytics Python APIs for their text analytics use cases.
+2. For the solution you propose, what is the range of value of the sentiment score, and how would you interpret that value?
+
+3. Next, pseudo code on how to use the Text Analytics Python APIs for their text analytics use cases.
 
 _Summarizing claim text_
 

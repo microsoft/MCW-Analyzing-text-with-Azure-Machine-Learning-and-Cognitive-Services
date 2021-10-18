@@ -286,7 +286,7 @@ _Classifying claim-text data_
 
 _Automated machine learning_
 
-1. Can Contoso apply automated machine learning for text classification? How?
+1. Can Contoso apply automated machine learning for text classification?
 
 2. Can they really expect a non-data scientist to create performant models using automated machine learning?
 
@@ -294,7 +294,9 @@ _Free-text Analytics_
 
 1. How would you recommend Contoso identify the sentiment, opinions, and key phrases in the free-response text provided associated with a claim? Would this require you to build a custom AI model? Is there a pre-built AI service you could use?
 
-2. Next, pseudo code on how to use the Text Analytics Python APIs for their text analytics use cases.
+2. For the solution you propose, what is the range of value of the sentiment score, and how would you interpret that value?
+
+3. Next, pseudo code on how to use the Text Analytics Python APIs for their text analytics use cases.
 
 _Summarizing claim text_
 
@@ -414,17 +416,13 @@ The primary audience is the business and technology decision-makers. From the ca
 
 _High-level architecture_
 
-1. Without getting into the details (the following sections will address the details), diagram your initial vision for handling the top-level requirements for processing the claims textual data, photos, and enabling search. You will refine this diagram as you proceed.
+1. Without getting into the details (the following sections will address the details), diagram your initial vision for handling the top-level requirements for processing the claims textual data. You will refine this diagram as you proceed.
 
-    After speaking with its team at Microsoft, Contoso decided to design their PoC solution in Azure. They would continue to use the web app and SQL database they already have running in Azure to handle claim submissions. They could build a claim enrichment pipeline by invoking a sequence of Azure Functions, where each of the coordinates calls to various AI-powered services.
+    After speaking with its team at Microsoft, Contoso decided to design their PoC solution in Azure. They would continue to use the web app and SQL database they already have running in Azure to handle claim submissions. They could build a claim enrichment pipeline by invoking a sequence of Text Analytics APIs and custom AI in the form of services built and deployed with Azure Machine Learning services.
 
- ![The High-level architectural solution begins with a Claim, which points to Jupyter notebook. Jupyter then points to Computer Vision, Text Analytics, and Containerized Services, which includes a Classification Service and a Summary Service that both processes claim text.](media/image4.jpg "High-level architectural solution")
+     ![The High-level architectural solution begins with a Claim, which points to Claims submission WebApp. The WebApp then points to Text Analytics, and Containerized Services, which includes a Classification Service and a Summary Service that both processes claim text.](media/new_arch.png "High-level architectural solution")
 
-   The claim image processing functions would invoke the Computer Vision Cognitive Service for automatically creating the caption and the tags from any supplied claim images. A mixture of pre-built AI, in the form of Cognitive Services and custom AI in the form of Azure ML services, would be used to process the claim text. The models used for processing claims' text would be trained in Azure Machine Learning compute instance. These models could also be directly deployed from Azure Machine Learning compute instance using the Azure Machine Learning Service Python SDK. Azure Functions would coordinate the calls to the classifications and summary AI services, which would run as containerized web services in Azure Container Service. Simultaneously, the Text Analytics API could be invoked directly to provide a sentiment score for each claim text.
-
- ![In the Claim image processing diagram, Function (claim text processing) points to Sentiment, classification and summary, Text Analytics, and Containerized services comprised of Classification Service and Summary Service.](media/image5.png "Claim image processing diagram")
-
-   Once all claim processing has been completed, one final Azure Function could be used to insert the complete claim document into Azure Cognitive Search. The inserted document would contain the claim number as a field to always be tied back to the record store in Azure SQL Database.
+   The claim processing pipeline would invoke a mixture of pre-built AI, in the form of Cognitive Services Text Analytics APIs and custom AI in the form of Azure ML services, to process the claim text. The custom models used for processing claims' text would be trained in Azure Machine Learning compute clusters. These models could also be directly deployed to containerized services such as Azure Container Instance (ACI) or Azure Kubernetes Service (AKS) using the Azure Machine Learning Service Python SDK. The Text Analytics APIs could be invoked to provide key analytics such as, sentiment analysis, opinion mining, and key phrase extraction. The enriched claims data is then saved in the SQL database to serve the Agent Web portal.
 
 _Classifying claim text data_
 
@@ -504,15 +502,45 @@ _Classifying claim text data_
 
      The trained model is saved to a file. This file is then loaded by web service code that re-creates the model architecture and loads the model weights. The web service code can then run classifications using the model. You could deploy this service using Azure Machine Learning service, which would capture the web service in a container, and then deploy it to Azure Container Service where any REST client can invoke it.
 
-_Identifying free-text sentiment_
+_Automated machine learning_
 
-1. How would you recommend Contoso identify the sentiment in the free-response text provided associated with a claim? Would this require you to build a custom AI model? Is there a pre-built AI service you could use?
+1. Can Contoso apply automated machine learning for text classification?
 
-    Contoso should use the Text Analytics API from Cognitive Services for scoring the sentiment of the claim text. By doing so, they would not have to build or train a custom model, nor have the requirement of having the data to do so.
+    Azure automated machine learning picks an algorithm and hyperparameters for you and generates a model ready for deployment. Azure automated machine learning can be applied for text classification problems such as automatically classifying the claims text as either home or auto.
+
+2. Can they really expect a non-data scientist to create performant models using automated machine learning?
+
+    Automated machine learning in Azure Machine Learning helps to simplify and expedite the process of producing a performant model. You can create and run automated machine learning experiments in code using the [Azure ML Python SDK](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-auto-train) or if you prefer a no code experience, you can also Create your automated machine learning experiments in the [Azure portal](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-portal-experiments).
+
+_Free-text Analytics_
+
+1. How would you recommend Contoso identify the sentiment, opinions, and key phrases in the free-response text provided associated with a claim? Would this require you to build a custom AI model? Is there a pre-built AI service you could use?
+
+    Contoso should use the Text Analytics API from Cognitive Services for scoring the sentiment, extracting opinion, and identifying key phrases of the claim text. By doing so, they would not have to build or train a custom model, nor have the requirement of having the data to do so.
 
 2. For the solution you propose, what is the range of value of the sentiment score, and how would you interpret that value?
 
     The Text Analytics API returns values in the range of 0 to 1. A value closer to 0 is interpreted as strongly negative sentiment, near 0.5 as neutral sentiment, and closer to 1 as strongly positive.
+
+3. Next, pseudo code on how to use the Text Analytics Python APIs for their text analytics use cases.
+
+   ```python
+    from azure.core.credentials import AzureKeyCredential
+    from azure.ai.textanalytics import TextAnalyticsClient
+    
+    # Create the Text Analytics Client
+    credential = AzureKeyCredential(key)
+    client = TextAnalyticsClient(endpoint=endpoint, credential=credential)
+
+    # Analyze sentiments in the claims text
+    claim = "..."
+    response = client.analyze_sentiment(documents=[claim])[0]
+
+    # Retrieve the sentiment scores from the response
+    overall_positive_score = response.confidence_scores.positive
+    overall_neutral_score = response.confidence_scores.neutral
+    overall_negative_score = response.confidence_scores.negative
+    ```
 
 _Summarizing claim text_
 
@@ -520,105 +548,19 @@ _Summarizing claim text_
 
     Azure Machine Learning service can be used to deploy web services that do not have a model. While the API used to perform the deployment requires a model argument, the argument can refer to any file, and it does not require the use of the file during the web service runtime. Therefore, Contoso could deploy a web service that uses Gensim to perform summarization.
 
-_Captions, tags, and "reading" images_
+2. Discuss with Contoso team the Text Analytics extractive summarization capability that is currently in preview and how that can be used in place of Gensim when it becomes generally available.
 
-1. How would you recommend Contoso implement support for automatically creating captions for the claim photos? Similarly, how would they automatically generate tags? Would this require you to build a custom AI model? Is there a pre-built AI service you could use?
-
-    For both creating captions and the generation of tags, Contoso should use the analyze feature of the Computer Vision API from Cognitive Services.
-
-2. Describe the flow of processing of an image as input; what value is returned by each component in your proposed solution for captioning and tagging images?
-
-    Using the Computer Vision API, either the binary image data or a URL pointing to a publicly accessible image can be supplied. Computer Vision API's return value is a JSON document that includes the requested fields (such as captions and tags).
-
-     An example of such as JSON response document is as follows:
-
-    ```json
-    {'categories': [{'name': 'others_', 'score': 0.39453125},
-    {'name': 'trans_car', 'score': 0.44140625}],
-    'color': {'accentColor': '895D42',
-    'dominantColorBackground': 'White',
-    'dominantColorForeground': 'White',
-    'dominantColors': ['White'],
-    'isBwImg': False},
-    'description': {'captions': [{'confidence': 0.9485308427051494,
-        'text': 'a truck is parked on the side of a road'}],
-    'tags': ['outdoor',
-    'road',
-    'truck',
-    'car',
-    'traffic']},
-    'metadata': {'format': 'Jpeg', 'height': 1080, 'width': 1920},
-    'requestId': '2236f0b9-044f-415f-b772-a9a4ce15728d',
-    'tags': [{'confidence': 0.9950141310691833, 'name': 'outdoor'},
-    {'confidence': 0.9936342239379883, 'name': 'road'},
-    {'confidence': 0.981715738773346, 'name': 'truck'},
-    {'confidence': 0.749627411365509, 'name': 'transport'},
-    {'confidence': 0.16133838891983032, 'name': 'trailer'}]}
-
-    ```
-
-3. How would you recommend Contoso implement support for "reading" any text that appears within an image so that it could be searched later? Would this require you to build a custom AI model? Is there a pre-built AI service you could use?
-
-    When attempting to extract text from an image, Contoso could use the OCR feature of the Computer Vision API.
-
-4. Describe the flow of processing of an image as input. What value is returned by each component in your proposed solution for "reading" images?
-
-    Using the Computer Vision API, either the binary image data or a URL pointing to a publicly accessible image can be supplied. The return value of Computer Vision API for the OCR feature is a JSON document, which includes a collection of bounding boxes that contain the text recognized from the image.
-
-     An example of such as JSON response document is as follows:
-
-    ```json
-    {
-        'language': 'en',
-        'orientation': 'Up',
-        'regions': [
-            {
-                'boundingBox': '365,127,937,78',
-                'lines': [
-                    {
-                        'boundingBox': '1028,127,274,49',
-                        'words': [
-                            {
-                                'boundingBox': '1028,141,184,35',
-                                'text': 'POLICE'
-                            }
-                        ]
-                    },
-                    {
-                        'boundingBox': '365,171,318,34',
-                        'words': [
-                            {
-                                'boundingBox': '365,171,318,34',
-                                'text': 'EMERGENCY'
-                            }
-                        ]
-                    }
-                ]
-            }
-        ],
-        'textAngle': 0.0
-    }
-    ```
-
-_Enabling search_
-
-1. What service would you recommend Contoso leverage to enable greater searchability over the claim data, inclusive of the new data fields created by your text processing and image processing components?
-
-    Contoso should use Azure Cognitive Search to create an Index for the claim data as it enters their system and is augmented by the text and image processing components' results.
-
-2. Can they keep their claims data in the existing database and layer in this search capability? If so, explain how.
-
-    Yes, the Azure Cognitive Search index data would augment the data already stored in their SQL Database. The Azure Cognitive Search index data would tie back to the SQL Database data via values used as the primary key in the SQL Database (such as the claim ID, image ID, attachment ID, etc.).
+    The extractive summarization is a feature in Azure Text Analytics produces a summary by extracting sentences that collectively represent the most important or relevant information within the original content. This feature is designed to shorten content that users consider too long to read. The AI models used by the API are provided by the service, you just have to send content for analysis. Text Analytics extractive summarization is a preview capability and should not be deployed in any production use. However, once it becomes generally available, it will be part of the Text Analytics APIs and can be summarization APIs can be leveraged in a similar fashion as the other Text Analytics APIs.
 
 ## Checklist of preferred objection handling
 
 1. We are skeptical about all the hype surrounding these "AI" solutions. It's hard to know what is feasible versus what is not possible with today's technology and Azure.
 
-    While it is true that there is a lot of hype around AI, the ability to deploy solutions that use data, machine learning, and deep learning to create an application with "AI" capabilities is real and is possible in Azure. Azure provides a wide range of services to address the needs of AI, from pre-built AI capabilities in Cognitive Services to services that help you to build, train, and deploy your custom AI capabilities using the Azure Machine Learning service and other services from the Microsoft AI stack.
+    While it is true that there is a lot of hype around AI, the ability to deploy solutions that use data, machine learning, and deep learning to create an application with "AI" capabilities is real and is possible in Azure. Azure provides a wide range of services to address the needs of AI, from pre-built AI capabilities in Cognitive Services, to Automated Machine Learning in Azure Machine Learning, to services that help you to build, train, and deploy your custom AI capabilities using the Azure Machine Learning service and other services from the Microsoft AI stack.
 
 2. We know that there are both pre-built AI and custom AI options available. We are confused as to when to choose one over the other.
 
-    It would be best if you considered the pre-built AI options first. However, if you rule them out because they do not fit your requirements, you should explore the custom AI options. The advantage of pre-built AI options like Cognitive Services is that the models they use under the covers do not need to be trained by you, and you do not need to have the data to train them as a pre-requisite.
+    It would be best if you considered the pre-built AI and Automated Machine Learning options first. However, if you rule them out because they do not fit your requirements, you should explore the custom AI options. The advantage of pre-built AI options like Cognitive Services is that the models they use under the covers do not need to be trained by you, and you do not need to have the data to train them as a pre-requisite. On the other hand, Azure automated machine learning currently support use cases such as classification, regression, or time-series forecasting. Automated machine learning picks an algorithm and hyperparameters and thus simplifies and expedite the process of producing a performant model, and you can create your model training experiments in Azure Machine Learning studio without writing a single line of code.
 
 3. We expect some part of our solution would require deep learning. Do you have any prescriptive guidance on how we might choose between investing in understanding and using TensorFlow or the Microsoft Cognitive Toolkit (CNTK)?
 
