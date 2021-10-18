@@ -518,7 +518,7 @@ _Free-text Analytics_
 
 2. For the solution you propose, what is the range of value of the sentiment score, and how would you interpret that value?
 
-    The Text Analytics API returns values in the range of 0 to 1. A value closer to 0 is interpreted as strongly negative sentiment, near 0.5 as neutral sentiment, and closer to 1 as strongly positive.
+    The Text Analytics API returns confidence scores from 0 to 1 for positive, neutral, and negative sentiments. Higher confidence score for a given sentiment implies higher probability of that sentiment being present in the text.
 
 3. Next, pseudo code on how to use the Text Analytics Python APIs for their text analytics use cases.
 
@@ -548,7 +548,7 @@ _Summarizing claim text_
 
 2. Discuss with Contoso team the Text Analytics extractive summarization capability that is currently in preview and how that can be used in place of Gensim when it becomes generally available.
 
-    The extractive summarization is a feature in Azure Text Analytics produces a summary by extracting sentences that collectively represent the most important or relevant information within the original content. This feature is designed to shorten content that users consider too long to read. The AI models used by the API are provided by the service, you just have to send content for analysis. Text Analytics extractive summarization is a preview capability and should not be deployed in any production use. However, once it becomes generally available, it will be part of the Text Analytics APIs and can be summarization APIs can be leveraged in a similar fashion as the other Text Analytics APIs.
+    The extractive summarization is a feature in Azure Text Analytics produces a summary by extracting sentences that collectively represent the most important or relevant information within the original content. This feature is designed to shorten content that users consider too long to read. The AI models used by the API are provided by the service, you just have to send content for analysis. Text Analytics extractive summarization is a preview capability and should not be deployed in any production use. However, once it becomes generally available, it will be part of the Text Analytics APIs and the summarization APIs can be then leveraged in a similar fashion as the other Text Analytics APIs.
 
 ## Checklist of preferred objection handling
 
