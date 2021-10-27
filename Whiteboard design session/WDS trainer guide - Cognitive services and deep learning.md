@@ -508,7 +508,7 @@ _Automated machine learning_
 
 2. Can they really expect a non-data scientist to create performant models using automated machine learning?
 
-    Automated machine learning in Azure Machine Learning helps to simplify and expedite the process of producing a performant model. You can create and run automated machine learning experiments in code using the [Azure ML Python SDK](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-auto-train) or if you prefer a no code experience, you can also Create your automated machine learning experiments in the [Azure portal](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-portal-experiments).
+    Automated machine learning in Azure Machine Learning helps to simplify and expedite the process of producing a performant model. You can create and run automated machine learning experiments in code using the [Azure ML Python SDK](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-auto-train) or if you prefer a no code experience, you can also create your automated machine learning experiments in the [Azure portal](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-portal-experiments).
 
 _Free-text Analytics_
 

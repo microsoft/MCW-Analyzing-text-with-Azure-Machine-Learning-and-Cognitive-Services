@@ -153,8 +153,6 @@ In this task, you provision the Azure Machine Learning workspace you will use th
 
    ![The Machine Learning resource page is shown with Overview selected from the left menu, and the Launch now button highlighted in the Overview screen.](media/bhol-03.png 'Launch the Azure Machine Learning studio')
 
-   > **Note**: If you use an existing workspace, please ensure that the default datastore for the workspace is the workspace blob store and not the file store. If you create a new workspace, as instructed above, the default datastore is already set to the workspace blob store.
-
 ### Task 4: Create a Compute Instance
 
 In this task, you add a compute resource to your Azure Machine Learning workspace.
