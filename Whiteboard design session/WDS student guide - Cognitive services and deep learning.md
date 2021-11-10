@@ -86,7 +86,7 @@ The second issue is Contoso would like to experiment with applying text analysis
 
 The third issue with the free text is that some of the responses are long. When agents are shifting between claims, it can be difficult for them to recall which response had the details they need. Contoso would like to experiment with an automatic summarization of long claims that produces a summary of about 30 words in length. This summarization would enable the agent to get the gist before reading the full claim and quickly remind themselves of the claim when revisiting it.
 
-As a final step, they would like to organize the information generated from text classification, text analysis and text summarization that can be then fed into their Agent portal.
+As a final step, they would like to organize the information generated from text classification, text analysis and text summarization that can be then fed into their Agent portal, an application where they can more quickly review and act on claim information.
 
 As a first step towards their bigger goals, Contoso would like to build a proof of concept (PoC) for an intelligent solution that could automate all the above. They would like to develop this PoC to build upon the claims submission solution they already have running in Azure. The existing solution consists of a Web App for claims submission and a SQL Database for claim storage. Contoso Ltd. believes this might be possible using AI, machine learning, or deep learning and would like to build a proof of concept to understand how far they can go using these technologies.
 
@@ -160,7 +160,7 @@ _Automated machine learning_
 
 1. Can Contoso apply automated machine learning for text classification?
 
-2. Can they really expect a non-data scientist to create performant models using automated machine learning?
+2. Can they really expect to create performant models using automated machine learning?
 
 _Free-text Analytics_
 
@@ -168,13 +168,13 @@ _Free-text Analytics_
 
 2. For the solution you propose, what is the range of value of the sentiment score, and how would you interpret that value?
 
-3. Next, pseudo code on how to use the Text Analytics Python APIs for their text analytics use cases.
+3. Write some pseudo code to describe how the Text Analytics APIs could be used for Contoso's text analytics use cases. (The actual solution may use the Python SDK or REST APIs)
 
 _Summarizing claim text_
 
 1. The team at Contoso has heard about a Python library called Gensim, which has a summarize function. Given an input of text, it can extract a summary of the desired length. Contoso would like their PoC to implement its summarization functionality initially using Gensim. However, the process they follow to deploy the summarization capability should also enable them to replace Gensim with another library or with the use of their own custom trained models if desired down the road. Describe how Contoso should deploy the summarization service to meet these requirements?
 
-2. Discuss with Contoso team the Text Analytics extractive summarization capability that is currently in preview and how that can be used in place of Gensim when it becomes generally available.
+2. Discuss with Contoso team the Text Analytics extractive summarization capability that is in preview (as of November 2021) and how that can be used in place of Gensim when it becomes generally available.
 
 **Prepare**
 

@@ -42,7 +42,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 ## Requirements
 
-1. Microsoft Azure subscription must be pay-as-you-go or MSDN
+1. You will need an Azure subscription with permissions to deploy resource groups and resources into them.
 
    - Trial subscriptions will not work. You will run into issues with Azure resource quota limits.
    - Subscriptions with access limited to a single resource group will not work. You need the ability to deploy multiple resource groups.
@@ -206,5 +206,7 @@ In this task, you import Jupyter notebooks from GitHub that you will use to comp
    - `pip install -r requirements.txt`
 
    ![In the Jupyter terminal window, the commands listed above are displayed.](media/jupyter-terminal-02.png "Setup Lab environment")
+
+    > Note: You can safely ignore any dependency errors during installation.
 
 You should follow all these steps provided *before* attending the Hands-on lab.

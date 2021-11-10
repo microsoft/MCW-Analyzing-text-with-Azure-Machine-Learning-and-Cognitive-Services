@@ -29,9 +29,9 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Overview](#overview)
   - [Solution architecture](#solution-architecture)
   - [Requirements](#requirements)
-  - [Exercise 1: Create and Deploy an Unsupervised Model](#exercise-1-create-and-deploy-an-unsupervised-model)
+  - [Exercise 1: Exercise 1: Create and Deploy a Summarization Service](#exercise-1-create-and-deploy-a-summarization-service)
     - [Task 1: Locate and open the Summarization notebook](#task-1-locate-and-open-the-summarization-notebook)
-    - [Task 2: Read through and execute the Summarization notebook](#task-2-read-through-and-execute-the-summarization-notebook)
+    - [Task 2: Run Notebook - 01 Summarize](#task-2-run-notebook---01-summarize)
     - [Task 3: Provision the Azure Machine Learning Workspace and Create the Summarization service](#task-3-provision-the-azure-machine-learning-workspace-and-create-the-summarization-service)
   - [Exercise 2: Create and Deploy a Keras Model](#exercise-2-create-and-deploy-a-keras-model)
     - [Task 1: Create a simple Keras based model](#task-1-create-a-simple-keras-based-model)
@@ -67,12 +67,12 @@ The high-level architecture of the solution is illustrated in the diagram. The l
 
 ## Requirements
 
-1. Microsoft Azure subscription must be pay-as-you-go or MSDN.
+1. You will need an Azure subscription with permissions to deploy resource groups and resources into them.
 
     - Trial subscriptions will not work. You will run into issues with Azure resource quota limits.
     - Subscriptions with access limited to a single resource group will not work. You will need the ability to deploy multiple resource groups.
 
-## Exercise 1: Create and Deploy an Unsupervised Model
+## Exercise 1: Create and Deploy a Summarization Service
 
 Duration: 60 minutes
 
@@ -86,13 +86,13 @@ In this task, you will navigate to the folder where all the notebooks for this l
 
     ![The 01 Summarize.ipynb notebook is opened from within the notebooks section of the Azure Machine Learning Studio.](media/notebook-01.png "01 Summarize.ipynb")
 
-### Task 2: Read through and execute the Summarization notebook
+### Task 2: Run Notebook - 01 Summarize
 
 1. Read the instructions at the top of the notebook, and execute the notebook cells one by one by selecting the **Run cell** arrow.
 
     ![The 01 Summarize.ipynb notebook is opened from within the notebooks section of the Azure Machine Learning Studio and the Run cell arrow is highlighted.](media/notebook-02.png "01 Summarize.ipynb")
 
-### Task 3: Provision the Azure Machine Learning Workspace and Create the Summarization service
+### Task 3: Run Notebook - 02 Deploy Summarizer Web Service
 
 1. Within the `notebooks` folder, select the notebook called **02 Deploy Summarizer Web Service.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
@@ -106,7 +106,7 @@ Duration: 60 minutes
 
 In this exercise, you use Keras to construct and train a Deep Neural Network (DNN) called the Long Short-Term Memory (LSTM) recurrent neural network. LSTM works well for text classification problems, especially when used in conjunction with word embedding such as GloVe for word vectorization. In this notebook, you also learn how GloVe word embeddings perform on word analogy tasks.
 
-### Task 1: Create a simple Keras based model
+### Task 1: Run Notebook - 03 Claim Classification
 
 1. Within the `notebooks` folder, select the notebook named **03 Claim Classification.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
@@ -114,7 +114,7 @@ In this exercise, you use Keras to construct and train a Deep Neural Network (DN
 
    > **Note**: Pay attention to the top of the notebook and check the TensorFlow library version. The TensorFlow version should be 2.2.0.
 
-### Task 2: Deploy the Keras model
+### Task 2: Run Notebook - 04 Deploy Classifier Web Service
 
 1. Within the `notebooks` folder, select the notebook named **04 Deploy Classifier Web Service.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
@@ -219,7 +219,7 @@ In this task, you will retrieve the API key and endpoint URI associated with you
 
     ![Keys and Endpoint in highlighted and selected in the left-hand navigation menu. The copy buttons for Key 1 and Endpoint are highlighted.](media/text-analytics-keys-and-endpoint.png "Text Analytics Keys and Endpoint")
 
-### Task 2: Completing the solution
+### Task 2: Run Notebook - 05 Cognitive Services
 
 1. From within Azure Machine Learning studio, navigate to the `Notebooks` section by selecting it from the left-hand navigation menu. Then select the notebook: **mcw-csdl/MCW-Cognitive-services-and-deep-learning/Hands-on lab/notebooks/05 Cognitive Services.ipynb**. This opens the notebook so you can read and execute the code it contains.
 

@@ -212,7 +212,7 @@ The second issue is Contoso would like to experiment with applying text analysis
 
 The third issue with the free text is that some of the responses are long. When agents are shifting between claims, it can be difficult for them to recall which response had the details they need. Contoso would like to experiment with an automatic summarization of long claims that produces a summary of about 30 words in length. This summarization would enable the agent to get the gist before reading the full claim and quickly remind themselves of the claim when revisiting it.
 
-As a final step, they would like to organize the information generated from text classification, text analysis and text summarization that can be then fed into their Agent portal.
+As a final step, they would like to organize the information generated from text classification, text analysis and text summarization that can be then fed into their Agent portal, an application where they can more quickly review and act on claim information.
 
 As a first step towards their bigger goals, Contoso would like to build a proof of concept (PoC) for an intelligent solution that could automate all the above. They would like to develop this PoC to build upon the claims submission solution they already have running in Azure. The existing solution consists of a Web App for claims submission and a SQL Database for claim storage. Contoso Ltd. believes this might be possible using AI, machine learning, or deep learning and would like to build a proof of concept to understand how far they can go using these technologies.
 
@@ -286,7 +286,7 @@ _Automated machine learning_
 
 1. Can Contoso apply automated machine learning for text classification?
 
-2. Can they really expect a non-data scientist to create performant models using automated machine learning?
+2. Can they really expect to create performant models using automated machine learning?
 
 _Free-text Analytics_
 
@@ -294,13 +294,13 @@ _Free-text Analytics_
 
 2. For the solution you propose, what is the range of value of the sentiment score, and how would you interpret that value?
 
-3. Next, pseudo code on how to use the Text Analytics Python APIs for their text analytics use cases.
+3. Write some pseudo code to describe how the Text Analytics APIs could be used for Contoso's text analytics use cases. (The actual solution may use the Python SDK or REST APIs)
 
 _Summarizing claim text_
 
 1. The team at Contoso has heard about a Python library called Gensim, which has a summarize function. Given an input of text, it can extract a summary of the desired length. Contoso would like their PoC to implement its summarization functionality initially using Gensim. However, the process they follow to deploy the summarization capability should also enable them to replace Gensim with another library or with the use of their own custom trained models if desired down the road. Describe how Contoso should deploy the summarization service to meet these requirements?
 
-2. Discuss with Contoso team the Text Analytics extractive summarization capability that is currently in preview and how that can be used in place of Gensim when it becomes generally available.
+2. Discuss with Contoso team the Text Analytics extractive summarization capability that is in preview (as of November 2021) and how that can be used in place of Gensim when it becomes generally available.
 
 **Prepare**
 
@@ -506,9 +506,9 @@ _Automated machine learning_
 
     Azure automated machine learning picks an algorithm and hyperparameters for you and generates a model ready for deployment. Azure automated machine learning can be applied for text classification problems such as automatically classifying the claims text as either home or auto.
 
-2. Can they really expect a non-data scientist to create performant models using automated machine learning?
+2. Can they really expect to create performant models using automated machine learning?
 
-    Automated machine learning in Azure Machine Learning helps to simplify and expedite the process of producing a performant model. You can create and run automated machine learning experiments in code using the [Azure ML Python SDK](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-auto-train) or if you prefer a no code experience, you can also create your automated machine learning experiments in the [Azure portal](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-portal-experiments).
+    Automated machine learning in Azure Machine Learning helps to simplify and expedite the process of producing a performant model. You can create and run automated machine learning experiments in code using the [Azure ML Python SDK](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-configure-auto-train) or if you prefer a no code experience, you can also create your automated machine learning experiments in the [Azure portal](https://docs.microsoft.com/en-us/azure/machine-learning/service/how-to-create-portal-experiments). It’s a useful tool in the toolkit that can be leveraged by both non-data scientists as well as professional data scientists.
 
 _Free-text Analytics_
 
@@ -520,7 +520,15 @@ _Free-text Analytics_
 
     The Text Analytics API returns confidence scores from 0 to 1 for positive, neutral, and negative sentiments. Higher confidence score for a given sentiment implies higher probability of that sentiment being present in the text.
 
-3. Next, pseudo code on how to use the Text Analytics Python APIs for their text analytics use cases.
+3. Write some pseudo code to describe how the Text Analytics APIs could be used for Contoso's text analytics use cases. (The actual solution may use the Python SDK or REST APIs)
+
+    The steps required to use the Text Analytics APIs is as follows:
+    - Import the dependent libraries
+    - Create a "client" in the code to interact with the web service
+    - Read in the claim(s)
+    - Send the claim text to the Text Analytics API to retrieve the information specifically needed (i.e. sentiments, extract key phrases, etc.)
+    - Retrieve the results
+    - Parse the returned values and send them to the next step of the solution chain
 
    ```python
     from azure.core.credentials import AzureKeyCredential
@@ -546,9 +554,9 @@ _Summarizing claim text_
 
     Azure Machine Learning service can be used to deploy web services that do not have a model. While the API used to perform the deployment requires a model argument, the argument can refer to any file, and it does not require the use of the file during the web service runtime. Therefore, Contoso could deploy a web service that uses Gensim to perform summarization.
 
-2. Discuss with Contoso team the Text Analytics extractive summarization capability that is currently in preview and how that can be used in place of Gensim when it becomes generally available.
+2. Discuss with Contoso team the Text Analytics extractive summarization capability that is in preview (as of November 2021) and how that can be used in place of Gensim when it becomes generally available.
 
-    The extractive summarization is a feature in Azure Text Analytics produces a summary by extracting sentences that collectively represent the most important or relevant information within the original content. This feature is designed to shorten content that users consider too long to read. The AI models used by the API are provided by the service, you just have to send content for analysis. Text Analytics extractive summarization is a preview capability and should not be deployed in any production use. However, once it becomes generally available, it will be part of the Text Analytics APIs and the summarization APIs can be then leveraged in a similar fashion as the other Text Analytics APIs.
+    The extractive summarization is a feature in Azure Text Analytics produces a summary by extracting sentences that collectively represent the most important or relevant information within the original content. This feature is designed to shorten content that users consider too long to read. The AI models used by the API are provided by the service, you just have to send content for analysis. Text Analytics extractive summarization is a preview capability (as of Nov 2021) and should not be deployed in any production use. However, once it becomes generally available, it will be part of the Text Analytics APIs and the summarization APIs can be then leveraged in a similar fashion as the other Text Analytics APIs.
 
 ## Checklist of preferred objection handling
 
@@ -558,7 +566,7 @@ _Summarizing claim text_
 
 2. We know that there are both pre-built AI and custom AI options available. We are confused as to when to choose one over the other.
 
-    It would be best if you considered the pre-built AI and Automated Machine Learning options first. However, if you rule them out because they do not fit your requirements, you should explore the custom AI options. The advantage of pre-built AI options like Cognitive Services is that the models they use under the covers do not need to be trained by you, and you do not need to have the data to train them as a pre-requisite. On the other hand, Azure automated machine learning currently support use cases such as classification, regression, or time-series forecasting. Automated machine learning picks an algorithm and hyperparameters and thus simplifies and expedite the process of producing a performant model, and you can create your model training experiments in Azure Machine Learning studio without writing a single line of code.
+    When proving the value of an A.I. or machine learning solution, it can be helpful to start with ready-to-use solutions and then progress into more customized solutions. So, in the case of Azure A.I. services, start with cognitive services like, the Text Analytics API. If more control is needed, try Auto ML. For a fully customizable solution, consider building your own model in Azure ML.
 
 3. We expect some part of our solution would require deep learning. Do you have any prescriptive guidance on how we might choose between investing in understanding and using TensorFlow or the Microsoft Cognitive Toolkit (CNTK)?
 
