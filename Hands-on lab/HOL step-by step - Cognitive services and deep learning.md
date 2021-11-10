@@ -29,13 +29,13 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Overview](#overview)
   - [Solution architecture](#solution-architecture)
   - [Requirements](#requirements)
-  - [Exercise 1: Exercise 1: Create and Deploy a Summarization Service](#exercise-1-create-and-deploy-a-summarization-service)
+  - [Exercise 1: Create and Deploy a Summarization Service](#exercise-1-create-and-deploy-a-summarization-service)
     - [Task 1: Locate and open the Summarization notebook](#task-1-locate-and-open-the-summarization-notebook)
     - [Task 2: Run Notebook - 01 Summarize](#task-2-run-notebook---01-summarize)
-    - [Task 3: Provision the Azure Machine Learning Workspace and Create the Summarization service](#task-3-provision-the-azure-machine-learning-workspace-and-create-the-summarization-service)
-  - [Exercise 2: Create and Deploy a Keras Model](#exercise-2-create-and-deploy-a-keras-model)
-    - [Task 1: Create a simple Keras based model](#task-1-create-a-simple-keras-based-model)
-    - [Task 2: Deploy the Keras model](#task-2-deploy-the-keras-model)
+    - [Task 3: Run Notebook - 02 Deploy Summarizer Web Service](#task-3-run-notebook---02-deploy-summarizer-web-service)
+  - [Exercise 2: Create and Deploy a Custom Deep Learning Model using Keras](#exercise-2-create-and-deploy-a-custom-deep-learning-model-using-keras)
+    - [Task 1: Run Notebook - 03 Claim Classification](#task-1-run-notebook---03-claim-classification)
+    - [Task 2: Run Notebook - 04 Deploy Classifier Web Service](#task-2-run-notebook---04-deploy-classifier-web-service)
   - [Exercise 3: Text Classification with Azure Automated Machine Learning](#exercise-3-text-classification-with-azure-automated-machine-learning)
     - [Task 1: Create New Automated Machine Learning Experiment](#task-1-create-new-automated-machine-learning-experiment)
     - [Task 2: Create a new Automated ML run](#task-2-create-a-new-automated-ml-run)
@@ -43,7 +43,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 4: Review Best Model Performance](#task-4-review-best-model-performance)
   - [Exercise 4: Completing the solution](#exercise-4-completing-the-solution)
     - [Task 1: Retrieve the Text Analytics API endpoint and key](#task-1-retrieve-the-text-analytics-api-endpoint-and-key)
-    - [Task 2: Completing the solution](#task-2-completing-the-solution)
+    - [Task 2: Run Notebook - 05 Cognitive Services](#task-2-run-notebook---05-cognitive-services)
   - [After the hands-on lab](#after-the-hands-on-lab)
     - [Task 1: Clean up lab resources](#task-1-clean-up-lab-resources)
 
@@ -100,7 +100,7 @@ In this task, you will navigate to the folder where all the notebooks for this l
 
 3. Make sure you copy the scoring URI from the output of the last cell of this notebook. The scoring URI value is needed in the final notebook of this hands-on lab.
 
-## Exercise 2: Create and Deploy a Keras Model
+## Exercise 2: Create and Deploy a Custom Deep Learning Model using Keras
 
 Duration: 60 minutes
 
