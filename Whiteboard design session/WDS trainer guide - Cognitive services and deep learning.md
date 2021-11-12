@@ -1,7 +1,7 @@
 ![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/main/Media/ms-cloud-workshop.png "Microsoft Cloud Workshops")
 
 <div class="MCWHeader1">
-Cognitive services and deep learning
+Analyzing text with Azure Machine Learning and Cognitive Services
 </div>
 
 <div class="MCWHeader2">
@@ -31,7 +31,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Whiteboard design session flow](#whiteboard-design-session-flow)
   - [Before the whiteboard design session: How to prepare](#before-the-whiteboard-design-session-how-to-prepare)
   - [During the whiteboard design session: Tips for an effective whiteboard design session](#during-the-whiteboard-design-session-tips-for-an-effective-whiteboard-design-session)
-- [Cognitive services and deep learning whiteboard design session student guide](#cognitive-services-and-deep-learning-whiteboard-design-session-student-guide)
+- [Analyzing text with Azure Machine Learning and Cognitive Services whiteboard design session student guide](#analyzing-text-with-azure-machine-learning-and-cognitive-services-whiteboard-design-session-student-guide)
   - [Abstract and learning objectives](#abstract-and-learning-objectives)
   - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study)
     - [Customer situation](#customer-situation)
@@ -42,7 +42,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Step 3: Present the solution](#step-3-present-the-solution)
   - [Wrap-up](#wrap-up)
   - [Additional references](#additional-references)
-- [Cognitive services and deep learning whiteboard design session trainer guide](#cognitive-services-and-deep-learning-whiteboard-design-session-trainer-guide)
+- [Analyzing text with Azure Machine Learning and Cognitive Services whiteboard design session trainer guide](#analyzing-text-with-azure-machine-learning-and-cognitive-services-whiteboard-design-session-trainer-guide)
   - [Step 1: Review the customer case study](#step-1-review-the-customer-case-study-1)
   - [Step 2: Design a proof of concept solution](#step-2-design-a-proof-of-concept-solution-1)
   - [Step 3: Present the solution](#step-3-present-the-solution-1)
@@ -166,7 +166,7 @@ When participants are doing activities, you can **look ahead to refresh your mem
 
 **Wait for responses**. If you ask a question such as, "What's your experience with (fill in the blank)?" then wait. Do not be afraid of a little silence. If you leap into the silence, your participants will feel you are not serious about involving them and will become passive. Give participants a chance to think, and if no one answers, patiently ask again. You will usually get a response.
 
-# Cognitive services and deep learning whiteboard design session student guide
+# Analyzing text with Azure Machine Learning and Cognitive Services whiteboard design session student guide
 
 ## Abstract and learning objectives
 
@@ -362,7 +362,7 @@ Directions: Tables reconvene with the larger group to hear the facilitator/SME s
 | Overview of the Text Analytics API Cognitive Service  | <https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/overview>               |
 | Text Analytics Extractive Summarization | <https://docs.microsoft.com/en-us/azure/cognitive-services/text-analytics/how-tos/extractive-summarization>               |
 
-# Cognitive services and deep learning whiteboard design session trainer guide
+# Analyzing text with Azure Machine Learning and Cognitive Services whiteboard design session trainer guide
 
 ## Step 1: Review the customer case study
 

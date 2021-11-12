@@ -2,7 +2,7 @@
 
 As we look to streamline content and improve training, we are considering retiring the Microsoft Cloud Workshop (MCW) program. Please take a moment to fill out the [Microsoft Cloud Workshop Survey](https://forms.office.com/r/834zwtaNtK) and give us your feedback.
 
-# Cognitive services and deep learning
+# Analyzing text with Azure Machine Learning and Cognitive Services
 
 In this workshop, you help Contoso Ltd. build a proof of concept that shows how they can develop a solution that amplifies their agents' claims processing capabilities.
 

@@ -1,7 +1,7 @@
 ![Microsoft Cloud Workshops](https://github.com/Microsoft/MCW-Template-Cloud-Workshop/raw/main/Media/ms-cloud-workshop.png 'Microsoft Cloud Workshops')
 
 <div class="MCWHeader1">
-Cognitive services and deep learning
+Analyzing text with Azure Machine Learning and Cognitive Services
 </div>
 
 <div class="MCWHeader2">
@@ -26,7 +26,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- TOC -->
 
-- [Cognitive services and deep learning before the hands-on lab setup guide](#cognitive-services-and-deep-learning-before-the-hands-on-lab-setup-guide)
+- [Analyzing text with Azure Machine Learning and Cognitive Services before the hands-on lab setup guide](#analyzing-text-with-azure-machine-learning-and-cognitive-services-before-the-hands-on-lab-setup-guide)
   - [Requirements](#requirements)
   - [Before the hands-on lab](#before-the-hands-on-lab)
     - [Task 1: Create a resource group](#task-1-create-a-resource-group)
@@ -38,7 +38,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
 
 <!-- /TOC -->
 
-# Cognitive services and deep learning before the hands-on lab setup guide
+# Analyzing text with Azure Machine Learning and Cognitive Services before the hands-on lab setup guide
 
 ## Requirements
 
@@ -190,9 +190,7 @@ In this task, you import Jupyter notebooks from GitHub that you will use to comp
 
    - `mkdir mcw-csdl`
    - `cd mcw-csdl`
-   - `git clone https://github.com/microsoft/MCW-Cognitive-services-and-deep-learning.git`
-
-   ![In the Jupyter terminal window, the commands listed above are displayed.](media/jupyter-terminal.png "Import repository")
+   - `git clone https://github.com/microsoft/MCW-Analyzing-text-with-azure-machine-learning-and-cognitive-services.git`
 
 5. Wait for the `clone` command to finish importing the repo.
 
@@ -200,12 +198,10 @@ In this task, you import Jupyter notebooks from GitHub that you will use to comp
 
 1. From the terminal window run the following commands (assuming you are in the `mcw-csdl` folder):
 
-   - `cd "MCW-Cognitive-services-and-deep-learning/Hands-on lab/notebooks"`
+   - `cd "MCW-Analyzing-text-with-azure-machine-learning-and-cognitive-services/Hands-on lab/notebooks"`
    - `conda activate azureml_py38`
    - `pip install --upgrade pip`
    - `pip install -r requirements.txt`
-
-   ![In the Jupyter terminal window, the commands listed above are displayed.](media/jupyter-terminal-02.png "Setup Lab environment")
 
     > Note: You can safely ignore any dependency errors during installation.
 
