@@ -88,7 +88,7 @@ In this task, you will navigate to the folder where all the notebooks for this l
 
 ### Task 2: Run Notebook - 01 Summarize
 
-1. Read the instructions at the top of the notebook, and execute the notebook cells one by one by selecting the **Run cell** arrow.
+1. Read the instructions at the top of the notebook and execute the notebook cells one by one by selecting the **Run cell** arrow.
 
     ![The 01 Summarize.ipynb notebook is opened from within the notebooks section of the Azure Machine Learning Studio and the Run cell arrow is highlighted.](media/notebook-02.png "01 Summarize.ipynb")
 
@@ -130,7 +130,7 @@ Automated machine learning picks an algorithm and hyperparameters for you and ge
 
 In this exercise, you learn how to create, run, and explore automated machine learning experiments in the Azure portal without a single line of code. We will train a classification model for claim text that will predict `1` if the claim is an auto insurance claim or `0` if it is a home insurance claim.
 
-> Note: You need to complete running the notebook **03 Claim Classification.ipynb** from `Exercise 2 Task 1` before starting this exercise.
+> **Note**: You need to complete running the notebook **03 Claim Classification.ipynb** from `Exercise 2 Task 1` before starting this exercise.
 
 ### Task 1: Create New Automated Machine Learning Experiment
 
@@ -175,7 +175,7 @@ In this exercise, you learn how to create, run, and explore automated machine le
 
   ![The AutoML run details page is shown, with the run status highlighted.](media/automl-05.png "Monitor AutoML run")
 
-> Note: The Automated ML run will for around 40-60 minutes. It is recommended you complete Exercise 4 and then return to complete Exercise 3.
+> **Note**: The Automated ML run will for around 40-60 minutes. It is recommended you complete Exercise 4 and then return to complete Exercise 3.
 
 ### Task 4: Review Best Model Performance
 
@@ -191,7 +191,7 @@ In this exercise, you learn how to create, run, and explore automated machine le
 
   ![Model metrics tab showing various model performance metrics and charts.](media/automl-08.png "Model Metrics")
 
-  > Note: You have the option to deploy the trained model pipeline to either Azure Container Instance or Azure Kubernetes Service directly from the Azure ML Studio.
+  > **Note**: You have the option to deploy the trained model pipeline to either Azure Container Instance or Azure Kubernetes Service directly from the Azure ML Studio.
 
 ## Exercise 4: Completing the solution
 
