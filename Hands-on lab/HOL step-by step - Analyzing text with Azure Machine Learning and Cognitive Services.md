@@ -61,7 +61,7 @@ In this workshop, you help Contoso Ltd. build a proof of concept that shows how 
 
 ## Solution architecture
 
-The high-level architecture of the solution is illustrated in the diagram. The lab is performed within the context of a notebook running within Azure Machine Learning compute instance. Various notebooks are built to test the integration with the Cognitive Services listed, train custom ML services, and integrate the results in a simple user interface that shows the effect of processing the claim with all of the AI services involved.
+The high-level architecture of the solution is illustrated in the diagram. The lab is performed within the context of a notebook running within Azure Machine Learning compute instance. Various notebooks are built to test the integration with the Cognitive Services listed, train custom ML services, and integrate the results in a simple user interface that shows the effect of processing the claim with all the AI services involved.
 
 ![The High-level architectural solution begins with a Claim, which points to Claims submission WebApp. The WebApp then points to Text Analytics, and Containerized Services, which includes a Classification Service and a Summary Service that both processes claim text.](media/new_arch.png "High-level architectural solution")
 
@@ -146,7 +146,7 @@ In this exercise, you learn how to create, run, and explore automated machine le
 
   ![In the create new automated ml run page the dataset named claims-dataset is highlighted and the button named next is also highlighted.](media/automl-02.png "Select dataset")
 
-2. In the `Configure run` page, make the following selections and then select **Next**:
+2. In the `Configure run` page, make the following selections, and then select **Next**:
 
    - Existing experiment: **claims-classification-exp**
    - Target column: **labels (Integer)**
@@ -221,7 +221,7 @@ In this task, you will retrieve the API key and endpoint URI associated with you
 
 ### Task 2: Run Notebook - 05 Cognitive Services
 
-1. From within Azure Machine Learning studio, navigate to the `Notebooks` section by selecting it from the left-hand navigation menu. Then select the notebook: **mcw-csdl/MCW-Analyzing-text-with-azure-machine-learning-and-cognitive-services/Hands-on lab/notebooks/05 Cognitive Services.ipynb**. This opens the notebook so you can read and execute the code it contains.
+1. From within Azure Machine Learning Studio, navigate to the `Notebooks` section by selecting it from the left-hand navigation menu. Then select the notebook: **mcw-csdl/MCW-Analyzing-text-with-azure-machine-learning-and-cognitive-services/Hands-on lab/notebooks/05 Cognitive Services.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
 2. Follow the steps within the notebook to complete the lab and view the result of combining Cognitive Services with your Azure Machine Learning Services.
 
@@ -229,7 +229,7 @@ In this task, you will retrieve the API key and endpoint URI associated with you
 
 Duration: 5 minutes
 
-To avoid unexpected charges, it is recommended that you clean up all of your lab resources when you complete the lab.
+To avoid unexpected charges, it is recommended that you clean up all your lab resources when you complete the lab.
 
 ### Task 1: Clean up lab resources
 
@@ -245,9 +245,9 @@ To avoid unexpected charges, it is recommended that you clean up all of your lab
 
     ![Delete resource group is highlighted on the toolbar of the hands-on-lab-SUFFIX resource group.](media/delete-resource-group.png "Delete resource group")
 
-4. In the confirmation dialog that appears, enter the name of the resource group and select **Delete**.
+4. In the confirmation dialog that appears, enter the name of the resource group, and select **Delete**.
 
-5. Wait for the confirmation that the Resource Group has been successfully deleted. If you don't wait, and the delete fails for some reason, you may be left with resources running that were not expected. You can monitor using the Notifications dialog, which is accessible from the Alarm icon.
+5. Wait for confirmation the Resource Group has been successfully deleted. If you don't wait, and the delete fails for some reason, you may be left with resources running that were not expected. You can monitor using the Notifications dialog, which is accessible from the Alarm icon.
 
     ![The Notifications dialog box has a message stating that the resource group is being deleted.](media/notifications-deleting-resource-group.png 'Notifications dialog box')
 
