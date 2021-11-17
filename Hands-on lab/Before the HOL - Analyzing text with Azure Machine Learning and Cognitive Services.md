@@ -32,7 +32,7 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 1: Create a resource group](#task-1-create-a-resource-group)
     - [Task 2: Provision a Text Analytics API](#task-2-provision-a-text-analytics-api)
     - [Task 3: Create an Azure Machine Learning workspace](#task-3-create-an-azure-machine-learning-workspace)
-    - [Task 4: Create a Compute instance](#task-4-create-a-compute-instance)
+    - [Task 4: Create a compute instance](#task-4-create-a-compute-instance)
     - [Task 5: Import the lab notebooks](#task-5-import-the-lab-notebooks)
     - [Task 6: Setup lab environment](#task-6-setup-lab-environment)
 
@@ -153,7 +153,7 @@ In this task, you provision the Azure Machine Learning workspace you will use th
 
    ![The Machine Learning resource page is shown with Overview selected from the left menu, and the Launch now button highlighted in the Overview screen.](media/bhol-03.png 'Launch the Azure Machine Learning studio')
 
-### Task 4: Create a Compute instance
+### Task 4: Create a compute instance
 
 In this task, you add a compute resource to your Azure Machine Learning workspace.
 
