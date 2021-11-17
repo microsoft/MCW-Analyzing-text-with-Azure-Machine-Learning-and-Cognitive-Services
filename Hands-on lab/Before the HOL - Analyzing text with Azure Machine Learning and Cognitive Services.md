@@ -33,8 +33,8 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
     - [Task 2: Provision a Text Analytics API](#task-2-provision-a-text-analytics-api)
     - [Task 3: Create an Azure Machine Learning workspace](#task-3-create-an-azure-machine-learning-workspace)
     - [Task 4: Create a Compute Instance](#task-4-create-a-compute-instance)
-    - [Task 5: Import the Lab Notebooks](#task-5-import-the-lab-notebooks)
-    - [Task 6: Setup Lab Environment](#task-6-setup-lab-environment)
+    - [Task 5: Import the lab notebooks](#task-5-import-the-lab-notebooks)
+    - [Task 6: Setup lab environment](#task-6-setup-lab-environment)
 
 <!-- /TOC -->
 
@@ -170,7 +170,7 @@ In this task, you add a compute resource to your Azure Machine Learning workspac
 
 3. Select **Create** and wait for the Compute Instance to be ready. It takes approximately 3-5 minutes for the compute provisioning to complete.
 
-### Task 5: Import the Lab Notebooks
+### Task 5: Import the lab notebooks
 
 In this task, you import Jupyter notebooks from GitHub that you will use to complete the exercises in this hands-on lab.
 
@@ -194,7 +194,7 @@ In this task, you import Jupyter notebooks from GitHub that you will use to comp
 
 5. Wait for the `clone` command to finish importing the repo.
 
-### Task 6: Setup Lab Environment
+### Task 6: Setup lab environment
 
 1. From the terminal window run the following commands (assuming you are in the `mcw-csdl` folder):
 

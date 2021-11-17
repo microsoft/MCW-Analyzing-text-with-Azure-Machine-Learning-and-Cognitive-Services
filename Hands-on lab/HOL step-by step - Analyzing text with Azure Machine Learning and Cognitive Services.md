@@ -29,21 +29,21 @@ Microsoft and the trademarks listed at <https://www.microsoft.com/en-us/legal/in
   - [Overview](#overview)
   - [Solution architecture](#solution-architecture)
   - [Requirements](#requirements)
-  - [Exercise 1: Create and Deploy a Summarization Service](#exercise-1-create-and-deploy-a-summarization-service)
-    - [Task 1: Locate and open the Summarization notebook](#task-1-locate-and-open-the-summarization-notebook)
-    - [Task 2: Run Notebook - 01 Summarize](#task-2-run-notebook---01-summarize)
-    - [Task 3: Run Notebook - 02 Deploy Summarizer Web Service](#task-3-run-notebook---02-deploy-summarizer-web-service)
-  - [Exercise 2: Create and Deploy a Custom Deep Learning Model using Keras](#exercise-2-create-and-deploy-a-custom-deep-learning-model-using-keras)
-    - [Task 1: Run Notebook - 03 Claim Classification](#task-1-run-notebook---03-claim-classification)
-    - [Task 2: Run Notebook - 04 Deploy Classifier Web Service](#task-2-run-notebook---04-deploy-classifier-web-service)
-  - [Exercise 3: Text Classification with Azure Automated Machine Learning](#exercise-3-text-classification-with-azure-automated-machine-learning)
-    - [Task 1: Create New Automated Machine Learning Experiment](#task-1-create-new-automated-machine-learning-experiment)
-    - [Task 2: Create a new Automated ML run](#task-2-create-a-new-automated-ml-run)
-    - [Task 3: Monitor Automated ML run](#task-3-monitor-automated-ml-run)
-    - [Task 4: Review Best Model Performance](#task-4-review-best-model-performance)
+  - [Exercise 1: Create and deploy a Summarization Service](#exercise-1-create-and-deploy-a-summarization-service)
+    - [Task 1: Locate and open the summarization notebook](#task-1-locate-and-open-the-summarization-notebook)
+    - [Task 2: Run notebook - 01 Summarize](#task-2-run-notebook---01-summarize)
+    - [Task 3: Run notebook - 02 Deploy Summarizer Web Service](#task-3-run-notebook---02-deploy-summarizer-web-service)
+  - [Exercise 2: Create and deploy a custom Deep Learning Model using Keras](#exercise-2-create-and-deploy-a-custom-deep-learning-model-using-keras)
+    - [Task 1: Run notebook - 03 Claim Classification](#task-1-run-notebook---03-claim-classification)
+    - [Task 2: Run notebook - 04 Deploy Classifier Web Service](#task-2-run-notebook---04-deploy-classifier-web-service)
+  - [Exercise 3: Text classification with Azure Automated Machine Learning](#exercise-3-text-classification-with-azure-automated-machine-learning)
+    - [Task 1: Create new automated ML experiment](#task-1-create-new-automated-ml-experiment)
+    - [Task 2: Create a new automated ML run](#task-2-create-a-new-automated-ml-run)
+    - [Task 3: Monitor automated ML run](#task-3-monitor-automated-ml-run)
+    - [Task 4: Review best model performance](#task-4-review-best-model-performance)
   - [Exercise 4: Completing the solution](#exercise-4-completing-the-solution)
     - [Task 1: Retrieve the Text Analytics API endpoint and key](#task-1-retrieve-the-text-analytics-api-endpoint-and-key)
-    - [Task 2: Run Notebook - 05 Cognitive Services](#task-2-run-notebook---05-cognitive-services)
+    - [Task 2: Run notebook - 05 Cognitive Services](#task-2-run-notebook---05-cognitive-services)
   - [After the hands-on lab](#after-the-hands-on-lab)
     - [Task 1: Clean up lab resources](#task-1-clean-up-lab-resources)
 
@@ -72,13 +72,13 @@ The high-level architecture of the solution is illustrated in the diagram. The l
     - Trial subscriptions will not work. You will run into issues with Azure resource quota limits.
     - Subscriptions with access limited to a single resource group will not work. You will need the ability to deploy multiple resource groups.
 
-## Exercise 1: Create and Deploy a Summarization Service
+## Exercise 1: Create and deploy a Summarization Service
 
 Duration: 60 minutes
 
 In this exercise, you create and deploy a web service that uses a pre-trained model to summarize long text paragraphs.
 
-### Task 1: Locate and open the Summarization notebook
+### Task 1: Locate and open the summarization notebook
 
 In this task, you will navigate to the folder where all the notebooks for this lab are available. Then you will open the `Summarization` notebook and confirm that the compute instance is attached to the notebook.
 
@@ -86,13 +86,13 @@ In this task, you will navigate to the folder where all the notebooks for this l
 
     ![The 01 Summarize.ipynb notebook is opened from within the notebooks section of the Azure Machine Learning Studio.](media/notebook-01.png "01 Summarize.ipynb")
 
-### Task 2: Run Notebook - 01 Summarize
+### Task 2: Run notebook - 01 Summarize
 
 1. Read the instructions at the top of the notebook, and execute the notebook cells one by one by selecting the **Run cell** arrow.
 
     ![The 01 Summarize.ipynb notebook is opened from within the notebooks section of the Azure Machine Learning Studio and the Run cell arrow is highlighted.](media/notebook-02.png "01 Summarize.ipynb")
 
-### Task 3: Run Notebook - 02 Deploy Summarizer Web Service
+### Task 3: Run notebook - 02 Deploy Summarizer Web Service
 
 1. Within the `notebooks` folder, select the notebook called **02 Deploy Summarizer Web Service.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
@@ -100,13 +100,13 @@ In this task, you will navigate to the folder where all the notebooks for this l
 
 3. Make sure you copy the scoring URI from the output of the last cell of this notebook. The scoring URI value is needed in the final notebook of this hands-on lab.
 
-## Exercise 2: Create and Deploy a Custom Deep Learning Model using Keras
+## Exercise 2: Create and deploy a custom Deep Learning Model using Keras
 
 Duration: 60 minutes
 
 In this exercise, you use Keras to construct and train a Deep Neural Network (DNN) called the Long Short-Term Memory (LSTM) recurrent neural network. LSTM works well for text classification problems, especially when used in conjunction with word embedding such as GloVe for word vectorization. In this notebook, you also learn how GloVe word embeddings perform on word analogy tasks.
 
-### Task 1: Run Notebook - 03 Claim Classification
+### Task 1: Run notebook - 03 Claim Classification
 
 1. Within the `notebooks` folder, select the notebook named **03 Claim Classification.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
@@ -114,7 +114,7 @@ In this exercise, you use Keras to construct and train a Deep Neural Network (DN
 
    > **Note**: Pay attention to the top of the notebook and check the TensorFlow library version. The TensorFlow version should be 2.2.0.
 
-### Task 2: Run Notebook - 04 Deploy Classifier Web Service
+### Task 2: Run notebook - 04 Deploy Classifier Web Service
 
 1. Within the `notebooks` folder, select the notebook named **04 Deploy Classifier Web Service.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
@@ -122,7 +122,7 @@ In this exercise, you use Keras to construct and train a Deep Neural Network (DN
 
 3. Make sure you copy the scoring URI from the output of the last cell of this notebook. The scoring URI value is needed in the final notebook of this hands-on lab.
 
-## Exercise 3: Text Classification with Azure Automated Machine Learning
+## Exercise 3: Text classification with Azure Automated Machine Learning
 
 Duration: 75 minutes
 
@@ -132,7 +132,7 @@ In this exercise, you learn how to create, run, and explore automated machine le
 
 > Note: You need to complete running the notebook **03 Claim Classification.ipynb** from `Exercise 2 Task 1` before starting this exercise.
 
-### Task 1: Create New Automated Machine Learning Experiment
+### Task 1: Create new automated ML experiment
 
 1. From within Azure Machine Learning studio, select **Home, Create new, Automated ML run**.
 
@@ -140,7 +140,7 @@ In this exercise, you learn how to create, run, and explore automated machine le
 
 1. This will open a `Create a new Automated ML run` page.
 
-### Task 2: Create a new Automated ML run
+### Task 2: Create a new automated ML run
 
 1. Select the dataset **claims-dataset** created during `Exercise 2` and then select **Next**.
 
@@ -169,7 +169,7 @@ In this exercise, you learn how to create, run, and explore automated machine le
 
   ![In the select task type page the above listed values are filled in and the button named finish is highlighted.](media/automl-04.png "Select task type")
 
-### Task 3: Monitor Automated ML run
+### Task 3: Monitor automated ML run
 
 1. You can monitor the experiment from the run details page. Initially run status is `Not started`. Wait till the run status is `Completed`.
 
@@ -177,7 +177,7 @@ In this exercise, you learn how to create, run, and explore automated machine le
 
 > Note: The Automated ML run will for around 40-60 minutes. It is recommended you complete Exercise 4 and then return to complete Exercise 3.
 
-### Task 4: Review Best Model Performance
+### Task 4: Review best model performance
 
 1. Select the **Models** tab to review the model pipelines that were trained during the experiment run.
 
@@ -219,7 +219,7 @@ In this task, you will retrieve the API key and endpoint URI associated with you
 
     ![Keys and Endpoint in highlighted and selected in the left-hand navigation menu. The copy buttons for Key 1 and Endpoint are highlighted.](media/text-analytics-keys-and-endpoint.png "Text Analytics Keys and Endpoint")
 
-### Task 2: Run Notebook - 05 Cognitive Services
+### Task 2: Run notebook - 05 Cognitive Services
 
 1. From within Azure Machine Learning studio, navigate to the `Notebooks` section by selecting it from the left-hand navigation menu. Then select the notebook: **mcw-csdl/MCW-Analyzing-text-with-azure-machine-learning-and-cognitive-services/Hands-on lab/notebooks/05 Cognitive Services.ipynb**. This opens the notebook so you can read and execute the code it contains.
 
