@@ -59,7 +59,7 @@ In this exercise, you set up your environment for use in the rest of the hands-o
 
 1. In the [Azure portal](https://portal.azure.com), select **Resource groups** from the Azure services list.
 
-   ![Resource groups is highlighted in the Azure services list.](media/azure-services-resource-groups.png "Azure services")
+   ![Resource groups are highlighted in the Azure services list.](media/azure-services-resource-groups.png "Azure services")
 
 2. On the Resource groups blade, select **+Add**.
 
@@ -89,7 +89,7 @@ In this task, you create a Text Analytics API, which will be integrated into you
 
     ![In the New resource blade, AI + Machine Learning is selected under the Azure Marketplace and Text Analytics is highlighted under the featured services.](media/create-resource-text-analytics.png "Text Analytics")
 
-   > Note: If you shown `Select additional features` page, select **Skip this step**.
+   > **Note**: If you are shown the `Select additional features` page, select **Skip this step**.
 
 3. On the **Create** tab, provide the following:
 
@@ -115,9 +115,9 @@ In this task, you create a Text Analytics API, which will be integrated into you
 
 In this task, you provision the Azure Machine Learning workspace you will use throughout this hands-on lab.
 
-1. Sign in to [Azure portal](https://portal.azure.com) by using the credentials for your Azure subscription.
+1. Sign into [Azure portal](https://portal.azure.com) by using the credentials for your Azure subscription.
 
-2. In the upper-left corner of Azure portal, select **+ Create a resource**.
+2. In the upper-left corner of the Azure portal, select **+ Create a resource**.
 
 3. Use the search bar to find the **Machine Learning**.
 
@@ -159,7 +159,7 @@ In this task, you add a compute resource to your Azure Machine Learning workspac
 
 1. In the new Azure Machine Learning studio window, select **Create new** and then select **Compute instance** from the context menu.
 
-   ![Within Azure Machine Learning studio, Create new is selected and highlighted, and Compute instance is highlighted in the context menu.](media/machine-learning-studio-create-new-compute-instance.png "Create new compute instance")
+   ![Within Azure Machine Learning Studio, Create new is selected and highlighted, and Compute instance is highlighted in the context menu.](media/machine-learning-studio-create-new-compute-instance.png "Create new compute instance")
 
 2. On the create compute instance screen, enter the following information:
 
