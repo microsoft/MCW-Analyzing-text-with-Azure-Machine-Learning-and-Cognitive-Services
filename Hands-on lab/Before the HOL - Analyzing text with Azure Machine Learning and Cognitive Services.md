@@ -85,13 +85,13 @@ In this task, you create a Text Analytics API, which will be integrated into you
 
    ![The Show portal menu icon is highlighted, and the portal menu is displayed. Create a resource is highlighted in the portal menu.](media/create-a-resource.png "Create a resource")
 
-2. Select **AI + Machine Learning** in the Azure Marketplace list and then select **Text Analytics** from the featured services list.
+2. Select **AI + Machine Learning** in the Azure Marketplace list and then select **Language service, Create** from the featured services list.
 
-    ![In the New resource blade, AI + Machine Learning is selected under the Azure Marketplace and Text Analytics is highlighted under the featured services.](media/create-resource-text-analytics.png "Text Analytics")
+    ![In the New resource blade, AI + Machine Learning is selected under the Azure Marketplace and Language service is highlighted under the featured services.](media/create-resource-text-analytics.png "Language service")
 
-   > **Note**: If you are shown the `Select additional features` page, select **Skip this step**.
+3. On the `Select additional features` tab, select **Continue to create your resource**.
 
-3. On the **Create** tab, provide the following:
+4. On the `Create` tab, provide the following:
 
     Project details:
 
@@ -103,13 +103,14 @@ In this task, you create a Text Analytics API, which will be integrated into you
     - **Region**: Select the region you used for the hands-on-lab-SUFFIX resource group.
     - **Name:** Provide a unique name for this instance, such as ta-SUFFIX.
     - **Pricing tier**: Free F0 (5K Transactions per 30 days).
+    - **Legal terms**: Checked
     - **Responsible AI Notice**: Checked
 
     ![The Create Text Analytics Basics tab is populated with the values specified above.](media/create-text-analytics.png "Create Text Analytics")
 
-4. Select **Review + create**.
+5. Select **Review + create**.
 
-5. Ensure validation passes and then select **Create** on the Review + create tab.
+6. Ensure validation passes and then select **Create** on the `Review + create` tab.
 
 ### Task 3: Create an Azure Machine Learning workspace
 
