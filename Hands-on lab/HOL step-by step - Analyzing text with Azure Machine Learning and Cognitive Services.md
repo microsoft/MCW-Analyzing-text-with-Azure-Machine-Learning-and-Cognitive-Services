@@ -162,12 +162,17 @@ In this exercise, you learn how to create, run, and explore automated machine le
 4. In the `Additional configurations` dialog make the following selections and then select **Save**:
 
    - Training job timeout (hours): **1**
+
+5. In the `Select task type` page select **Next**.
+
+  ![In the select task type page the above listed values are filled in and the button named next is highlighted.](media/automl-04.png "Select task type")
+
+6. In the `Select the validation and test type` page make the following selections and then select **Finish** to start the AutoML experiment run.
+
    - Validation type: **Train-validation split**
    - Percentage validation of data: **10**
 
-5. In the `Select task type` page select **Finish** to start the AutoML experiment run.
-
-  ![In the select task type page the above listed values are filled in and the button named finish is highlighted.](media/automl-04.png "Select task type")
+  ![In the select the validation and test type the above listed values are filled in and the button named finish is highlighted.](media/automl-04b.png "Select the validation and test type")
 
 ### Task 3: Monitor automated ML run
 
