@@ -12,3 +12,4 @@ onnxruntime==1.4.0
 tf2onnx==1.6.3
 azure-ai-textanalytics==5.1.0
 h5py~=2.10.0
+ipykernel==6.6.0
