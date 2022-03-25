@@ -1,3 +1,8 @@
+# Retirement notice
+This workshop will be retired effective June 30, 2022. At that time the repository will be archived, and the materials will not be maintained.
+
+For questions or concerns regarding the MCW library, email us at [AskMCW](mailto:AskMCW@microsoft.com). Please remember to include the title of the workshop in your email.
+
 # Analyzing text with Azure Machine Learning and Cognitive Services
 
 In this workshop, you help Contoso Ltd. build a proof of concept that shows how they can develop a solution that amplifies their agents' claims processing capabilities.
